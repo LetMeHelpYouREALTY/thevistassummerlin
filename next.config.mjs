@@ -4,9 +4,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig = {
-  experimental: {
-    typedRoutes: false,
-  },
+  typedRoutes: false,
   images: {
     remotePatterns: [
       {

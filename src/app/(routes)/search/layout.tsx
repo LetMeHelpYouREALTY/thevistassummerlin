@@ -1,53 +1,40 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: "Property Search - Find Your Perfect Home in The Vistas Summerlin",
-  description: "Search through 500+ luxury properties in The Vistas Summerlin. Advanced AI-powered search tools help you find homes that match your lifestyle across 28 exclusive subcommunities.",
+  title: 'Property Search | The Vistas Summerlin Homes by Dr. Jan Duffy',
+  description:
+    'Search homes for sale in The Vistas Summerlin, Las Vegas with Dr. Jan Duffy. Explore luxury listings, pricing, and neighborhood options.',
   keywords: [
-    "property search",
-    "homes for sale",
-    "The Vistas Summerlin",
-    "luxury homes",
-    "real estate search",
-    "Las Vegas homes",
-    "property finder",
-    "home search",
-    "real estate listings",
-    "property types",
-    "single family homes",
-    "townhomes",
-    "condos",
-    "Dr. Jan Duffy",
-    "Berkshire Hathaway HomeServices"
+    'property search',
+    'homes for sale',
+    'The Vistas Summerlin',
+    'luxury homes',
+    'Las Vegas homes',
+    'single family homes',
+    'townhomes',
+    'condos',
+    'Dr. Jan Duffy',
   ],
+  alternates: {
+    canonical: 'https://www.thevistassummerlin.com/search',
+  },
   openGraph: {
-    title: "Property Search - Find Your Perfect Home in The Vistas Summerlin",
-    description: "Search through 500+ luxury properties in The Vistas Summerlin. Advanced AI-powered search tools help you find homes that match your lifestyle.",
-    url: "https://www.thevistassummerlin.com/search",
+    title: 'Property Search | The Vistas Summerlin',
+    description:
+      'Search homes for sale in The Vistas Summerlin with local guidance from Dr. Jan Duffy.',
+    url: 'https://www.thevistassummerlin.com/search',
     images: [
       {
-        url: "/subcommunities/IMG_0737.JPG",
+        url: '/subcommunities/IMG_0737.JPG',
         width: 1200,
         height: 630,
-        alt: "The Vistas Summerlin Luxury Properties Search",
+        alt: 'The Vistas Summerlin luxury property search',
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Property Search - Find Your Perfect Home in The Vistas Summerlin",
-    description: "Search through 500+ luxury properties in The Vistas Summerlin. Advanced AI-powered search tools help you find homes that match your lifestyle.",
-    images: ["/subcommunities/IMG_0737.JPG"],
-  },
-  alternates: {
-    canonical: "https://www.thevistassummerlin.com/search",
-  },
 };
 
-export default function SearchLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function SearchLayout({ children }: { children: ReactNode }) {
   return children;
 }

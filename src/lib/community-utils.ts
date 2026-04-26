@@ -154,13 +154,13 @@ export async function getCommunityBySlug(slug: string): Promise<CommunityData | 
         image: '/subcommunities/IMG_0737.JPG', // Default image
         description: neighborhood.description,
         stats: {
-          ...generateStats(communityType),
+          ...generateStats(communityType, slug),
           priceRange: neighborhood.priceRange
         },
         amenities: getAmenitiesForType(communityType, 6),
         neighborhood: getNeighborhoodScores(communityType),
-        location: generateLocation(),
-        marketTrends: generateMarketTrends(),
+        location: generateLocation(slug),
+        marketTrends: generateMarketTrends(slug),
       };
       return communityData;
     }
@@ -181,11 +181,11 @@ export async function getCommunityBySlug(slug: string): Promise<CommunityData | 
         name: communityName,
         image: `${IMAGE_CONFIG.defaultImagePath}${imageFile}`,
         description: generateDescription(communityName),
-        stats: generateStats(communityType),
+        stats: generateStats(communityType, slug),
         amenities: getAmenitiesForType(communityType, 6),
         neighborhood: getNeighborhoodScores(communityType),
-        location: generateLocation(),
-        marketTrends: generateMarketTrends(),
+        location: generateLocation(slug),
+        marketTrends: generateMarketTrends(slug),
       };
       return communityData;
     }
@@ -204,38 +204,45 @@ function generateDescription(communityName: string): string {
   return template.replace(/{name}/g, communityName);
 }
 
-function generateStats(communityType: string = 'default') {
-  const listingsCount = Math.floor(Math.random() * 80) + 15;
+function deterministicNumber(seed: string, min: number, max: number): number {
+  const hash = simpleHash(seed);
+  return min + (hash % (max - min + 1));
+}
+
+function generateStats(communityType: string = 'default', seedKey: string = 'default') {
+  const listingsCount = deterministicNumber(`${seedKey}:listings`, 15, 95);
   const { priceRanges } = DEFAULT_COMMUNITY_CONFIG;
   const priceRangeIndex = communityType === 'luxury' 
-    ? Math.floor(Math.random() * 2) + 3
-    : Math.floor(Math.random() * priceRanges.length);
+    ? deterministicNumber(`${seedKey}:luxury-price-index`, 3, 4)
+    : deterministicNumber(`${seedKey}:price-index`, 0, priceRanges.length - 1);
   return {
     listings: listingsCount,
     priceRange: priceRanges[priceRangeIndex] || priceRanges[0],
-    soldLastMonth: Math.floor(Math.random() * 20) + 5,
+    soldLastMonth: deterministicNumber(`${seedKey}:sold`, 5, 24),
   };
 }
 
-function generateLocation() {
+function generateLocation(seedKey: string = 'default') {
   const { defaultCity, defaultState, baseCoordinates, coordinateRadius } = LOCATION_CONFIG;
+  const latOffset = (deterministicNumber(`${seedKey}:lat`, 0, 1000) / 1000 - 0.5) * coordinateRadius;
+  const lngOffset = (deterministicNumber(`${seedKey}:lng`, 0, 1000) / 1000 - 0.5) * coordinateRadius;
   return {
     city: defaultCity,
     state: defaultState,
-    zipCodes: ['90210', '90211'],
+    zipCodes: ['89138', '89135'],
     coordinates: {
-      lat: baseCoordinates.lat + (Math.random() - 0.5) * coordinateRadius,
-      lng: baseCoordinates.lng + (Math.random() - 0.5) * coordinateRadius,
+      lat: baseCoordinates.lat + latOffset,
+      lng: baseCoordinates.lng + lngOffset,
     },
   };
 }
 
-function generateMarketTrends() {
+function generateMarketTrends(seedKey: string = 'default') {
   const { priceChanges, inventoryLevels, daysOnMarket } = MARKET_TRENDS;
   return {
-    priceChange: priceChanges[Math.floor(Math.random() * priceChanges.length)],
-    inventoryLevel: inventoryLevels[Math.floor(Math.random() * inventoryLevels.length)] as 'Low' | 'Medium' | 'High',
-    daysOnMarket: Math.floor(Math.random() * (daysOnMarket.max - daysOnMarket.min + 1)) + daysOnMarket.min,
+    priceChange: priceChanges[deterministicNumber(`${seedKey}:price-change`, 0, priceChanges.length - 1)],
+    inventoryLevel: inventoryLevels[deterministicNumber(`${seedKey}:inventory`, 0, inventoryLevels.length - 1)] as 'Low' | 'Medium' | 'High',
+    daysOnMarket: deterministicNumber(`${seedKey}:dom`, daysOnMarket.min, daysOnMarket.max),
   };
 }
 
