@@ -5,6 +5,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig = {
   typedRoutes: false,
+  outputFileTracingRoot: __dirname,
   images: {
     remotePatterns: [
       {

@@ -55,6 +55,7 @@ const propertyTypes = [
 
 
 export default function SearchPage() {
+  const agentId = process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID || 'QWdlbnQtMjI1MDUw';
   const [selectedPropertyType, setSelectedPropertyType] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -124,6 +125,30 @@ export default function SearchPage() {
                 <div className="text-3xl font-bold text-white mb-2">24/7</div>
                 <div className="text-sm text-blue-200">Expert Support</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seller conversion widget */}
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="property-glass-card rounded-3xl p-8 border border-[rgba(212,168,67,0.3)]">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl font-bold text-[#f0eaff] mb-3">
+                Selling in The Vistas Summerlin?
+              </h2>
+              <p className="text-[#9b8ecf]">
+                Check your value first, then compare with active MLS listings on this page.
+              </p>
+            </div>
+            <div className="max-w-2xl mx-auto">
+              <realscout-home-value agent-encoded-id={agentId} />
+            </div>
+            <div className="text-center mt-6">
+              <a href="tel:+17025000607" className="btn-primary">
+                Call 702-500-0607 for a pricing strategy
+              </a>
             </div>
           </div>
         </div>
@@ -267,12 +292,12 @@ export default function SearchPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Link 
-              href="http://drjanduffy.realscout.com/onboarding"
+            <Link
+              href="/valuation"
               className="inline-flex items-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-10 py-4 rounded-2xl text-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl group"
             >
               <span className="flex items-center">
-                View All Listings
+                Get My Vistas Value
                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>

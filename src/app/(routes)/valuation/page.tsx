@@ -3,6 +3,7 @@ import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { FAQSchema } from '@/components/StructuredData';
 import { CalendlyButton } from '@/components/CalendlyButton';
+import { CalendlyEmbed } from '@/components/CalendlyEmbed';
 import HomeEvaluationSection from '@/components/sections/home-evaluation-v0';
 import Link from 'next/link';
 import { 
@@ -325,6 +326,20 @@ export default function ValuationPage() {
 
       {/* Interactive Home Valuation Widget */}
       <HomeEvaluationSection />
+
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+              Book a Seller Strategy Session
+            </h2>
+            <p className="mt-3 text-lg text-gray-600">
+              Pick a time that works for you and we will review local comps.
+            </p>
+          </div>
+          <CalendlyEmbed url="https://calendly.com/drjanduffy" />
+        </div>
+      </section>
 
       <Footer />
       <FAQSchema />

@@ -17,6 +17,7 @@ import {
   BreadcrumbSchema,
   ArticleSchema
 } from '@/components/StructuredData';
+import { CalendlyBadge } from '@/components/CalendlyBadge';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -166,21 +167,15 @@ export default function RootLayout({
           strategy="beforeInteractive"
           id="realscout-widgets"
         />
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="afterInteractive"
+          id="calendly-widget-js"
+        />
       </head>
       <body className={`antialiased ${playfair.variable} ${dmSans.variable} font-secondary text-text-light bg-deep`}>
         {children}
-        <section className="section-shell dark-luxury-bg">
-          <div className="max-w-7xl mx-auto">
-            {React.createElement('realscout-office-listings', {
-              'agent-encoded-id': 'QWdlbnQtMjI1MDUw',
-              'sort-order': 'STATUS_AND_SIGNIFICANT_CHANGE',
-              'listing-status': 'For Sale',
-              'property-types': 'SFR,LAL',
-              'price-min': '500000',
-              suppressHydrationWarning: true,
-            })}
-          </div>
-        </section>
+        <CalendlyBadge url="https://calendly.com/drjanduffy" />
       </body>
     </html>
   );

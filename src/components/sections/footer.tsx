@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, ArrowRight, Facebook, Twitter, Instagram, Linkedin, Youtube, MessageCircle, Heart } from 'lucide-react';
 
@@ -56,6 +57,26 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 section-shell">
+        {/* Global high-intent MLS lead generator */}
+        <section className="mb-12 property-glass-card rounded-3xl p-8 border border-[rgba(212,168,67,0.35)]">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl lg:text-3xl font-bold text-[#f0eaff] mb-3">
+              Live MLS Inventory by Dr. Jan Duffy
+            </h2>
+            <p className="text-[#9b8ecf] max-w-2xl mx-auto">
+              Browse active listings across The Vistas Summerlin, then call 702-500-0607 for a subcommunity pricing strategy.
+            </p>
+          </div>
+          {React.createElement('realscout-office-listings', {
+            'agent-encoded-id': 'QWdlbnQtMjI1MDUw',
+            'sort-order': 'STATUS_AND_SIGNIFICANT_CHANGE',
+            'listing-status': 'For Sale',
+            'property-types': 'SFR,LAL',
+            'price-min': '500000',
+            suppressHydrationWarning: true,
+          })}
+        </section>
+
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}

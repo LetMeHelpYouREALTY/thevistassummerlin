@@ -28,6 +28,7 @@ export const metadata: Metadata = {
 };
 
 export default function SellPage() {
+  const agentId = process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID || 'QWdlbnQtMjI1MDUw';
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
@@ -56,6 +57,30 @@ export default function SellPage() {
                 className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-green-900 transition-colors shadow-lg"
               >
                 Call Jan Duffy
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* High-intent seller widget */}
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-slate-900 to-indigo-900 rounded-3xl p-8 lg:p-10 text-white shadow-2xl">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-3">
+                Start with Your Address
+              </h2>
+              <p className="text-blue-100">
+                Use the live valuation widget, then review comps with Dr. Jan before listing.
+              </p>
+            </div>
+            <div className="max-w-2xl mx-auto bg-white rounded-2xl p-6">
+              <realscout-home-value agent-encoded-id={agentId}></realscout-home-value>
+            </div>
+            <div className="text-center mt-6">
+              <a href="tel:+17025000607" className="btn-primary">
+                Call 702-500-0607
               </a>
             </div>
           </div>

@@ -3,6 +3,7 @@ import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { FAQSchema } from '@/components/StructuredData';
 import { CalendlyButton } from '@/components/CalendlyButton';
+import { CalendlyEmbed } from '@/components/CalendlyEmbed';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar, Star, Award, Users, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 
@@ -393,6 +394,20 @@ export default function Contact() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+                Book a Time That Works for You
+              </h2>
+              <p className="mt-3 text-lg text-gray-600">
+                Use the calendar below to schedule with Dr. Jan Duffy.
+              </p>
+            </div>
+            <CalendlyEmbed url="https://calendly.com/drjanduffy/showing" />
           </div>
         </section>
 
