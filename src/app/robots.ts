@@ -10,7 +10,6 @@ export default function robots(): MetadataRoute.Robots {
           '/private/',
           '/admin/',
           '/api/',
-          '/static/',
         ],
       },
       {
@@ -22,7 +21,11 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: 'https://www.thevistassummerlin.com/sitemap.xml',
+    sitemap: [
+      'https://www.thevistassummerlin.com/sitemap.xml',
+      'https://www.thevistassummerlin.com/image-sitemap.xml',
+      'https://www.thevistassummerlin.com/feed.xml',
+    ],
     host: 'https://www.thevistassummerlin.com',
   }
 }
