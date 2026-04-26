@@ -1,184 +1,52 @@
 import { MetadataRoute } from 'next'
+import { getNeighborhoodSlugs } from '@/constants/neighborhoods'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.thevistassummerlin.com'
-  
-          // Community slugs for dynamic sitemap generation - All 26+ Subcommunities
-          const communitySlugs = [
-            // The Vistas Summerlin Subcommunities (26 confirmed)
-            'ashton-park',
-            'barrington',
-            'bella-vista',
-            'canterra',
-            'capri',
-            'cara-vella',
-            'casa-rosa',
-            'encanto',
-            'estancia',
-            'hillstone',
-            'kingwood',
-            'miraleste',
-            'monterosa',
-            'palmilla',
-            'paradiso',
-            'portofino',
-            'sage-hills',
-            'san-marcos',
-            'santalina',
-            'solano',
-            'somerset',
-            'sonesta',
-            'summerfield',
-            'talaverde',
-            'talega',
-            'vista-verde',
-            
-            // Legacy communities and other pages
-            'vistas', // Dr. Jan Duffy's office location
-            'summerlin-west',
-            'red-rock', 
-            'southern-highlands',
-            'macdonald-highlands',
-            'img-0737', // Legacy Barrington URL
-            'img-0738', // Legacy Kingwood URL
-            'img-0739', // Legacy Santalina URL
-            'santaluz' // Premium community (not in official list)
-          ]
-  
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/valuation`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/communities`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    // Individual community pages
-    ...communitySlugs.map(slug => ({
-      url: `${baseUrl}/communities/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    })),
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/search`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/sell`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/market-reports`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/market-analysis`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/investment`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/community-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/properties/11773-golden-moments-avenue`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/faq`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/testimonials`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    // Additional important pages for SEO
-    {
-      url: `${baseUrl}/agents/dr-jan-duffy`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/communities/canterra`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9, // High priority for Canterra as featured community
-    },
-    {
-      url: `${baseUrl}/faq`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/testimonials`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-  ]
+const baseUrl = 'https://www.thevistassummerlin.com'
+
+const staticRoutes: Array<{
+  path: string
+  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']
+  priority: number
+}> = [
+  { path: '', changeFrequency: 'weekly', priority: 1.0 },
+  { path: '/valuation', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/communities', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/blog', changeFrequency: 'weekly', priority: 0.6 },
+  { path: '/search', changeFrequency: 'weekly', priority: 0.8 },
+  { path: '/sell', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/market-reports', changeFrequency: 'weekly', priority: 0.6 },
+  { path: '/market-analysis', changeFrequency: 'weekly', priority: 0.6 },
+  { path: '/investment', changeFrequency: 'monthly', priority: 0.6 },
+  { path: '/community-guide', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/properties/11773-golden-moments-avenue', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/faq', changeFrequency: 'monthly', priority: 0.6 },
+  { path: '/testimonials', changeFrequency: 'monthly', priority: 0.6 },
+  { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
+  { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
+  { path: '/agents/dr-jan-duffy', changeFrequency: 'monthly', priority: 0.8 },
+]
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const now = new Date()
+  // Keep sitemap focused on canonical neighborhood slugs.
+  // Image-derived legacy slugs are still reachable via redirects when needed.
+  const communitySlugs = getNeighborhoodSlugs()
+
+  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
+    url: `${baseUrl}${route.path}`,
+    lastModified: now,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }))
+
+  const communityEntries: MetadataRoute.Sitemap = communitySlugs.map((slug) => ({
+    url: `${baseUrl}/communities/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
+  return [...staticEntries, ...communityEntries]
 }

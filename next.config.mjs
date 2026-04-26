@@ -42,6 +42,36 @@ const nextConfig = {
         destination: '/communities',
         permanent: true,
       },
+      {
+        source: '/blog/:page(\\d+)',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/amenities',
+        destination: '/community-guide',
+        permanent: true,
+      },
+      {
+        source: '/communities/canyon-ridge',
+        destination: '/communities',
+        permanent: true,
+      },
+      {
+        source: '/communities/img-0737',
+        destination: '/communities/barrington',
+        permanent: true,
+      },
+      {
+        source: '/communities/img-0738',
+        destination: '/communities/kingwood',
+        permanent: true,
+      },
+      {
+        source: '/communities/img-0739',
+        destination: '/communities/santalina',
+        permanent: true,
+      },
     ]
   },
   async headers() {
@@ -67,7 +97,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "frame-ancestors 'none'; object-src 'none'; base-uri 'self'",
+            value: "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com; connect-src 'self' https://em.realscout.com https://www.realscout.com https:; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:; frame-src 'self' https://www.google.com https://www.youtube.com https://player.vimeo.com https://em.realscout.com https://www.realscout.com;",
           },
         ],
       },

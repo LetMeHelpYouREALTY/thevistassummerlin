@@ -90,10 +90,10 @@ export const metadata: Metadata = {
     images: ["/subcommunities/IMG_0737.JPG"],
   },
   verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION || "your-google-verification-code",
+    google: process.env.GOOGLE_SITE_VERIFICATION,
   },
   other: {
-    'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION || "your-google-verification-code",
+    'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION || "",
     'msvalidate.01': process.env.BING_SITE_VERIFICATION || "",
     'yandex-verification': process.env.YANDEX_SITE_VERIFICATION || "",
   },
@@ -121,12 +121,6 @@ export default function RootLayout({
         <meta name="ICBM" content="36.1699, -115.1398" />
         <meta name="language" content="en-US" />
         <meta name="revisit-after" content="7 days" />
-        <meta name="rating" content="General" />
-        <meta name="distribution" content="Global" />
-        <meta name="coverage" content="Worldwide" />
-        <meta name="target" content="all" />
-        <meta name="audience" content="all" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         
         {/* RSS Feed for Google Discover Follow Feature */}
         <link rel="alternate" type="application/rss+xml" 
@@ -141,7 +135,9 @@ export default function RootLayout({
         
         {/* Performance Optimization - Preconnect to RealScout */}
         <link rel="preconnect" href="https://em.realscout.com" />
+        <link rel="preconnect" href="https://www.realscout.com" />
         <link rel="dns-prefetch" href="https://em.realscout.com" />
+        <link rel="dns-prefetch" href="https://www.realscout.com" />
         
         {/* Business Information */}
         <meta name="business:contact_data:locality" content="Las Vegas" />

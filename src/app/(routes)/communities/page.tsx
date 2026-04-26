@@ -66,23 +66,23 @@ const allCommunities = [
     category: 'Premium'
   },
   {
-    id: 'canyon-ridge',
-    name: 'Canyon Ridge',
-    description: 'Modern homes with stunning canyon views and contemporary design',
-    priceRange: '$700K - $1.6M',
+    id: 'canterra',
+    name: 'Canterra',
+    description: 'Tuscan-inspired villas with oversized lots and luxury finishes',
+    priceRange: '$1M - $2M',
     homesAvailable: 10,
     image: '/subcommunities/IMG_0738.JPG',
-    features: ['Canyon Views', 'Modern Design', 'Smart Homes', 'Fitness Center'],
+    features: ['Oversized Lots', 'Tuscan Architecture', 'Luxury Finishes', 'Community Amenities'],
     category: 'Luxury'
   },
   {
-    id: 'sunset-hills',
-    name: 'Sunset Hills',
-    description: 'Family-friendly community with parks, trails, and excellent schools',
-    priceRange: '$550K - $1.2M',
+    id: 'sonesta',
+    name: 'Sonesta',
+    description: 'Resort-style living with modern amenities and mountain views',
+    priceRange: '$800K - $1.2M',
     homesAvailable: 20,
     image: '/subcommunities/IMG_0739.JPG',
-    features: ['Family-Friendly', 'Parks & Trails', 'Top Schools', 'Community Events'],
+    features: ['Resort Style', 'Mountain Views', 'Modern Amenities', 'Community Events'],
     category: 'Family'
   }
 ];
@@ -202,7 +202,7 @@ export default function CommunitiesPage() {
               </p>
               
               <p className="mb-6">
-                The Vistas Summerlin features world-class subcommunities including <Link href="/communities/img-0737" className="text-blue-600 hover:text-blue-800 font-semibold underline">Barrington</Link> with 
+                The Vistas Summerlin features world-class subcommunities including <Link href="/communities/barrington" className="text-blue-600 hover:text-blue-800 font-semibold underline">Barrington</Link> with 
                 sophisticated architecture, <Link href="/communities/kingwood" className="text-blue-600 hover:text-blue-800 font-semibold underline">Kingwood</Link> with royal-inspired homes and mountain views, 
                 and <Link href="/communities/santalina" className="text-blue-600 hover:text-blue-800 font-semibold underline">Santalina</Link> with Mediterranean charm. Each community offers unique amenities 
                 ranging from resort-style pools to private patios and landscaped grounds, creating 
@@ -336,12 +336,16 @@ export default function CommunitiesPage() {
               <div className="flex border border-gray-300 rounded-xl overflow-hidden">
                 <button
                   onClick={() => handleViewModeChange('grid')}
+                  aria-label="Grid view"
+                  title="Grid view"
                   className={`p-3 transition-colors ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
                 >
                   <Grid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => handleViewModeChange('list')}
+                  aria-label="List view"
+                  title="List view"
                   className={`p-3 transition-colors ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
                 >
                   <List className="w-4 h-4" />
@@ -355,8 +359,8 @@ export default function CommunitiesPage() {
             <div className="mt-6 p-6 bg-gray-50 rounded-2xl">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Price Range</label>
-                  <select className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <label htmlFor="price-range-filter" className="block text-sm font-semibold text-gray-700 mb-2">Price Range</label>
+                  <select id="price-range-filter" className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <option>Any Price</option>
                     <option>$500K - $750K</option>
                     <option>$750K - $1M</option>
@@ -365,8 +369,8 @@ export default function CommunitiesPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Homes Available</label>
-                  <select className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <label htmlFor="homes-available-filter" className="block text-sm font-semibold text-gray-700 mb-2">Homes Available</label>
+                  <select id="homes-available-filter" className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <option>Any Amount</option>
                     <option>1-5 Homes</option>
                     <option>6-10 Homes</option>
@@ -375,8 +379,8 @@ export default function CommunitiesPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Features</label>
-                  <select className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <label htmlFor="features-filter" className="block text-sm font-semibold text-gray-700 mb-2">Features</label>
+                  <select id="features-filter" className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <option>Any Features</option>
                     <option>Gated Community</option>
                     <option>Mountain Views</option>

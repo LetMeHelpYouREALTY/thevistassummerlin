@@ -2,9 +2,16 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  // Let Vercel handle redirects via vercel.json
-  // This middleware is kept for future geo-targeting or other features
-  return NextResponse.next();
+  const response = NextResponse.next();
+  const { pathname, search } = request.nextUrl;
+
+  // Filtered search URLs create many thin variants; keep base /search indexable
+  // while asking crawlers not to index parameterized versions.
+  if (pathname === '/search' && search) {
+    response.headers.set('X-Robots-Tag', 'noindex, follow');
+  }
+
+  return response;
 }
 
 export const config = {
