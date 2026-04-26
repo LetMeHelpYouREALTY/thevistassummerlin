@@ -39,8 +39,8 @@ const featuredCommunities = [
     stats: { appreciation: '4.8%', walkScore: 65, schoolRating: 8.9 }
   },
   {
-    id: 'summerlin-park',
-    name: 'Summerlin Park',
+    id: 'summerlin-west',
+    name: 'Summerlin West',
     description: 'Family-friendly community with parks, schools, and shopping nearby',
     priceRange: '$525K - $1.2M',
     homesAvailable: 25,

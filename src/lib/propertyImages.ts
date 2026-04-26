@@ -16,14 +16,14 @@ export const realScoutImageUrls = {
   livingRoom: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center",
   
   // Master bedroom - Bedroom placeholder
-  masterBedroom: "https://images.unsplash.com/photo-1631889993959-41b5b5e5b8b5?w=800&h=600&fit=crop&crop=center",
+  masterBedroom: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center",
   
   // Backyard - Outdoor space placeholder
   backyard: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop&crop=center",
   
   // Additional rooms - Placeholders
   diningRoom: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center",
-  secondMaster: "https://images.unsplash.com/photo-1631889993959-41b5b5e5b8b5?w=800&h=600&fit=crop&crop=center",
+  secondMaster: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center",
   garage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&crop=center",
 };
 

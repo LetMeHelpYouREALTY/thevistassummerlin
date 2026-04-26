@@ -15,19 +15,19 @@ export const NAVIGATION = {
   main: [
     { name: 'Home', href: '/' },
     { name: 'Communities', href: '/communities' },
-    { name: 'Market Data', href: '/market' },
+    { name: 'Market reports', href: '/market-reports' },
     { name: 'Valuation', href: '/valuation' },
     { name: 'Contact', href: '/contact' },
   ],
   footer: {
     communities: [
       { name: 'All Communities', href: '/communities' },
-      { name: 'Featured', href: '/communities/featured' },
-      { name: 'New Construction', href: '/communities/new-construction' },
+      { name: 'Vistas', href: '/communities/vistas' },
+      { name: 'Property search', href: '/search' },
     ],
     services: [
       { name: 'Home Valuation', href: '/valuation' },
-      { name: 'Market Analysis', href: '/market' },
+      { name: 'Market Analysis', href: '/market-analysis' },
       { name: 'Property Search', href: '/search' },
     ],
     resources: [
