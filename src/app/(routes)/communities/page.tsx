@@ -10,6 +10,7 @@ import RealScoutAdvancedSearch from '@/components/RealScoutAdvancedSearch';
 import RealScoutYourListings from '@/components/RealScoutYourListings';
 import PropertyCategories from '@/components/sections/property-categories';
 import FeaturedCommunities from '@/components/sections/featured-communities';
+import { PostHeroOfficeListings } from '@/components/sections/post-hero-office-listings';
 
 // Debounce utility function
 const debounce = (func: Function, wait: number) => {
@@ -173,6 +174,13 @@ export default function CommunitiesPage() {
         </div>
       </section>
 
+      <PostHeroOfficeListings
+        title="Current Luxury Homes for Sale in The Vistas Summerlin Communities"
+        description="Explore our curated selection of luxury homes across The Vistas Summerlin's prestigious communities. Each property offers exceptional value with premium amenities and access to world-class community features."
+        sort-order="STATUS_AND_SIGNIFICANT_CHANGE"
+        bandKey="communities-index-post-hero"
+      />
+
       {/* SEO Content Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -217,26 +225,8 @@ export default function CommunitiesPage() {
                 Our current inventory spans The Vistas Summerlin's prestigious communities with 
                 luxury homes ranging from $500,000 to $600,000. Each property benefits 
                 from The Vistas' world-class amenities including the community center at 11312 
-                Parkside Way, miles of walking paths, and access to TPC Summerlin golf course. Browse our live listings below or <Link href="/market-reports" className="text-blue-600 hover:text-blue-800 font-semibold underline">view market trends</Link>.
+                Parkside Way, miles of walking paths, and access to TPC Summerlin golf course. Browse our live listings above or <Link href="/market-reports" className="text-blue-600 hover:text-blue-800 font-semibold underline">view market trends</Link>.
               </p>
-              
-              {/* RealScout Office Widget */}
-              <div className="my-12">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Current Luxury Homes for Sale in The Vistas Summerlin Communities
-                </h3>
-                <p className="text-lg text-gray-600 mb-6">
-                  Explore our curated selection of luxury homes across The Vistas Summerlin's prestigious communities. Each property offers exceptional value with premium amenities and access to world-class community features.
-                </p>
-                <div className="bg-white rounded-xl shadow-lg p-6">
-                  <realscout-office-listings
-                    agent-encoded-id="QWdlbnQtMjI1MDUw"
-                    price-min="800000"
-                    price-max="2000000"
-                    sort-order="STATUS_AND_SIGNIFICANT_CHANGE"
-                  />
-                </div>
-              </div>
               
               <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">
                 Downtown Summerlin Lifestyle & Entertainment

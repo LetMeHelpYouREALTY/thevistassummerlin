@@ -10,6 +10,7 @@ import RealScoutListings from '@/components/RealScoutListings';
 import GoogleBusinessProfileWidget from '@/components/sections/google-business-profile-widget';
 import ReviewCollectionWidget from '@/components/sections/review-collection-widget';
 import LocalSEOShowcase from '@/components/sections/local-seo-showcase';
+import { PostHeroOfficeListings } from '@/components/sections/post-hero-office-listings';
 
 // Metadata moved to layout or parent component since this is a client component
 
@@ -103,6 +104,12 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <PostHeroOfficeListings
+          title="Live MLS Listings in The Vistas"
+          description="See active office inventory, then call (702) 500-0607 to align a showing strategy with recent closings."
+          bandKey="about-post-hero"
+        />
 
         {/* SEO Content Section */}
         <section className="py-24 bg-white">

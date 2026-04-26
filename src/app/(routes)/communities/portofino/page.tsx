@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
+import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { 
   BarChart, 
   Users, 
@@ -157,6 +158,55 @@ export default function PortofinoCommunityPage() {
                 </div>
                 <div className="text-lg font-bold text-gray-900">The Vistas Summerlin</div>
                 <div className="text-gray-600">Las Vegas, NV 89134</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Properties Section — live MLS (below hero, #properties) */}
+      <section id="properties" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Available Properties in Portofino
+            </h2>
+            <p className="text-xl text-gray-600">
+              Discover your coastal retreat in this charming community
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl p-8 shadow-lg">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Current Luxury Homes for Sale in Portofino
+              </h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
+                Discover our curated selection of luxury homes in Portofino. Each property offers exceptional value with Mediterranean-inspired architecture and resort-style amenities.
+              </p>
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-xl border border-blue-100">
+                <VistasRealScoutOfficeListings
+  sort-order="PRICE_LOW"
+  listing-status="For Sale"
+  property-types=",SFR"
+  bandKey="portofino-post-hero"
+/>
+              </div>
+              <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
+                <a
+                  href="http://drjanduffy.realscout.com/onboarding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105"
+                >
+                  View All Listings on RealScout
+                </a>
+                <a
+                  href="tel:+17025000607"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-base font-medium rounded-full shadow-sm text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-300 transform hover:scale-105"
+                >
+                  Call Dr. Jan Duffy for Personalized Help
+                </a>
               </div>
             </div>
           </div>
@@ -388,57 +438,6 @@ export default function PortofinoCommunityPage() {
                 Beautifully landscaped common areas with Mediterranean plants, walking trails, 
                 and outdoor spaces that encourage neighborly interaction.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Properties Section */}
-      <section id="properties" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Available Properties in Portofino
-            </h2>
-            <p className="text-xl text-gray-600">
-              Discover your coastal retreat in this charming community
-            </p>
-          </div>
-
-          <div className="bg-white rounded-3xl p-8 shadow-lg">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Current Luxury Homes for Sale in Portofino
-              </h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
-                Discover our curated selection of luxury homes in Portofino. Each property offers exceptional value with Mediterranean-inspired architecture and resort-style amenities.
-              </p>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-xl border border-blue-100">
-                <realscout-office-listings 
-                  agent-encoded-id="QWdlbnQtMjI1MDUw" 
-                  sort-order="PRICE_LOW" 
-                  listing-status="For Sale" 
-                  property-types=",SFR" 
-                  price-min="800000" 
-                  price-max="2500000"
-                ></realscout-office-listings>
-              </div>
-              <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
-                <a
-                  href="http://drjanduffy.realscout.com/onboarding"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105"
-                >
-                  View All Listings on RealScout
-                </a>
-                <a
-                  href="tel:+17025000607"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-base font-medium rounded-full shadow-sm text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-300 transform hover:scale-105"
-                >
-                  Call Dr. Jan Duffy for Personalized Help
-                </a>
-              </div>
             </div>
           </div>
         </div>

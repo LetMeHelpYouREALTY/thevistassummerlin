@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
+import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
 
@@ -97,6 +98,40 @@ export default function PalmillaPage() {
                   <div className="text-emerald-200 text-sm">Residents</div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        {/* RealScout Office Listings */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 via-emerald-50 to-green-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Current Luxury Homes for Sale in Palmilla
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
+              Discover our curated selection of luxury homes in Palmilla. Each property offers exceptional value with resort-style amenities and palm landscaping.
+            </p>
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-emerald-100">
+              <VistasRealScoutOfficeListings
+  sort-order="PRICE_LOW"
+  listing-status="For Sale"
+  property-types=",SFR"
+/>
+            </div>
+            <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
+              <a
+                href="http://drjanduffy.realscout.com/onboarding"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 transition-colors duration-300 transform hover:scale-105"
+              >
+                View All Listings on RealScout
+              </a>
+              <a
+                href="tel:+17025000607"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-emerald-600 text-base font-medium rounded-full shadow-sm text-emerald-600 bg-white hover:bg-emerald-50 transition-colors duration-300 transform hover:scale-105"
+              >
+                Call Dr. Jan Duffy for Personalized Help
+              </a>
             </div>
           </div>
         </section>
@@ -244,43 +279,7 @@ export default function PalmillaPage() {
           </div>
         </section>
 
-        {/* RealScout Office Listings */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 via-emerald-50 to-green-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Current Luxury Homes for Sale in Palmilla
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
-              Discover our curated selection of luxury homes in Palmilla. Each property offers exceptional value with resort-style amenities and palm landscaping.
-            </p>
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-emerald-100">
-              <realscout-office-listings 
-                agent-encoded-id="QWdlbnQtMjI1MDUw" 
-                sort-order="PRICE_LOW" 
-                listing-status="For Sale" 
-                property-types=",SFR" 
-                price-min="650000" 
-                price-max="1500000"
-              ></realscout-office-listings>
-            </div>
-            <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
-              <a
-                href="http://drjanduffy.realscout.com/onboarding"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 transition-colors duration-300 transform hover:scale-105"
-              >
-                View All Listings on RealScout
-              </a>
-              <a
-                href="tel:+17025000607"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-emerald-600 text-base font-medium rounded-full shadow-sm text-emerald-600 bg-white hover:bg-emerald-50 transition-colors duration-300 transform hover:scale-105"
-              >
-                Call Dr. Jan Duffy for Personalized Help
-              </a>
-            </div>
-          </div>
-        </section>
+
 
         {/* Contact Section */}
         <section className="py-24 bg-gradient-to-br from-slate-900 via-emerald-900 to-green-900 text-white">

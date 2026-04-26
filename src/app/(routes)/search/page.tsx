@@ -19,6 +19,7 @@ import {
   Users
 } from 'lucide-react';
 import { HomeSearch } from '@/components/HomeSearch';
+import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 
 const propertyTypes = [
   {
@@ -126,6 +127,48 @@ export default function SearchPage() {
                 <div className="text-sm text-blue-200">Expert Support</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* RealScout Office Widget - $500K–$1.8M (below hero) */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-blue-400/30 rounded-full px-6 py-3 text-blue-200 font-medium mb-6 shadow-lg">
+              <Star className="w-5 h-5 text-blue-300" />
+              <span>Premium Properties</span>
+              <Sparkles className="w-4 h-4 text-blue-300 animate-pulse" />
+            </div>
+            
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Luxury Homes $500K – $1.8M
+            </h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+              Discover our curated selection of premium properties in The Vistas Summerlin. 
+              These exceptional homes offer the perfect balance of luxury, comfort, and value.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+            <VistasRealScoutOfficeListings sort-order="STATUS_AND_SIGNIFICANT_CHANGE" bandKey="search-post-hero" />
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/valuation"
+              className="inline-flex items-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-10 py-4 rounded-2xl text-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl group"
+            >
+              <span className="flex items-center">
+                Get My Vistas Value
+                <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -254,53 +297,6 @@ export default function SearchPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* RealScout Office Widget - $800K-$1.2M Range */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-blue-400/30 rounded-full px-6 py-3 text-blue-200 font-medium mb-6 shadow-lg">
-              <Star className="w-5 h-5 text-blue-300" />
-              <span>Premium Properties</span>
-              <Sparkles className="w-4 h-4 text-blue-300 animate-pulse" />
-            </div>
-            
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Luxury Homes $800K - $1.2M
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Discover our curated selection of premium properties in The Vistas Summerlin. 
-              These exceptional homes offer the perfect balance of luxury, comfort, and value.
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
-            <realscout-office-listings 
-              agent-encoded-id="QWdlbnQtMjI1MDUw"
-              price-min="800000"
-              price-max="1200000"
-              sort-order="STATUS_AND_SIGNIFICANT_CHANGE"
-            />
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/valuation"
-              className="inline-flex items-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-10 py-4 rounded-2xl text-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl group"
-            >
-              <span className="flex items-center">
-                Get My Vistas Value
-                <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Link>
           </div>
         </div>
       </section>

@@ -7,6 +7,7 @@ import Navigation from '@/components/sections/navigation';
 import Hero from '@/components/sections/hero';
 import HomeEvaluationSection from '@/components/sections/home-evaluation-v0';
 import Footer from '@/components/sections/footer';
+import { PostHeroOfficeListings } from '@/components/sections/post-hero-office-listings';
 import { Phone, MapPin, ArrowRight, Sparkles, TrendingUp, DollarSign, Calendar, Bed, Bath, Square, ExternalLink, ChevronDown } from 'lucide-react';
 import FloatingActionButton from '@/components/ui/FloatingActionButton';
 import ScrollToTop from '@/components/ui/ScrollToTop';
@@ -32,6 +33,12 @@ export default function Home() {
       <Navigation />
       <main className="flex-grow">
         <Hero />
+
+        <PostHeroOfficeListings
+          title="Live MLS Inventory by Dr. Jan Duffy"
+          description="Browse active listings across The Vistas Summerlin, then call 702-500-0607 for a subcommunity pricing strategy."
+          bandKey="home-post-hero"
+        />
 
         {/* Featured Property Teaser */}
         <section className="text-white relative overflow-hidden dark-luxury-bg">

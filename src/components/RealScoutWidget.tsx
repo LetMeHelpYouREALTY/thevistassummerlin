@@ -1,6 +1,12 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import { Buffer } from 'buffer';
+import {
+  getOfficeListingsPriceBand,
+  OFFICE_LISTINGS_USD_MAX,
+  OFFICE_LISTINGS_USD_MIN,
+} from '@/lib/realscout-office-listings-band';
 
 // The script is now loaded globally in app/layout.tsx
 // const REALSCOUT_SCRIPT_SRC = 'https://em.realscout.com/widgets/realscout-web-components.umd.js';
@@ -26,8 +32,14 @@ interface RealScoutWidgetProps {
   onListingsLoaded?: (properties: Property[]) => void;
 }
 
+function clampUsd(n: number): number {
+  return Math.min(OFFICE_LISTINGS_USD_MAX, Math.max(OFFICE_LISTINGS_USD_MIN, n));
+}
+
 export function RealScoutWidget(props: RealScoutWidgetProps) {
   const widgetRef = useRef<HTMLElement | null>(null);
+  const pathname = usePathname() ?? '/';
+  const band = useMemo(() => getOfficeListingsPriceBand(pathname), [pathname]);
   const { onListingsLoaded, ...widgetProps } = props;
   const agentEncodedId = AGENT_ID ? Buffer.from(`Agent-${AGENT_ID}`).toString('base64') : null;
 
@@ -55,10 +67,24 @@ export function RealScoutWidget(props: RealScoutWidgetProps) {
     );
   }
 
+  const fromMin = widgetProps['price-min']
+    ? clampUsd(parseInt(widgetProps['price-min'], 10) || OFFICE_LISTINGS_USD_MIN)
+    : parseInt(band.priceMin, 10);
+  const fromMax = widgetProps['price-max']
+    ? clampUsd(parseInt(widgetProps['price-max'], 10) || OFFICE_LISTINGS_USD_MAX)
+    : parseInt(band.priceMax, 10);
+  let lo = fromMin;
+  let hi = fromMax;
+  if (hi < lo) {
+    [lo, hi] = [hi, lo];
+  }
+
   const finalWidgetProps = {
     'agent-encoded-id': agentEncodedId,
     'sort-order': 'STATUS_AND_SIGNIFICANT_CHANGE',
     ...widgetProps,
+    'price-min': String(lo),
+    'price-max': String(hi),
   };
 
   return (

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
+import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
 
@@ -97,6 +98,40 @@ export default function SanMarcosPage() {
                   <div className="text-red-200 text-sm">Residents</div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        {/* RealScout Office Listings */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 via-red-50 to-orange-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Current Luxury Homes for Sale in San Marcos
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
+              Discover our curated selection of luxury homes in San Marcos. Each property offers exceptional value with Spanish colonial charm and private courtyards.
+            </p>
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-red-100">
+              <VistasRealScoutOfficeListings
+  sort-order="PRICE_LOW"
+  listing-status="For Sale"
+  property-types=",SFR"
+/>
+            </div>
+            <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
+              <a
+                href="http://drjanduffy.realscout.com/onboarding"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-red-600 hover:bg-red-700 transition-colors duration-300 transform hover:scale-105"
+              >
+                View All Listings on RealScout
+              </a>
+              <a
+                href="tel:+17025000607"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-red-600 text-base font-medium rounded-full shadow-sm text-red-600 bg-white hover:bg-red-50 transition-colors duration-300 transform hover:scale-105"
+              >
+                Call Dr. Jan Duffy for Personalized Help
+              </a>
             </div>
           </div>
         </section>
@@ -244,43 +279,7 @@ export default function SanMarcosPage() {
           </div>
         </section>
 
-        {/* RealScout Office Listings */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 via-red-50 to-orange-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Current Luxury Homes for Sale in San Marcos
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
-              Discover our curated selection of luxury homes in San Marcos. Each property offers exceptional value with Spanish colonial charm and private courtyards.
-            </p>
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-red-100">
-              <realscout-office-listings 
-                agent-encoded-id="QWdlbnQtMjI1MDUw" 
-                sort-order="PRICE_LOW" 
-                listing-status="For Sale" 
-                property-types=",SFR" 
-                price-min="650000" 
-                price-max="1500000"
-              ></realscout-office-listings>
-            </div>
-            <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
-              <a
-                href="http://drjanduffy.realscout.com/onboarding"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-red-600 hover:bg-red-700 transition-colors duration-300 transform hover:scale-105"
-              >
-                View All Listings on RealScout
-              </a>
-              <a
-                href="tel:+17025000607"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-red-600 text-base font-medium rounded-full shadow-sm text-red-600 bg-white hover:bg-red-50 transition-colors duration-300 transform hover:scale-105"
-              >
-                Call Dr. Jan Duffy for Personalized Help
-              </a>
-            </div>
-          </div>
-        </section>
+
 
         {/* Contact Section */}
         <section className="py-24 bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 text-white">

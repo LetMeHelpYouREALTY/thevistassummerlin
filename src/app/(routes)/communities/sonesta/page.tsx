@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
+import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
 
@@ -97,6 +98,40 @@ export default function SonestaPage() {
                   <div className="text-purple-200 text-sm">Residents</div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        {/* RealScout Office Listings */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 via-purple-50 to-pink-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Current Luxury Homes for Sale in Sonesta
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
+              Discover our curated selection of luxury homes in Sonesta. Each property offers exceptional value with resort-style amenities and spa facilities.
+            </p>
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-purple-100">
+              <VistasRealScoutOfficeListings
+  sort-order="PRICE_LOW"
+  listing-status="For Sale"
+  property-types=",SFR"
+/>
+            </div>
+            <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
+              <a
+                href="http://drjanduffy.realscout.com/onboarding"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-purple-600 hover:bg-purple-700 transition-colors duration-300 transform hover:scale-105"
+              >
+                View All Listings on RealScout
+              </a>
+              <a
+                href="tel:+17025000607"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-600 text-base font-medium rounded-full shadow-sm text-purple-600 bg-white hover:bg-purple-50 transition-colors duration-300 transform hover:scale-105"
+              >
+                Call Dr. Jan Duffy for Personalized Help
+              </a>
             </div>
           </div>
         </section>
@@ -244,43 +279,7 @@ export default function SonestaPage() {
           </div>
         </section>
 
-        {/* RealScout Office Listings */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 via-purple-50 to-pink-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Current Luxury Homes for Sale in Sonesta
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
-              Discover our curated selection of luxury homes in Sonesta. Each property offers exceptional value with resort-style amenities and spa facilities.
-            </p>
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-purple-100">
-              <realscout-office-listings 
-                agent-encoded-id="QWdlbnQtMjI1MDUw" 
-                sort-order="PRICE_LOW" 
-                listing-status="For Sale" 
-                property-types=",SFR" 
-                price-min="700000" 
-                price-max="1600000"
-              ></realscout-office-listings>
-            </div>
-            <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
-              <a
-                href="http://drjanduffy.realscout.com/onboarding"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-purple-600 hover:bg-purple-700 transition-colors duration-300 transform hover:scale-105"
-              >
-                View All Listings on RealScout
-              </a>
-              <a
-                href="tel:+17025000607"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-600 text-base font-medium rounded-full shadow-sm text-purple-600 bg-white hover:bg-purple-50 transition-colors duration-300 transform hover:scale-105"
-              >
-                Call Dr. Jan Duffy for Personalized Help
-              </a>
-            </div>
-          </div>
-        </section>
+
 
         {/* Contact Section */}
         <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-pink-900 text-white">

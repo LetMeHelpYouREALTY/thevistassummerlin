@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
+import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
 
@@ -102,6 +103,40 @@ export default function CanterraPage() {
                   <div className="text-blue-200 text-sm">Max Home Size (sq ft)</div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        {/* RealScout Office Listings */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Current Luxury Homes for Sale in Canterra
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
+              Discover our curated selection of luxury homes in Canterra. Each property offers exceptional value with contemporary amenities and resort-style features.
+            </p>
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-blue-100">
+              <VistasRealScoutOfficeListings
+  sort-order="PRICE_LOW"
+  listing-status="For Sale"
+  property-types=",SFR"
+/>
+            </div>
+            <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
+              <a
+                href="http://drjanduffy.realscout.com/onboarding"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105"
+              >
+                View All Listings on RealScout
+              </a>
+              <a
+                href="tel:+17025000607"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-base font-medium rounded-full shadow-sm text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-300 transform hover:scale-105"
+              >
+                Call Dr. Jan Duffy for Personalized Help
+              </a>
             </div>
           </div>
         </section>
@@ -375,43 +410,7 @@ export default function CanterraPage() {
           </div>
         </section>
 
-        {/* RealScout Office Listings */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Current Luxury Homes for Sale in Canterra
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
-              Discover our curated selection of luxury homes in Canterra. Each property offers exceptional value with contemporary amenities and resort-style features.
-            </p>
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-blue-100">
-              <realscout-office-listings 
-                agent-encoded-id="QWdlbnQtMjI1MDUw" 
-                sort-order="PRICE_LOW" 
-                listing-status="For Sale" 
-                property-types=",SFR" 
-                price-min="550000" 
-                price-max="1300000"
-              ></realscout-office-listings>
-            </div>
-            <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
-              <a
-                href="http://drjanduffy.realscout.com/onboarding"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105"
-              >
-                View All Listings on RealScout
-              </a>
-              <a
-                href="tel:+17025000607"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-base font-medium rounded-full shadow-sm text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-300 transform hover:scale-105"
-              >
-                Call Dr. Jan Duffy for Personalized Help
-              </a>
-            </div>
-          </div>
-        </section>
+
 
         {/* Contact Section */}
         <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 text-white">

@@ -6,6 +6,7 @@ import { CalendlyButton } from '@/components/CalendlyButton';
 import { CalendlyEmbed } from '@/components/CalendlyEmbed';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar, Star, Award, Users, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
+import { PostHeroOfficeListings } from '@/components/sections/post-hero-office-listings';
 
 export const metadata: Metadata = {
   title: 'Contact Dr. Jan Duffy - The Vistas Summerlin Real Estate Expert',
@@ -86,6 +87,12 @@ export default function Contact() {
             </div>
           </div>
         </section>
+
+        <PostHeroOfficeListings
+          title="Browse listings before you call"
+          description="Skim the live MLS range for The Vistas, then use the contact options above to reach Dr. Jan Duffy."
+          bandKey="contact-post-hero"
+        />
 
         {/* SEO Content Section */}
         <section className="py-24 bg-white">
