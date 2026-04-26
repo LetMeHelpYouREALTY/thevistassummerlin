@@ -15,11 +15,11 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden dark-luxury-bg">
       {/* Advanced V0 Background with Multiple Layers */}
       <div className="absolute inset-0 z-0">
         {/* Primary Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0f0a1e] to-[#1a0a3a]"></div>
         
         {/* Animated Background Elements */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -62,17 +62,17 @@ export default function Hero() {
 
             {/* Main Headline with Staggered Animation */}
             <div className="space-y-4">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
+              <h1 className="hero-headline text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
                 <span className={`block text-white transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   Find Your Perfect
                 </span>
-                <span className={`block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+                <span className={`block text-[#D4A843] transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   Home in
                 </span>
                 <span className={`block text-white transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   The Vistas
                 </span>
-                <span className={`block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+                <span className={`block text-[#D4A843] transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   Summerlin
                 </span>
               </h1>
@@ -95,24 +95,24 @@ export default function Hero() {
             </div>
 
             {/* Enhanced Key Stats with Hover Effects */}
-            <div className={`grid grid-cols-3 gap-6 py-6 transition-all duration-1000 delay-1400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-              <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300 group">
-                <div className="text-3xl lg:text-4xl font-bold text-blue-300 mb-2 group-hover:text-blue-200 transition-colors">
-                  <AnimatedCounter end={28} />
+            <div className={`grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 py-6 transition-all duration-1000 delay-1400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+              <div className="text-center stat-glass-card">
+                <div className="stat-value">
+                  <AnimatedCounter end={19} />
                 </div>
-                <div className="text-sm lg:text-base text-blue-100 group-hover:text-white transition-colors">Subcommunities</div>
+                <div className="stat-label">Listings</div>
               </div>
-              <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300 group">
-                <div className="text-3xl lg:text-4xl font-bold text-purple-300 mb-2 group-hover:text-purple-200 transition-colors">
-                  <AnimatedCounter end={875} prefix="$" suffix="K" />
+              <div className="text-center stat-glass-card col-span-2 md:col-span-1">
+                <div className="stat-value">
+                  <AnimatedCounter end={647} prefix="$" suffix="K" />
                 </div>
-                <div className="text-sm lg:text-base text-blue-100 group-hover:text-white transition-colors">Median Price</div>
+                <div className="stat-label">Median Price</div>
               </div>
-              <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300 group">
-                <div className="text-3xl lg:text-4xl font-bold text-pink-300 mb-2 group-hover:text-pink-200 transition-colors">
-                  <AnimatedCounter end={12} />
+              <div className="text-center stat-glass-card">
+                <div className="stat-value">
+                  1.2
                 </div>
-                <div className="text-sm lg:text-base text-blue-100 group-hover:text-white transition-colors">Homes Remaining</div>
+                <div className="stat-label">Days on Market</div>
               </div>
             </div>
 
@@ -120,7 +120,7 @@ export default function Hero() {
             <div className={`flex flex-col sm:flex-row gap-4 pt-4 transition-all duration-1000 delay-1600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
               <a 
                 href="tel:+17025000607" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 group hover:scale-105"
+                className="btn-primary px-8 py-4 shadow-lg flex items-center justify-center space-x-2 group w-full sm:w-auto"
               >
                 <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 <span>Call Dr. Jan: (702) 500-0607</span>
@@ -129,7 +129,7 @@ export default function Hero() {
               
               <Link 
                 href="/communities" 
-                className="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-slate-900 transition-all duration-200 shadow-lg flex items-center justify-center space-x-2 hover:scale-105"
+                className="btn-secondary px-8 py-4 shadow-lg flex items-center justify-center space-x-2 hover:text-[#D4A843] w-full sm:w-auto"
               >
                 <MapPin className="w-5 h-5" />
                 <span>Explore Communities</span>

@@ -47,14 +47,14 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+    <footer className="text-white relative overflow-hidden footer-dark-luxury">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10 section-shell">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
@@ -64,7 +64,7 @@ export default function Footer() {
                 The Vistas Summerlin
               </h3>
               <div className="mb-4">
-                <p className="text-blue-300 font-semibold mb-2">Homes by Dr. Jan Duffy</p>
+                <p className="text-[#D4A843] font-semibold mb-2">Homes by Dr. Jan Duffy</p>
                 <p className="text-sm text-blue-200">Preferred Realtor | Award-Winning Service</p>
               </div>
               <p className="text-blue-100 mb-6 leading-relaxed">
@@ -79,7 +79,7 @@ export default function Footer() {
                 <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center">
                   <Phone className="w-5 h-5 text-blue-300" />
                 </div>
-                <a href="tel:+17025000607" className="text-blue-100 hover:text-white transition-colors">
+                <a href="tel:+17025000607" className="text-blue-100 hover:text-[#D4A843] transition-colors duration-200">
                   Call Dr. Jan: (702) 500-0607
                 </a>
               </div>
@@ -87,7 +87,7 @@ export default function Footer() {
                 <div className="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center">
                   <Mail className="w-5 h-5 text-green-300" />
                 </div>
-                <a href="mailto:DrJanSells@TheVistasSummerlin.com" className="text-blue-100 hover:text-white transition-colors">
+                <a href="mailto:DrJanSells@TheVistasSummerlin.com" className="text-blue-100 hover:text-[#D4A843] transition-colors duration-200">
                   DrJanSells@TheVistasSummerlin.com
                 </a>
               </div>
@@ -122,13 +122,13 @@ export default function Footer() {
 
           {/* Communities */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Communities</h4>
+            <h4 className="text-sm font-semibold mb-6 uppercase tracking-[0.12em] text-[#D4A843]">Communities</h4>
             <ul className="space-y-3">
               {footerLinks.communities.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-blue-100 hover:text-white transition-colors duration-300 flex items-center group"
+                    className="text-blue-100 hover:text-[#D4A843] transition-colors duration-200 flex items-center group"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -140,13 +140,13 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Services</h4>
+            <h4 className="text-sm font-semibold mb-6 uppercase tracking-[0.12em] text-[#D4A843]">Services</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-blue-100 hover:text-white transition-colors duration-300 flex items-center group"
+                    className="text-blue-100 hover:text-[#D4A843] transition-colors duration-200 flex items-center group"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -158,13 +158,13 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Resources</h4>
+            <h4 className="text-sm font-semibold mb-6 uppercase tracking-[0.12em] text-[#D4A843]">Resources</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-blue-100 hover:text-white transition-colors duration-300 flex items-center group"
+                    className="text-blue-100 hover:text-[#D4A843] transition-colors duration-200 flex items-center group"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -233,25 +233,25 @@ export default function Footer() {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-blue-200 mb-4 md:mb-0">
-              © 2024 The Vistas Summerlin. All rights reserved.
+              <span className="text-[0.75rem] text-[#6b5f8a]">© 2024 The Vistas Summerlin. All rights reserved. License S.0197614.LLC</span>
             </div>
             
             <div className="flex items-center space-x-6">
               <Link 
                 href="/privacy"
-                className="text-blue-200 hover:text-white transition-colors duration-300"
+                className="text-blue-200 hover:text-[#D4A843] transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <Link 
                 href="/terms"
-                className="text-blue-200 hover:text-white transition-colors duration-300"
+                className="text-blue-200 hover:text-[#D4A843] transition-colors duration-200"
               >
                 Terms of Service
               </Link>
               <Link 
                 href="/sitemap.xml"
-                className="text-blue-200 hover:text-white transition-colors duration-300"
+                className="text-blue-200 hover:text-[#D4A843] transition-colors duration-200"
               >
                 Sitemap
               </Link>

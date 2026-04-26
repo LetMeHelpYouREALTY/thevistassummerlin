@@ -8,20 +8,20 @@ import Hero from '@/components/sections/hero';
 import HomeEvaluationSection from '@/components/sections/home-evaluation-v0';
 import Footer from '@/components/sections/footer';
 import { FAQSchema } from '@/components/StructuredData';
-import { Phone, User, MapPin, ArrowRight, Zap, Sparkles, Heart, Award, TrendingUp, Users, Star, Home as HomeIcon, DollarSign, Calendar, CheckCircle, Crown, Mountain, Building, Clock, Bed, Bath, Square, ExternalLink } from 'lucide-react';
+import { Phone, User, MapPin, ArrowRight, Zap, Sparkles, Heart, Award, TrendingUp, Users, Star, Home as HomeIcon, DollarSign, Calendar, CheckCircle, Crown, Mountain, Building, Clock, Bed, Bath, Square, ExternalLink, ChevronDown } from 'lucide-react';
 import FloatingActionButton from '@/components/ui/FloatingActionButton';
 import ScrollToTop from '@/components/ui/ScrollToTop';
 import RealScoutFrame from '@/components/RealScoutFrame';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col font-secondary text-text-dark">
+    <div className="flex min-h-screen flex-col font-secondary text-text-light dark-luxury-bg">
       <Navigation />
       <main className="flex-grow">
         <Hero />
         
         {/* V0 Featured Property Section - Moved Right After Hero */}
-        <section className="py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
+        <section className="text-white relative overflow-hidden dark-luxury-bg">
           {/* V0 Background Elements */}
           <div className="absolute inset-0">
             {/* Animated floating elements */}
@@ -41,7 +41,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative section-shell">
             {/* V0 Featured Property Badge */}
             <div className="text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-sm border border-yellow-400/30 rounded-full px-8 py-4 text-yellow-200 font-medium mb-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -85,7 +85,7 @@ export default function Home() {
             </div>
 
             {/* V0 Property Card */}
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl shadow-2xl overflow-hidden max-w-6xl mx-auto hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+            <div className="property-glass-card shadow-2xl overflow-hidden max-w-6xl mx-auto transition-all duration-500">
               <div className="grid lg:grid-cols-2 gap-0">
                 
                 {/* Property Image Gallery */}
@@ -174,20 +174,20 @@ export default function Home() {
                 </div>
 
                 {/* Property Details */}
-                <div className="p-12 bg-gradient-to-br from-white to-blue-50">
+                <div className="p-12 md:p-12 p-5 bg-[rgba(255,255,255,0.02)] text-[#f0eaff]">
                   <div className="space-y-8">
                     
                     {/* Property Description */}
                     <div>
-                      <h4 className="text-2xl font-bold text-gray-900 mb-4">🏡 About This Canterra Home</h4>
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      <h4 className="text-2xl font-bold text-[#f0eaff] mb-4">About This Canterra Home</h4>
+                      <p className="text-lg text-[#9b8ecf] leading-relaxed mb-6">
                         This exceptional 4-bedroom, 3-bathroom home at 11773 Golden Moments Avenue is located in 
                         Canterra - The Vistas Summerlin's premier community featuring oversized lots up to 11,761 sq ft. 
                         This home showcases Canterra's signature dual master suite floor plan, perfect for multi-generational 
                         families seeking flexible living arrangements. The modern chef's kitchen showcases black granite 
                         countertops and white shaker cabinets, creating a sophisticated culinary space.
                       </p>
-                      <p className="text-lg text-gray-700 leading-relaxed">
+                      <p className="text-lg text-[#9b8ecf] leading-relaxed">
                         The expansive landscaped yard takes full advantage of Canterra's oversized lot design, providing 
                         ample space for pools, professional landscaping, and outdoor entertaining. Built during the 
                         pre-boom era when land was more affordable, this home represents excellent investment value. 
@@ -199,8 +199,8 @@ export default function Home() {
                     
                     {/* V0 Property Features */}
                     <div>
-                      <h4 className="text-2xl font-bold text-gray-900 mb-6">✨ Key Features</h4>
-                      <div className="grid grid-cols-1 gap-4">
+                      <h4 className="text-2xl font-bold text-[#f0eaff] mb-6">Key Features</h4>
+                      <div className="grid grid-cols-1 gap-4 feature-diamond-list">
                         {[
                           "Canterra's signature dual master suite floor plan - perfect for multi-generational living",
                           "Oversized lot design providing space for pools, landscaping, and outdoor kitchens",
@@ -214,8 +214,7 @@ export default function Home() {
                           "Move-in ready condition with recent updates and modern finishes"
                         ].map((feature, index) => (
                           <div key={index} className="flex items-center space-x-3">
-                            <CheckCircle className="w-5 h-5 text-green-500" />
-                            <span className="text-gray-700">{feature}</span>
+                            <span className="text-[#9b8ecf]">{feature}</span>
                           </div>
                         ))}
                       </div>
@@ -227,7 +226,7 @@ export default function Home() {
                         href="https://drjanduffy.realscout.com/homesearch/listings/p-11773-golden-moments-avenue-las-vegas-89138-glvartrestle-139"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center space-x-2"
+                        className="btn-primary block w-full text-center py-4 text-lg shadow-xl flex items-center justify-center space-x-2"
                       >
                         <ExternalLink className="w-5 h-5" />
                         <span>View Full Listing</span>
@@ -235,7 +234,7 @@ export default function Home() {
                       
                       <a
                         href="tel:+17025000607"
-                        className="block w-full border-2 border-blue-600 text-blue-600 text-center py-4 rounded-2xl font-bold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                        className="btn-secondary block w-full text-center py-4 text-lg shadow-lg flex items-center justify-center space-x-2"
                       >
                         <Phone className="w-5 h-5" />
                         <span>Call Dr. Jan Duffy</span>
@@ -286,6 +285,7 @@ export default function Home() {
             {/* V0 Interactive RealScout Frame */}
             <div className="mb-16">
               <div className="text-center mb-8">
+                <p className="text-2xl font-primary text-[#D4A843] mb-4">Explore The Neighborhood</p>
                 <h3 className="text-3xl font-bold text-white mb-4">
                   🏡 Explore Complete Property Details
                 </h3>
@@ -294,12 +294,14 @@ export default function Home() {
                 </p>
               </div>
               
-              <RealScoutFrame 
-                url="https://drjanduffy.realscout.com/homesearch/listings/p-11773-golden-moments-avenue-las-vegas-89138-glvartrestle-139"
-                title="11773 Golden Moments Avenue - Complete Listing"
-                description="Interactive RealScout portal with full property details, photos, and contact options"
-                className="shadow-2xl"
-              />
+              <div className="rounded-xl overflow-hidden border border-[rgba(212,168,67,0.4)] min-h-[280px] md:min-h-[400px]">
+                <RealScoutFrame 
+                  url="https://drjanduffy.realscout.com/homesearch/listings/p-11773-golden-moments-avenue-las-vegas-89138-glvartrestle-139"
+                  title="11773 Golden Moments Avenue - Complete Listing"
+                  description="Interactive RealScout portal with full property details, photos, and contact options"
+                  className="shadow-2xl"
+                />
+              </div>
             </div>
 
             {/* V0 Bottom CTA */}
@@ -310,14 +312,14 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link
                   href="/properties/11773-golden-moments-avenue"
-                  className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-10 py-4 rounded-2xl text-lg font-bold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center space-x-2"
+                  className="btn-primary px-10 py-4 text-lg shadow-xl flex items-center justify-center space-x-2"
                 >
                   <Calendar className="w-5 h-5" />
                   <span>Schedule Tour</span>
                 </Link>
                 <Link
                   href="/communities/canterra"
-                  className="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-10 py-4 rounded-2xl text-lg font-bold hover:bg-white/20 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                  className="btn-secondary px-10 py-4 text-lg shadow-lg flex items-center justify-center space-x-2"
                 >
                   <MapPin className="w-5 h-5" />
                   <span>Explore Canterra</span>
@@ -328,7 +330,7 @@ export default function Home() {
         </section>
         
         {/* V0 Clean Homepage Content */}
-        <section className="py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-50 relative overflow-hidden">
+        <section className="relative overflow-hidden dark-luxury-bg">
           {/* V0 Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute top-20 right-20 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl animate-pulse"></div>
@@ -336,7 +338,7 @@ export default function Home() {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-200/10 rounded-full blur-2xl animate-pulse delay-500"></div>
           </div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative section-shell">
             <div className="text-center mb-16">
               <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                 The Vistas Summerlin
@@ -431,7 +433,7 @@ export default function Home() {
         </section>
         
         {/* V0 Brand Focus Section */}
-        <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+        <section className="text-white relative overflow-hidden dark-luxury-bg">
           {/* V0 Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -442,7 +444,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
           </div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative section-shell">
             <div className="text-center mb-16">
               {/* V0 Brand Badge */}
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-8 py-4 text-blue-200 font-medium mb-8 shadow-lg hover:bg-white/20 hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -507,7 +509,7 @@ export default function Home() {
         <HomeEvaluationSection />
         
         {/* V0 Enhanced Quick Links Section */}
-        <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+        <section className="text-white relative overflow-hidden dark-luxury-bg">
           {/* V0 Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -519,7 +521,7 @@ export default function Home() {
             <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-pink-500/10 rounded-full blur-lg animate-pulse delay-300"></div>
           </div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative section-shell">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
                 Ready to Work with The Vistas Summerlin Expert?
@@ -613,8 +615,8 @@ export default function Home() {
         </section>
 
         {/* FAQ Section for Featured Snippets */}
-        <section className="py-24 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="dark-luxury-bg">
+          <div className="section-shell">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -622,51 +624,39 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="max-w-4xl mx-auto space-y-8">
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">What is The Vistas Summerlin?</h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  The Vistas Summerlin is a prestigious master-planned community in Las Vegas featuring luxury homes, 
-                  world-class amenities, and access to TPC Summerlin golf course. It offers over 28 distinct subcommunities 
-                  with homes ranging from $800K to over $2.5M, providing an unparalleled lifestyle in the heart of Summerlin.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">How much do homes cost in The Vistas Summerlin?</h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Home prices in The Vistas Summerlin typically range from $800,000 to over $2.5 million, depending on the 
-                  community, home size, and features. The median home price is approximately $1.2 million, with luxury estates 
-                  commanding premium prices for their location, amenities, and architectural features.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">What amenities are available in The Vistas Summerlin?</h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  The Vistas Summerlin offers world-class amenities including TPC Summerlin golf course, resort-style pools, 
-                  fitness centers, walking trails, parks, and playgrounds. Many communities feature private clubhouses, 
-                  tennis courts, and concierge services, providing a resort-like living experience.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Is The Vistas Summerlin a good investment?</h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Yes, The Vistas Summerlin has consistently shown strong appreciation and is considered one of Las Vegas's 
-                  premier real estate investments. The community's location, amenities, and reputation make it highly 
-                  desirable for both primary residences and investment properties, with strong rental demand and property values.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">How can I find the right real estate agent for The Vistas Summerlin?</h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Dr. Jan Duffy is a specialized real estate agent with extensive experience in The Vistas Summerlin market. 
-                  With 12+ years of Nevada market expertise and flexible scheduling that works around your lifestyle, 
-                  Dr. Duffy provides personalized service for buyers, sellers, and investors in The Vistas Summerlin community.
-                </p>
-              </div>
+            <div className="max-w-4xl mx-auto space-y-4">
+              {[
+                {
+                  q: 'What is The Vistas Summerlin?',
+                  a: "The Vistas Summerlin is a prestigious master-planned community in Las Vegas featuring luxury homes, world-class amenities, and access to TPC Summerlin golf course. It offers over 28 distinct subcommunities with homes ranging from $800K to over $2.5M, providing an unparalleled lifestyle in the heart of Summerlin."
+                },
+                {
+                  q: 'How much do homes cost in The Vistas Summerlin?',
+                  a: "Home prices in The Vistas Summerlin typically range from $800,000 to over $2.5 million, depending on the community, home size, and features. The median home price is approximately $1.2 million, with luxury estates commanding premium prices for their location, amenities, and architectural features."
+                },
+                {
+                  q: 'What amenities are available in The Vistas Summerlin?',
+                  a: "The Vistas Summerlin offers world-class amenities including TPC Summerlin golf course, resort-style pools, fitness centers, walking trails, parks, and playgrounds. Many communities feature private clubhouses, tennis courts, and concierge services, providing a resort-like living experience."
+                },
+                {
+                  q: 'Is The Vistas Summerlin a good investment?',
+                  a: "Yes, The Vistas Summerlin has consistently shown strong appreciation and is considered one of Las Vegas's premier real estate investments. The community's location, amenities, and reputation make it highly desirable for both primary residences and investment properties, with strong rental demand and property values."
+                },
+                {
+                  q: 'How can I find the right real estate agent for The Vistas Summerlin?',
+                  a: "Dr. Jan Duffy is a specialized real estate agent with extensive experience in The Vistas Summerlin market. With 12+ years of Nevada market expertise and flexible scheduling that works around your lifestyle, Dr. Duffy provides personalized service for buyers, sellers, and investors in The Vistas Summerlin community."
+                }
+              ].map((item) => (
+                <details key={item.q} className="property-glass-card overflow-hidden group">
+                  <summary className="faq-question-row flex items-center justify-between">
+                    <span className="faq-question-text">{item.q}</span>
+                    <ChevronDown className="w-5 h-5 faq-chevron group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6">
+                    <p className="faq-answer-text">{item.a}</p>
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
         </section>

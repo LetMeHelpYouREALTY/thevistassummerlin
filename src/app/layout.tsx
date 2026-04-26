@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import "@/styles/realscout-widgets.css";
 import Script from 'next/script';
@@ -24,9 +24,9 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-const lato = Lato({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['300', '400', '500'],
   variable: '--font-body',
   display: 'swap',
 });
@@ -110,6 +110,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+        />
         {/* Theme color for supported browsers (Chrome, Safari, Edge) */}
         <meta name="theme-color" content="#2C3E50" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#1a252f" media="(prefers-color-scheme: dark)" />
@@ -163,7 +167,7 @@ export default function RootLayout({
           id="realscout-widgets"
         />
       </head>
-      <body className={`antialiased ${playfair.variable} ${lato.variable} font-secondary text-text-dark bg-white`}>
+      <body className={`antialiased ${playfair.variable} ${dmSans.variable} font-secondary text-text-light bg-deep`}>
         {children}
       </body>
     </html>

@@ -50,7 +50,7 @@ export default function HomeEvaluationSection() {
   };
 
   return (
-    <section id="home-valuation" className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+    <section id="home-valuation" className="relative overflow-hidden valuation-section-bg">
       {/* V0 Advanced Background Elements */}
       <div className="absolute inset-0">
         {/* Animated floating orbs */}
@@ -65,15 +65,15 @@ export default function HomeEvaluationSection() {
         }}></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 section-shell">
         {/* V0 Section Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20">
             <Sparkles className="w-4 h-4 mr-2" />
             Instant Valuation
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-            Instant Home Valuation
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+            What&apos;s Your Home Worth?
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
             Get your comprehensive market analysis in under 60 seconds
@@ -82,7 +82,7 @@ export default function HomeEvaluationSection() {
 
         {/* V0 Compact Widget Container */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-8 border border-white/20 hover:shadow-3xl transition-all duration-300">
+          <div className="valuation-widget-card bg-white rounded-2xl shadow-2xl p-10 border border-white/20 transition-all duration-300">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-transform duration-300 shadow-lg">
                 <TrendingUp className="w-8 h-8 text-white" />
@@ -115,11 +115,7 @@ export default function HomeEvaluationSection() {
                     agent-encoded-id="QWdlbnQtMjI1MDUw"
                     onLoad={handleWidgetLoad}
                     onError={handleWidgetError}
-                    style={{
-                      maxWidth: '100%',
-                      height: 'auto',
-                      borderRadius: '12px'
-                    }}
+                    class="valuation-widget-element"
                   />
                 </div>
               ) : (

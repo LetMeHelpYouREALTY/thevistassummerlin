@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,6 +15,15 @@
 */
 
 :root {
+  --color-bg-deep: #08051a;
+  --color-bg-mid: #0f0a1e;
+  --color-bg-card: rgba(255, 255, 255, 0.06);
+  --color-gold: #D4A843;
+  --color-gold-soft: rgba(212, 168, 67, 0.15);
+  --color-purple-mid: #9b8ecf;
+  --color-text-light: #f0eaff;
+  --color-text-muted: #9b8ecf;
+
   /* === Luxury Color Palette === */
   --color-primary-navy: #0A2540;      /* Deep Navy - Primary Brand */
   --color-secondary-gold: #D4AF37;    /* Warm Gold - Luxury Accent */
@@ -32,7 +41,7 @@
 
   /* === Premium Typography === */
   --font-primary: 'Playfair Display', serif;      /* Luxury Headings */
-  --font-secondary: 'Source Sans Pro', sans-serif; /* Clean Body Text */
+  --font-secondary: 'DM Sans', sans-serif; /* Clean Body Text */
 
   /* === Typography Scale === */
   --text-xs: 0.75rem;    /* 12px */
@@ -116,8 +125,8 @@
   --box-shadow-widget: var(--shadow-2xl);
   
   /* Core Colors */
-  --background: var(--color-white);
-  --foreground: var(--color-text-dark);
+  --background: var(--color-bg-mid);
+  --foreground: var(--color-text-light);
   --primary: var(--color-primary-navy);
   --primary-foreground: var(--color-white);
   --accent: var(--color-accent-blue);
@@ -279,8 +288,8 @@
     font-family: var(--font-secondary);
     font-weight: var(--font-weight-regular);
     line-height: 1.6;
-    color: var(--color-text-dark);
-    background-color: var(--color-white);
+    color: inherit;
+    background: linear-gradient(135deg, var(--color-bg-mid) 0%, #1a0a3a 100%);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -290,7 +299,7 @@
     font-family: var(--font-primary);
     font-weight: var(--font-weight-semibold);
     line-height: 1.2;
-    color: var(--color-text-dark);
+    color: var(--color-text-light);
     margin-bottom: var(--space-md);
   }
 
@@ -356,51 +365,51 @@
 
   /* === Luxury Button Styling === */
   .btn-primary {
-    background: linear-gradient(135deg, var(--color-primary-navy), var(--color-accent-blue));
-    color: var(--color-white);
-    padding: var(--space-md) var(--space-xl);
-    border-radius: var(--radius-lg);
-    font-weight: var(--font-weight-medium);
-    font-size: var(--text-lg);
-    border: none;
+    background: var(--color-gold);
+    color: var(--color-bg-mid);
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1.5px solid transparent;
     cursor: pointer;
-    transition: all var(--duration-normal) var(--ease-out);
-    box-shadow: var(--shadow-md);
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-gold);
     min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    font-family: var(--font-secondary);
+    letter-spacing: 0.05em;
   }
 
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    background: #c49a35;
     text-decoration: none;
   }
 
   .btn-secondary {
     background: transparent;
-    color: var(--color-primary-navy);
-    padding: var(--space-md) var(--space-xl);
-    border-radius: var(--radius-lg);
-    font-weight: var(--font-weight-medium);
-    font-size: var(--text-lg);
-    border: 2px solid var(--color-primary-navy);
+    color: var(--color-gold);
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1.5px solid var(--color-gold);
     cursor: pointer;
-    transition: all var(--duration-normal) var(--ease-out);
+    transition: all 0.2s ease;
     min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    font-family: var(--font-secondary);
+    letter-spacing: 0.05em;
   }
 
   .btn-secondary:hover {
-    background: var(--color-primary-navy);
-    color: var(--color-white);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    background: rgba(212, 168, 67, 0.1);
     text-decoration: none;
   }
 
@@ -497,5 +506,134 @@
   .bg-grid-pattern {
     background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
     background-size: 40px 40px;
+  }
+
+  .section-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .dark-luxury-bg {
+    background: linear-gradient(135deg, var(--color-bg-mid) 0%, #1a0a3a 100%);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .stat-glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 3px solid var(--color-gold);
+  }
+
+  .stat-value {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    color: var(--color-gold);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: var(--font-secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-purple-mid);
+  }
+
+  .property-glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(212, 168, 67, 0.3);
+    border-radius: 16px;
+  }
+
+  .gold-icon {
+    color: var(--color-gold);
+  }
+
+  .gold-price {
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    color: var(--color-gold);
+  }
+
+  .feature-diamond-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .feature-diamond-list li::before {
+    content: '◆';
+    color: var(--color-gold);
+    margin-right: 0.5rem;
+  }
+
+  .faq-question-row {
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+  }
+
+  .faq-question-text {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: #e8e0f0;
+    font-weight: 500;
+  }
+
+  .faq-answer-text {
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  .faq-chevron {
+    color: var(--color-gold);
+    transition: transform 0.2s ease;
+  }
+
+  .hero-headline {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  .valuation-section-bg {
+    background: linear-gradient(135deg, #1a0a3a 0%, #0f0a1e 100%);
+  }
+
+  .valuation-widget-card {
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .valuation-widget-element {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .footer-dark-luxury {
+    background: #08051a;
+    border-top: 1px solid rgba(212, 168, 67, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .section-shell {
+      padding: 3rem 1.25rem;
+    }
   }
 }

@@ -161,15 +161,15 @@ export default function FAQPage() {
       ]} />
 
       <Navigation />
-      <main className="flex-grow">
+      <main className="flex-grow dark-luxury-bg text-[#f0eaff]">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+        <section className="dark-luxury-bg text-white relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative section-shell">
             <div className="text-center">
               <h1 className="text-5xl lg:text-6xl font-bold mb-6">
                 Frequently Asked Questions
@@ -183,26 +183,26 @@ export default function FAQPage() {
         </section>
 
         {/* FAQ Sections */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="dark-luxury-bg">
+          <div className="section-shell">
             {faqs.map((category, categoryIndex) => (
               <div key={categoryIndex} className="mb-16">
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8 text-center">
+                <h2 className="text-3xl lg:text-4xl font-bold text-[#f0eaff] mb-8 text-center">
                   {category.category}
                 </h2>
                 
                 <div className="space-y-6">
                   {category.questions.map((faq, faqIndex) => (
-                    <div key={faqIndex} className="bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div key={faqIndex} className="property-glass-card rounded-2xl overflow-hidden transition-all duration-300">
                       <details className="group">
-                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-blue-50 transition-colors">
-                          <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                        <summary className="faq-question-row flex items-center justify-between">
+                          <h3 className="faq-question-text pr-4">
                             {faq.question}
                           </h3>
-                          <ChevronDown className="w-6 h-6 text-blue-600 group-open:rotate-180 transition-transform duration-200 flex-shrink-0" />
+                          <ChevronDown className="w-6 h-6 faq-chevron group-open:rotate-180 flex-shrink-0" />
                         </summary>
                         <div className="px-6 pb-6">
-                          <p className="text-gray-700 leading-relaxed">
+                          <p className="faq-answer-text">
                             {faq.answer}
                           </p>
                         </div>
@@ -216,37 +216,37 @@ export default function FAQPage() {
         </section>
 
         {/* Contact CTA */}
-        <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-3xl shadow-2xl p-12 text-center">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+        <section className="dark-luxury-bg">
+          <div className="section-shell">
+            <div className="property-glass-card rounded-3xl p-12 text-center">
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#f0eaff] mb-6">
                 Still Have Questions?
               </h2>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-[#9b8ecf] mb-8 max-w-3xl mx-auto">
                 Dr. Jan Duffy is here to help with any questions about The Vistas Summerlin, 
                 Canterra community, or the home buying/selling process. Contact her today!
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div className="flex items-center justify-center space-x-3">
-                  <Phone className="w-6 h-6 text-blue-600" />
+                  <Phone className="w-6 h-6 gold-icon" />
                   <div>
-                    <p className="font-semibold text-gray-900">(702) 500-0607</p>
-                    <p className="text-sm text-gray-600">Call Dr. Jan Duffy</p>
+                    <p className="font-semibold text-[#f0eaff]">(702) 500-0607</p>
+                    <p className="text-sm text-[#9b8ecf]">Call Dr. Jan Duffy</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
-                  <Mail className="w-6 h-6 text-blue-600" />
+                  <Mail className="w-6 h-6 gold-icon" />
                   <div>
-                    <p className="font-semibold text-gray-900">DrJanSells@TheVistasSummerlin.com</p>
-                    <p className="text-sm text-gray-600">Email Dr. Jan Duffy</p>
+                    <p className="font-semibold text-[#f0eaff]">DrJanSells@TheVistasSummerlin.com</p>
+                    <p className="text-sm text-[#9b8ecf]">Email Dr. Jan Duffy</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
-                  <Clock className="w-6 h-6 text-blue-600" />
+                  <Clock className="w-6 h-6 gold-icon" />
                   <div>
-                    <p className="font-semibold text-gray-900">Flexible Hours</p>
-                    <p className="text-sm text-gray-600">6AM - 9PM Daily</p>
+                    <p className="font-semibold text-[#f0eaff]">Flexible Hours</p>
+                    <p className="text-sm text-[#9b8ecf]">6AM - 9PM Daily</p>
                   </div>
                 </div>
               </div>
@@ -254,13 +254,13 @@ export default function FAQPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="btn-primary px-8 py-4 font-bold w-full sm:w-auto"
                 >
                   Contact Dr. Jan Duffy
                 </Link>
                 <Link
                   href="/communities"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105"
+                  className="btn-secondary px-8 py-4 font-bold w-full sm:w-auto"
                 >
                   Explore Communities
                 </Link>
