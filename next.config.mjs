@@ -91,8 +91,22 @@ const nextConfig = {
             value: 'camera=(), microphone=(), geolocation=(self), payment=(), usb=(), magnetometer=(), gyroscope=(), speaker=()',
           },
           {
+            // frame-src: RealScout uses widget.realscout.com + *.realscout.com (agent iframes); Calendly uses calendly.com iframes + assets.calendly.com script
+            // script-src: Calendly widget.js loads from assets.calendly.com
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; base-uri 'self'; frame-ancestors 'self' https://vercel.com https://*.vercel.com; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com; connect-src 'self' https://em.realscout.com https://www.realscout.com https:; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:; frame-src 'self' https://www.google.com https://www.youtube.com https://player.vimeo.com https://em.realscout.com https://www.realscout.com;",
+            value:
+              "default-src 'self'; " +
+              "base-uri 'self'; " +
+              "frame-ancestors 'self' https://vercel.com https://*.vercel.com; " +
+              "object-src 'none'; " +
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://assets.calendly.com; " +
+              "connect-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://*.calendly.com https:; " +
+              "img-src 'self' data: blob: https:; " +
+              "style-src 'self' 'unsafe-inline' https:; " +
+              "font-src 'self' data: https:; " +
+              "frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://player.vimeo.com " +
+              "https://em.realscout.com https://www.realscout.com https://widget.realscout.com https://*.realscout.com " +
+              "https://calendly.com https://*.calendly.com https://assets.calendly.com;",
           },
         ],
       },
