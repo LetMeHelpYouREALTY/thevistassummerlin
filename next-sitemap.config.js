@@ -1,4 +1,5 @@
 module.exports = {
+  // Keep in sync with src/lib/site-url.ts (NEXT_PUBLIC_BASE_URL or https://www.thevistassummerlin.com)
   siteUrl: 'https://www.thevistassummerlin.com',
   generateRobotsTxt: true,
   robotsTxtOptions: {

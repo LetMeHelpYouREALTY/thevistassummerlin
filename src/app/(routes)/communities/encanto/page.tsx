@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Encanto Community - Charming Living in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Encanto Community - Charming Living in The Vistas Summerlin',
     description: 'Charming community featuring luxury homes with community gardens and family-friendly amenities.',
-    url: 'https://www.thevistassummerlin.com/communities/encanto',
+    url: `${getSiteUrl()}/communities/encanto`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/encanto',
+    canonical: `${getSiteUrl()}/communities/encanto`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function EncantoPage() {
         amenities={['Charming Architecture', 'Community Gardens', 'Pool Area', 'Playground', 'Walking Trails', 'Community Events']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Encanto', url: 'https://www.thevistassummerlin.com/communities/encanto' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Encanto', url: `${getSiteUrl()}/communities/encanto` }
       ]} />
 
       <Navigation />

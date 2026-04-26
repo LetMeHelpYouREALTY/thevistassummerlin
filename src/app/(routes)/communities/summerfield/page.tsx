@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Summerfield Community - Summer Living in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Summerfield Community - Summer Living in The Vistas Summerlin',
     description: 'Summer living community featuring luxury homes with family amenities and community events.',
-    url: 'https://www.thevistassummerlin.com/communities/summerfield',
+    url: `${getSiteUrl()}/communities/summerfield`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/summerfield',
+    canonical: `${getSiteUrl()}/communities/summerfield`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function SummerfieldPage() {
         amenities={['Summer Activities', 'Community Pool', 'Playground', 'Walking Trails', 'Community Events', 'Family Amenities']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Summerfield', url: 'https://www.thevistassummerlin.com/communities/summerfield' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Summerfield', url: `${getSiteUrl()}/communities/summerfield` }
       ]} />
 
       <Navigation />

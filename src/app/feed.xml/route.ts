@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
+import { getSiteUrl } from '@/lib/site-url';
 
 export async function GET() {
-  const baseUrl = 'https://www.thevistassummerlin.com';
+  const baseUrl = getSiteUrl();
   const currentDate = new Date().toUTCString();
   
   const feed = `<?xml version="1.0" encoding="UTF-8"?>

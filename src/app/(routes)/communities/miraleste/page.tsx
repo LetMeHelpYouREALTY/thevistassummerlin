@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Miraleste Community - Elevated Living in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Miraleste Community - Elevated Living in The Vistas Summerlin',
     description: 'Elevated living community featuring luxury homes with modern design and golf course access.',
-    url: 'https://www.thevistassummerlin.com/communities/miraleste',
+    url: `${getSiteUrl()}/communities/miraleste`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/miraleste',
+    canonical: `${getSiteUrl()}/communities/miraleste`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function MiralestePage() {
         amenities={['Elevated Views', 'Modern Design', 'Private Terraces', 'Golf Course Access', 'Community Pool', 'Fitness Center']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Miraleste', url: 'https://www.thevistassummerlin.com/communities/miraleste' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Miraleste', url: `${getSiteUrl()}/communities/miraleste` }
       ]} />
 
       <Navigation />

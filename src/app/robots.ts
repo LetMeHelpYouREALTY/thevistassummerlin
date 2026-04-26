@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next'
+import { getSiteUrl } from '@/lib/site-url'
 
 export default function robots(): MetadataRoute.Robots {
+  const site = getSiteUrl()
   return {
     rules: [
       {
@@ -22,10 +24,10 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: [
-      'https://www.thevistassummerlin.com/sitemap.xml',
-      'https://www.thevistassummerlin.com/image-sitemap.xml',
-      'https://www.thevistassummerlin.com/feed.xml',
+      `${site}/sitemap.xml`,
+      `${site}/image-sitemap.xml`,
+      `${site}/feed.xml`,
     ],
-    host: 'https://www.thevistassummerlin.com',
+    host: site,
   }
 }

@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Canterra Community - Oversized Lots & Dual Master Suites in The Vistas Summerlin | Dr. Jan Duffy',
@@ -27,11 +28,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Canterra Community - Oversized Lots & Dual Master Suites in The Vistas Summerlin',
     description: 'Oversized lots up to 11,761 sq ft with dual master suite floor plans perfect for multi-generational living in The Vistas Summerlin.',
-    url: 'https://www.thevistassummerlin.com/communities/canterra',
+    url: `${getSiteUrl()}/communities/canterra`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/canterra',
+    canonical: `${getSiteUrl()}/communities/canterra`,
   },
 };
 
@@ -47,9 +48,9 @@ export default function CanterraPage() {
         amenities={['Oversized Lots', 'Dual Master Suites', 'Multi-Generational Living', 'Pool Installation Space', 'RV Parking', '360-Degree Design']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Canterra', url: 'https://www.thevistassummerlin.com/communities/canterra' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Canterra', url: `${getSiteUrl()}/communities/canterra` }
       ]} />
 
       <Navigation />

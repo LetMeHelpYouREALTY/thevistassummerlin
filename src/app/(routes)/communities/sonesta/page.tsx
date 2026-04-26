@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Sonesta Community - Resort-Style Living in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Sonesta Community - Resort-Style Living in The Vistas Summerlin',
     description: 'Resort-style living community featuring luxury homes with spa facilities and resort amenities.',
-    url: 'https://www.thevistassummerlin.com/communities/sonesta',
+    url: `${getSiteUrl()}/communities/sonesta`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/sonesta',
+    canonical: `${getSiteUrl()}/communities/sonesta`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function SonestaPage() {
         amenities={['Resort Amenities', 'Spa Facilities', 'Community Pool', 'Tennis Courts', 'Fitness Center', 'Community Events']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Sonesta', url: 'https://www.thevistassummerlin.com/communities/sonesta' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Sonesta', url: `${getSiteUrl()}/communities/sonesta` }
       ]} />
 
       <Navigation />

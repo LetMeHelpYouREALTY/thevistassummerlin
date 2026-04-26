@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Talaverde Community - Modern Amenities in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Talaverde Community - Modern Amenities in The Vistas Summerlin',
     description: 'Modern amenities community featuring luxury homes with contemporary design and community facilities.',
-    url: 'https://www.thevistassummerlin.com/communities/talaverde',
+    url: `${getSiteUrl()}/communities/talaverde`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/talaverde',
+    canonical: `${getSiteUrl()}/communities/talaverde`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function TalaverdePage() {
         amenities={['Modern Amenities', 'Contemporary Design', 'Community Pool', 'Fitness Center', 'Walking Trails', 'Community Center']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Talaverde', url: 'https://www.thevistassummerlin.com/communities/talaverde' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Talaverde', url: `${getSiteUrl()}/communities/talaverde` }
       ]} />
 
       <Navigation />

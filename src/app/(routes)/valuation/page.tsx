@@ -6,15 +6,16 @@ import { CalendlyButton } from '@/components/CalendlyButton';
 import { CalendlyEmbed } from '@/components/CalendlyEmbed';
 import HomeEvaluationSection from '@/components/sections/home-evaluation-v0';
 import Link from 'next/link';
-import { 
-  Calculator, 
-  Home, 
-  TrendingUp, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Star, 
-  CheckCircle, 
+import { getSiteUrl } from '@/lib/site-url';
+import {
+  Calculator,
+  Home,
+  TrendingUp,
+  MapPin,
+  Phone,
+  Mail,
+  Star,
+  CheckCircle,
   ArrowRight,
   BarChart,
   DollarSign,
@@ -22,7 +23,7 @@ import {
   Shield,
   Users,
   Award,
-  Sparkles
+  Sparkles,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -39,11 +40,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Home Valuation | The Vistas Summerlin Seller Pricing Guide',
     description: 'See your likely market value with local comps and seller-focused pricing guidance.',
-    url: 'https://www.thevistassummerlin.com/valuation',
+    url: `${getSiteUrl()}/valuation`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/valuation',
+    canonical: `${getSiteUrl()}/valuation`,
   },
 };
 

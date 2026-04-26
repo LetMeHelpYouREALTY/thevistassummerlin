@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Solano Community - Contemporary Design in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Solano Community - Contemporary Design in The Vistas Summerlin',
     description: 'Contemporary design community featuring luxury homes with modern amenities and community events.',
-    url: 'https://www.thevistassummerlin.com/communities/solano',
+    url: `${getSiteUrl()}/communities/solano`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/solano',
+    canonical: `${getSiteUrl()}/communities/solano`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function SolanoPage() {
         amenities={['Contemporary Design', 'Modern Amenities', 'Community Pool', 'Fitness Center', 'Walking Trails', 'Community Events']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Solano', url: 'https://www.thevistassummerlin.com/communities/solano' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Solano', url: `${getSiteUrl()}/communities/solano` }
       ]} />
 
       <Navigation />

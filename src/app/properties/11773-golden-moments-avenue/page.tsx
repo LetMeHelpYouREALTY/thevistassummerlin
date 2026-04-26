@@ -5,9 +5,13 @@ import { MapPin, Bed, Bath, Square, Calendar, Car, Home, TreePine, Phone, Mail, 
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { PropertyImageGallery, goldenMomentsImages } from '@/components/PropertyImageGallery';
+import { getSiteUrl } from '@/lib/site-url';
 
 // Keep server-rendered so Vercel Windows prebuild can package this route (see (routes)/layout).
 export const dynamic = 'force-dynamic';
+
+const siteUrl = getSiteUrl();
+const propertyPath = '/properties/11773-golden-moments-avenue';
 
 export const metadata: Metadata = {
   title: "11773 Golden Moments Avenue | The Vistas Summerlin Home for Sale",
@@ -25,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "11773 Golden Moments Avenue | The Vistas Summerlin Home for Sale",
     description: "Explore this The Vistas Summerlin property with photos, map, and showing details.",
-    url: "https://www.thevistassummerlin.com/properties/11773-golden-moments-avenue",
+    url: `${siteUrl}${propertyPath}`,
          images: [
            {
              url: "/subcommunities/IMG_0737.JPG",
@@ -36,7 +40,7 @@ export const metadata: Metadata = {
          ],
   },
   alternates: {
-    canonical: "https://www.thevistassummerlin.com/properties/11773-golden-moments-avenue",
+    canonical: `${siteUrl}${propertyPath}`,
   },
 };
 
@@ -47,8 +51,8 @@ function PropertySchema() {
     "@type": "RealEstateListing",
     "name": "11773 Golden Moments Avenue, Las Vegas, NV",
     "description": "Move-in ready 4-bedroom, 3-bath home in The Vistas Summerlin with two spacious primary suites and modern chef's kitchen",
-    "url": "https://www.thevistassummerlin.com/properties/11773-golden-moments-avenue",
-     "image": "https://www.thevistassummerlin.com/subcommunities/IMG_0737.JPG",
+    "url": `${siteUrl}${propertyPath}`,
+     "image": `${siteUrl}/subcommunities/IMG_0737.JPG`,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "11773 Golden Moments Avenue",
@@ -83,7 +87,7 @@ function PropertySchema() {
     "listingAgent": {
       "@type": "RealEstateAgent",
       "name": "Dr. Jan Duffy",
-      "url": "https://www.thevistassummerlin.com"
+      "url": siteUrl
     },
     "amenityFeature": [
       {

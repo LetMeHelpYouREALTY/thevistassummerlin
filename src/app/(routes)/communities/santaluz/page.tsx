@@ -7,6 +7,7 @@ import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOffic
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import RealScoutListings from '@/components/RealScoutListings';
 import { RealEstateListingSchema, CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Santaluz Community - Luxury Homes in The Vistas Summerlin | Dr. Jan Duffy',
@@ -24,11 +25,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Santaluz Community - Luxury Homes in The Vistas Summerlin',
     description: 'Premium community with luxury homes featuring mountain views and resort-style amenities.',
-    url: 'https://www.thevistassummerlin.com/communities/santaluz',
+    url: `${getSiteUrl()}/communities/santaluz`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/santaluz',
+    canonical: `${getSiteUrl()}/communities/santaluz`,
   },
 };
 
@@ -44,9 +45,9 @@ export default function SantaluzPage() {
         amenities={['Mountain Views', 'Resort Pool', 'Golf Course', 'Hiking Trails', 'Community Center', 'Tennis Courts']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Santaluz', url: 'https://www.thevistassummerlin.com/communities/santaluz' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Santaluz', url: `${getSiteUrl()}/communities/santaluz` }
       ]} />
 
       <Navigation />

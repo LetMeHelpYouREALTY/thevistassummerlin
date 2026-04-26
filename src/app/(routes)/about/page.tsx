@@ -11,6 +11,7 @@ import GoogleBusinessProfileWidget from '@/components/sections/google-business-p
 import ReviewCollectionWidget from '@/components/sections/review-collection-widget';
 import LocalSEOShowcase from '@/components/sections/local-seo-showcase';
 import { PostHeroOfficeListings } from '@/components/sections/post-hero-office-listings';
+import { getSiteUrl } from '@/lib/site-url';
 
 // Metadata moved to layout or parent component since this is a client component
 
@@ -542,7 +543,7 @@ export default function AboutPage() {
         description="Learn about Dr. Jan Duffy, your trusted Las Vegas real estate expert specializing in The Vistas Summerlin luxury homes and communities."
         datePublished="2024-01-01T00:00:00Z"
         dateModified="2025-10-15T00:00:00Z"
-        url="https://www.thevistassummerlin.com/about"
+        url={`${getSiteUrl()}/about`}
       />
       <FAQSchema />
     </div>

@@ -34,6 +34,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { RealScoutWidget } from '@/components/RealScoutWidget';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Santalina Community - The Vistas Summerlin | Mediterranean-Inspired Living',
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Santalina Community - The Vistas Summerlin',
     description: 'Mediterranean-inspired living in The Vistas Summerlin with warm colors and outdoor spaces.',
-    url: 'https://www.thevistassummerlin.com/communities/santalina',
+    url: `${getSiteUrl()}/communities/santalina`,
     images: [
       {
         url: '/subcommunities/IMG_0739.JPG',
@@ -68,7 +69,7 @@ export const metadata: Metadata = {
     images: ['/subcommunities/IMG_0739.JPG'],
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/santalina',
+    canonical: `${getSiteUrl()}/communities/santalina`,
   },
 };
 

@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Hillstone Community - Mountain View Homes in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Hillstone Community - Mountain View Homes in The Vistas Summerlin',
     description: 'Mountain view community featuring luxury homes with stone architecture and hiking access.',
-    url: 'https://www.thevistassummerlin.com/communities/hillstone',
+    url: `${getSiteUrl()}/communities/hillstone`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/hillstone',
+    canonical: `${getSiteUrl()}/communities/hillstone`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function HillstonePage() {
         amenities={['Mountain Views', 'Stone Architecture', 'Private Patios', 'Hiking Access', 'Community Pool', 'Scenic Trails']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Hillstone', url: 'https://www.thevistassummerlin.com/communities/hillstone' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Hillstone', url: `${getSiteUrl()}/communities/hillstone` }
       ]} />
 
       <Navigation />

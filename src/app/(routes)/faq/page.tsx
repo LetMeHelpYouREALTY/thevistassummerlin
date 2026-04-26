@@ -20,6 +20,7 @@ import {
   Award
 } from 'lucide-react';
 import Link from 'next/link';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'The Vistas Summerlin FAQ | Buyer, Seller, and Community Questions',
@@ -37,10 +38,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The Vistas Summerlin FAQ | Buyer, Seller, and Community Questions',
     description: 'Read practical answers on The Vistas Summerlin neighborhoods, pricing, and process.',
-    url: 'https://www.thevistassummerlin.com/faq',
+    url: `${getSiteUrl()}/faq`,
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/faq',
+    canonical: `${getSiteUrl()}/faq`,
   },
 };
 
@@ -156,8 +157,8 @@ export default function FAQPage() {
       <RealEstateExpertSchema />
       <FAQSchema />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'FAQ', url: 'https://www.thevistassummerlin.com/faq' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'FAQ', url: `${getSiteUrl()}/faq` }
       ]} />
 
       <Navigation />

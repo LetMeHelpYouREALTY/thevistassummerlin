@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Casa Rosa Community - Spanish-Inspired Elegance in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Casa Rosa Community - Spanish-Inspired Elegance in The Vistas Summerlin',
     description: 'Spanish-inspired elegant community featuring luxury homes with private patios and landscaped gardens.',
-    url: 'https://www.thevistassummerlin.com/communities/casa-rosa',
+    url: `${getSiteUrl()}/communities/casa-rosa`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/casa-rosa',
+    canonical: `${getSiteUrl()}/communities/casa-rosa`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function CasaRosaPage() {
         amenities={['Spanish Architecture', 'Private Patios', 'Landscaped Gardens', 'Community Pool', 'Walking Paths', 'Community Center']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Casa Rosa', url: 'https://www.thevistassummerlin.com/communities/casa-rosa' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Casa Rosa', url: `${getSiteUrl()}/communities/casa-rosa` }
       ]} />
 
       <Navigation />

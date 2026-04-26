@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { getSiteUrl } from '@/lib/site-url';
+
+const siteUrl = getSiteUrl();
 
 // Vercel CLI on Windows can fail prebuilt packaging ("Unable to find lambda for route") for
 // static App Router pages when file-tracing fallbacks list many routes. Forcing this segment
@@ -30,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Vistas Summerlin | Luxury Homes by Dr. Jan Duffy",
     description: "Discover homes in The Vistas Summerlin with local market guidance from Dr. Jan Duffy.",
-    url: "https://www.thevistassummerlin.com",
+    url: siteUrl,
     siteName: "The Vistas Summerlin | Homes by Dr. Jan Duffy",
     images: [
       {
@@ -50,7 +53,7 @@ export const metadata: Metadata = {
     images: ["/subcommunities/IMG_0737.JPG"],
   },
   alternates: {
-    canonical: "https://www.thevistassummerlin.com",
+    canonical: siteUrl,
   },
 };
 

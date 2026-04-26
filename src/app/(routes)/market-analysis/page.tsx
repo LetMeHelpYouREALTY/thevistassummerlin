@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import RealScoutAdvancedSearch from '@/components/RealScoutAdvancedSearch';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Market Analysis - The Vistas Summerlin Real Estate Market',
@@ -18,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Market Analysis - The Vistas Summerlin Real Estate Market',
     description: 'Comprehensive market analysis and trends for The Vistas Summerlin area.',
-    url: 'https://www.thevistassummerlin.com/market-analysis',
+    url: `${getSiteUrl()}/market-analysis`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/market-analysis',
+    canonical: `${getSiteUrl()}/market-analysis`,
   },
 };
 

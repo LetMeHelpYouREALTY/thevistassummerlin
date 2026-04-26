@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Recently Sold Homes in The Vistas Summerlin, Las Vegas 89138 | Dr. Jan Duffy',
   description:
     'Review 90-day sold home snapshots from The Vistas Summerlin with addresses, close dates, and subcommunity context for seller pricing decisions.',
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/sold',
+    canonical: `${getSiteUrl()}/sold`,
   },
 };
 

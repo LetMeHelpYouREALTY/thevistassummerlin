@@ -29,6 +29,7 @@ import { RealScoutWidget } from "@/components/RealScoutWidget";
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { FAQSchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 // Enhanced Community Hero Section
 const CommunityHero = ({ community }: { community: CommunityData }) => (
@@ -317,6 +318,7 @@ const PropertiesSection = ({ community }: { community: CommunityData }) => (
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const site = getSiteUrl();
   const community = await getCommunityBySlug(slug);
   
   if (!community) {
@@ -340,7 +342,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `${community.name} - The Vistas Summerlin Community`,
       description: `${community.description} Expert guidance from Jan Duffy.`,
-      url: `https://www.thevistassummerlin.com/communities/${slug}`,
+      url: `${site}/communities/${slug}`,
       images: [
         {
           url: community.image || '/subcommunities/IMG_0737.JPG',
@@ -358,13 +360,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: [community.image || '/subcommunities/IMG_0737.JPG'],
     },
     alternates: {
-      canonical: `https://www.thevistassummerlin.com/communities/${slug}`,
+      canonical: `${site}/communities/${slug}`,
     },
   };
 }
 
 export default async function CommunityPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const site = getSiteUrl();
   const community = await getCommunityBySlug(slug);
   
   if (!community) return notFound();
@@ -418,9 +421,9 @@ export default async function CommunityPage({ params }: { params: Promise<{ slug
       <Footer />
       <BreadcrumbSchema 
         items={[
-          { name: "Home", url: "https://www.thevistassummerlin.com" },
-          { name: "Communities", url: "https://www.thevistassummerlin.com/communities" },
-          { name: community.name, url: `https://www.thevistassummerlin.com/communities/${community.slug}` }
+          { name: "Home", url: site },
+          { name: "Communities", url: `${site}/communities` },
+          { name: community.name, url: `${site}/communities/${community.slug}` }
         ]} 
       />
       <FAQSchema />

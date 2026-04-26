@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign, Crown } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Talega Community - Contemporary Luxury in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Talega Community - Contemporary Luxury in The Vistas Summerlin',
     description: 'Contemporary luxury community featuring elegant homes with modern design and premium amenities.',
-    url: 'https://www.thevistassummerlin.com/communities/talega',
+    url: `${getSiteUrl()}/communities/talega`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/talega',
+    canonical: `${getSiteUrl()}/communities/talega`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function TalegaPage() {
         amenities={['Luxury Amenities', 'Modern Design', 'Private Patios', 'Community Pool', 'Tennis Courts', 'Community Center']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Talega', url: 'https://www.thevistassummerlin.com/communities/talega' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Talega', url: `${getSiteUrl()}/communities/talega` }
       ]} />
 
       <Navigation />

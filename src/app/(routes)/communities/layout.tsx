@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'The Vistas Summerlin Communities | Neighborhood Guide & Homes for Sale',
@@ -13,13 +14,13 @@ export const metadata: Metadata = {
     'Canterra Kingwood Santalina',
   ],
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities',
+    canonical: `${getSiteUrl()}/communities`,
   },
   openGraph: {
     title: 'The Vistas Summerlin Communities | Neighborhood Guide',
     description:
       'Compare The Vistas Summerlin neighborhoods, amenities, and active home opportunities.',
-    url: 'https://www.thevistassummerlin.com/communities',
+    url: `${getSiteUrl()}/communities`,
   },
 };
 

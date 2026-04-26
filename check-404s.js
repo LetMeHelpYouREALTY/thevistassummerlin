@@ -8,7 +8,7 @@ const slugs = [
 ];
 
 const BASE_URLS = [
-  'https://thevistassummerlin-2ydwfcj0h-janet-duffys-projects.vercel.app', // Production
+  'https://www.thevistassummerlin.com',
   'http://localhost:3000' // Local (change port if needed)
 ];
 

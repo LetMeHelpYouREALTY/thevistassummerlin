@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'San Marcos Community - Spanish Colonial Charm in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'San Marcos Community - Spanish Colonial Charm in The Vistas Summerlin',
     description: 'Spanish colonial charm community featuring luxury homes with private courtyards and community amenities.',
-    url: 'https://www.thevistassummerlin.com/communities/san-marcos',
+    url: `${getSiteUrl()}/communities/san-marcos`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/san-marcos',
+    canonical: `${getSiteUrl()}/communities/san-marcos`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function SanMarcosPage() {
         amenities={['Spanish Colonial', 'Private Courtyards', 'Community Pool', 'Tennis Courts', 'Walking Paths', 'Community Center']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'San Marcos', url: 'https://www.thevistassummerlin.com/communities/san-marcos' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'San Marcos', url: `${getSiteUrl()}/communities/san-marcos` }
       ]} />
 
       <Navigation />

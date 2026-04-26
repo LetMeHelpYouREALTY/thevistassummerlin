@@ -19,6 +19,7 @@ import {
   Home
 } from 'lucide-react';
 import Link from 'next/link';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Client Testimonials - The Vistas Summerlin | Dr. Jan Duffy',
@@ -36,10 +37,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Client Testimonials - The Vistas Summerlin | Dr. Jan Duffy',
     description: 'Read real client testimonials and reviews for Dr. Jan Duffy\'s real estate services in The Vistas Summerlin.',
-    url: 'https://www.thevistassummerlin.com/testimonials',
+    url: `${getSiteUrl()}/testimonials`,
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/testimonials',
+    canonical: `${getSiteUrl()}/testimonials`,
   },
 };
 
@@ -132,8 +133,8 @@ export default function TestimonialsPage() {
       <RealEstateExpertSchema />
       <ReviewSchema />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Testimonials', url: 'https://www.thevistassummerlin.com/testimonials' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Testimonials', url: `${getSiteUrl()}/testimonials` }
       ]} />
 
       <Navigation />

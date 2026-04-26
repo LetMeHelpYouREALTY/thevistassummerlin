@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Contact Dr. Jan Duffy - The Vistas Summerlin Real Estate Expert',
@@ -14,10 +15,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact Dr. Jan Duffy - The Vistas Summerlin Real Estate Expert',
     description: 'Contact Dr. Jan Duffy for personalized real estate services in The Vistas Summerlin. Flexible scheduling, expert guidance, and local market knowledge.',
-    url: 'https://www.thevistassummerlin.com/contact',
+    url: `${getSiteUrl()}/contact`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/contact',
+    canonical: `${getSiteUrl()}/contact`,
   },
 };

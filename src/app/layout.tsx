@@ -19,6 +19,9 @@ import {
 } from '@/components/StructuredData';
 import { CalendlyBadge } from '@/components/CalendlyBadge';
 import { GbpActionStrip } from '@/components/sections/gbp-action-strip';
+import { getSiteUrl } from '@/lib/site-url';
+
+const siteUrl = getSiteUrl();
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -34,7 +37,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.thevistassummerlin.com'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "The Vistas Summerlin | Berkshire Hathaway HomeServices Nevada Properties - Dr. Jan Duffy",
     template: "%s | The Vistas Summerlin | Berkshire Hathaway HomeServices Nevada Properties"
@@ -55,7 +58,7 @@ export const metadata: Metadata = {
     "BHHS Nevada Properties",
     "Berkshire Hathaway real estate agent"
   ],
-  authors: [{ name: "Dr. Jan Duffy", url: "https://www.thevistassummerlin.com" }],
+  authors: [{ name: "Dr. Jan Duffy", url: siteUrl }],
   creator: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties Real Estate Expert",
   publisher: "Berkshire Hathaway HomeServices Nevada Properties | Dr. Jan Duffy",
   robots: {
@@ -72,7 +75,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Vistas Summerlin | Homes by Dr. Jan Duffy - Las Vegas Expert",
     description: "The Vistas Summerlin offers luxury homes starting at $800K. Expert realtor Dr. Jan Duffy specializing in The Vistas community with flexible scheduling that works around YOUR lifestyle.",
-    url: "https://www.thevistassummerlin.com",
+    url: siteUrl,
     siteName: "The Vistas Summerlin | Homes by Dr. Jan Duffy",
     images: [
       {
@@ -100,7 +103,7 @@ export const metadata: Metadata = {
     'yandex-verification': process.env.YANDEX_SITE_VERIFICATION || "",
   },
   alternates: {
-    canonical: "https://www.thevistassummerlin.com",
+    canonical: siteUrl,
   },
 };
 
@@ -127,7 +130,7 @@ export default function RootLayout({
         
         {/* RSS Feed for Google Discover Follow Feature */}
         <link rel="alternate" type="application/rss+xml" 
-              href="https://www.thevistassummerlin.com/feed.xml" 
+              href={`${siteUrl}/feed.xml`} 
               title="The Vistas Summerlin Updates" />
         
         {/* Favicon Links for Google Search Results */}

@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Vista Verde Community - Green Views in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Vista Verde Community - Green Views in The Vistas Summerlin',
     description: 'Green views community featuring luxury homes with natural beauty and mountain views.',
-    url: 'https://www.thevistassummerlin.com/communities/vista-verde',
+    url: `${getSiteUrl()}/communities/vista-verde`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/vista-verde',
+    canonical: `${getSiteUrl()}/communities/vista-verde`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function VistaVerdePage() {
         amenities={['Green Landscaping', 'Mountain Views', 'Community Gardens', 'Walking Trails', 'Community Pool', 'Natural Beauty']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Vista Verde', url: 'https://www.thevistassummerlin.com/communities/vista-verde' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Vista Verde', url: `${getSiteUrl()}/communities/vista-verde` }
       ]} />
 
       <Navigation />

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CalendlyButton } from '@/components/CalendlyButton';
+import { getSiteUrl } from '@/lib/site-url';
 
 type AgentPageProps = {
   params: Promise<{ id: string }>;
@@ -9,7 +10,7 @@ type AgentPageProps = {
 
 export async function generateMetadata({ params }: AgentPageProps): Promise<Metadata> {
   const { id } = await params;
-  const canonical = `https://www.thevistassummerlin.com/agents/${id}`;
+  const canonical = `${getSiteUrl()}/agents/${id}`;
 
   if (id !== 'dr-jan-duffy') {
     return {

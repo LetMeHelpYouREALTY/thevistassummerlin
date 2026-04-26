@@ -40,6 +40,7 @@ import {
 import { RealScoutWidget } from "@/components/RealScoutWidget";
 import Link from 'next/link';
 import Image from 'next/image';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Portofino Community - The Vistas Summerlin | 213 Coastal-Inspired Homes',
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Portofino Community - The Vistas Summerlin | 213 Coastal-Inspired Homes',
     description: '213 coastal-inspired homes featuring Mediterranean charm and resort-style amenities.',
-    url: 'https://www.thevistassummerlin.com/communities/portofino',
+    url: `${getSiteUrl()}/communities/portofino`,
     images: [
       {
         url: '/subcommunities/IMG_0737.JPG',

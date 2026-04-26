@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Property Search | The Vistas Summerlin Homes for Sale',
@@ -16,13 +17,13 @@ export const metadata: Metadata = {
     'active MLS listings',
   ],
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/search',
+    canonical: `${getSiteUrl()}/search`,
   },
   openGraph: {
     title: 'Search The Vistas Summerlin Homes for Sale',
     description:
       'Filter active homes for sale in The Vistas Summerlin by price and property type.',
-    url: 'https://www.thevistassummerlin.com/search',
+    url: `${getSiteUrl()}/search`,
     images: [
       {
         url: '/subcommunities/IMG_0737.JPG',

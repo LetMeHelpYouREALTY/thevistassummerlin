@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Somerset Community - Traditional Luxury in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Somerset Community - Traditional Luxury in The Vistas Summerlin',
     description: 'Traditional luxury community featuring elegant homes with formal gardens and community amenities.',
-    url: 'https://www.thevistassummerlin.com/communities/somerset',
+    url: `${getSiteUrl()}/communities/somerset`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/somerset',
+    canonical: `${getSiteUrl()}/communities/somerset`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function SomersetPage() {
         amenities={['Traditional Architecture', 'Formal Gardens', 'Community Pool', 'Tennis Courts', 'Walking Paths', 'Community Center']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Somerset', url: 'https://www.thevistassummerlin.com/communities/somerset' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Somerset', url: `${getSiteUrl()}/communities/somerset` }
       ]} />
 
       <Navigation />

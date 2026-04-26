@@ -1,5 +1,8 @@
 import React from 'react';
 import Script from 'next/script';
+import { getSiteUrl } from '@/lib/site-url';
+
+const siteUrl = getSiteUrl();
 
 // E-E-A-T Schema for Real Estate Expertise
 export function RealEstateExpertSchema() {
@@ -8,7 +11,7 @@ export function RealEstateExpertSchema() {
     "@type": "RealEstateAgent",
     "name": "Dr. Jan Duffy",
     "description": "Las Vegas real estate expert with flexible scheduling that works around YOUR lifestyle. Based in Summerlin, serving discerning buyers, sellers, and investors across Henderson, Enterprise, and Southwest Vegas. With 12+ years of Nevada market expertise.",
-    "url": "https://www.thevistassummerlin.com",
+    "url": siteUrl,
     "telephone": "+1-702-500-0607",
     "email": "DrJanSells@TheVistasSummerlin.com",
     "address": {
@@ -86,7 +89,7 @@ export function RealEstateExpertSchema() {
       "Real Estate Market Trends"
     ],
     "sameAs": [
-      "https://www.thevistassummerlin.com",
+      siteUrl,
       "https://www.facebook.com/RealtorDrJanDuffySummerlin",
       "https://www.instagram.com/drjanduffy/",
       "https://www.linkedin.com/showcase/berkshire-hathaway-homeservices-summerlin/",
@@ -94,7 +97,7 @@ export function RealEstateExpertSchema() {
       "https://twitter.com/drjanduffy",
       "https://www.pinterest.com/DrJanDuffy/"
     ],
-    "image": "https://www.thevistassummerlin.com/logo.png",
+    "image": `${siteUrl}/logo.png`,
     "alumniOf": {
       "@type": "EducationalOrganization",
       "name": "University of Nevada, Las Vegas"
@@ -190,10 +193,10 @@ export function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    "@id": "https://www.thevistassummerlin.com/#real-estate-agent",
+    "@id": `${siteUrl}/#real-estate-agent`,
     "name": "Homes by Dr. Jan Duffy",
     "description": "Premier real estate services for The Vistas Summerlin luxury community. Expert guidance from Dr. Jan Duffy with flexible scheduling.",
-    "url": "https://www.thevistassummerlin.com",
+    "url": siteUrl,
     "telephone": "+1-702-500-0607",
     "email": "DrJanSells@TheVistasSummerlin.com",
     "address": {
@@ -230,7 +233,7 @@ export function LocalBusinessSchema() {
     "currenciesAccepted": "USD",
     "hasMap": hasMap,
     "sameAs": [
-      "https://www.thevistassummerlin.com"
+      siteUrl
     ],
     "areaServed": {
       "@type": "Place",
@@ -263,7 +266,7 @@ export function RealEstateListingSchema() {
     "@type": "RealEstateListing",
     "name": "Luxury Homes in The Vistas Summerlin",
     "description": "Discover luxury homes for sale in The Vistas Summerlin, Las Vegas's premier master-planned community.",
-    "url": "https://www.thevistassummerlin.com/search",
+    "url": `${siteUrl}/search`,
     "priceRange": "$800,000 - $2,500,000+",
     "numberOfRooms": "4-6 bedrooms",
     "floorSize": {
@@ -331,16 +334,16 @@ export function WebsiteSchema() {
     "@type": "WebSite",
     "name": "The Vistas Summerlin | Homes by Dr. Jan Duffy",
     "description": "Premier real estate services for The Vistas Summerlin luxury community. Expert guidance from Dr. Jan Duffy.",
-    "url": "https://www.thevistassummerlin.com",
+    "url": siteUrl,
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://www.thevistassummerlin.com/search?q={search_term_string}",
+      "target": `${siteUrl}/search?q={search_term_string}`,
       "query-input": "required name=search_term_string"
     },
     "publisher": {
       "@type": "Organization",
       "name": "The Vistas Summerlin | Homes by Dr. Jan Duffy",
-      "url": "https://www.thevistassummerlin.com"
+      "url": siteUrl
     }
   };
 
@@ -360,8 +363,8 @@ export function OrganizationSchema() {
     "@type": "Organization",
     "name": "Berkshire Hathaway HomeServices Nevada Properties - The Vistas Summerlin | Dr. Jan Duffy",
     "description": "Premier real estate services specializing in The Vistas Summerlin luxury community.",
-    "url": "https://www.thevistassummerlin.com",
-    "logo": "https://www.thevistassummerlin.com/berkshire-hathaway-logo.png",
+    "url": siteUrl,
+    "logo": `${siteUrl}/berkshire-hathaway-logo.png`,
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-702-500-0607",
@@ -378,7 +381,7 @@ export function OrganizationSchema() {
       "addressCountry": "US"
     },
     "sameAs": [
-      "https://www.thevistassummerlin.com"
+      siteUrl
     ]
   };
 
@@ -410,7 +413,7 @@ export function CommunitySchema({
     "@type": "ResidentialComplex",
     "name": `${communityName} - The Vistas Summerlin`,
     "description": description,
-    "url": `https://www.thevistassummerlin.com/communities/${communityName.toLowerCase().replace(/\s+/g, '-')}`,
+    "url": `${siteUrl}/communities/${communityName.toLowerCase().replace(/\s+/g, '-')}`,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Las Vegas",
@@ -492,7 +495,7 @@ export function PropertySchema({
     "@type": "RealEstateListing",
     "name": address,
     "description": description,
-    "url": `https://www.thevistassummerlin.com/properties/${address.toLowerCase().replace(/\s+/g, '-')}`,
+    "url": `${siteUrl}/properties/${address.toLowerCase().replace(/\s+/g, '-')}`,
     "price": price,
     "priceCurrency": "USD",
     "address": {
@@ -621,12 +624,12 @@ export function ArticleSchema({
     "author": {
       "@type": "Person",
       "name": author,
-      "url": "https://www.thevistassummerlin.com/about"
+      "url": `${siteUrl}/about`
     },
     "publisher": {
       "@type": "Organization",
       "name": "Berkshire Hathaway HomeServices Nevada Properties",
-      "url": "https://www.thevistassummerlin.com"
+      "url": siteUrl
     },
     "url": url,
     "mainEntityOfPage": {

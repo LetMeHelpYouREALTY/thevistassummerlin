@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import RealScoutAdvancedSearch from '@/components/RealScoutAdvancedSearch';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Investment Opportunities - The Vistas Summerlin Real Estate',
@@ -18,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Investment Opportunities - The Vistas Summerlin Real Estate',
     description: 'Comprehensive investment analysis and opportunities in The Vistas Summerlin.',
-    url: 'https://www.thevistassummerlin.com/investment',
+    url: `${getSiteUrl()}/investment`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/investment',
+    canonical: `${getSiteUrl()}/investment`,
   },
 };
 

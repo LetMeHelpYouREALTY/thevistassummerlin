@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Estancia Community - Ranch-Style Luxury in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Estancia Community - Ranch-Style Luxury in The Vistas Summerlin',
     description: 'Ranch-style luxury community featuring spacious homes with open spaces and horse trails.',
-    url: 'https://www.thevistassummerlin.com/communities/estancia',
+    url: `${getSiteUrl()}/communities/estancia`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/estancia',
+    canonical: `${getSiteUrl()}/communities/estancia`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function EstanciaPage() {
         amenities={['Ranch Architecture', 'Open Spaces', 'Horse Trails', 'Community Pool', 'Tennis Courts', 'Community Center']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Estancia', url: 'https://www.thevistassummerlin.com/communities/estancia' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Estancia', url: `${getSiteUrl()}/communities/estancia` }
       ]} />
 
       <Navigation />

@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
 import path from 'path';
+import { getSiteUrl } from '@/lib/site-url';
 
 export async function GET() {
-  const baseUrl = 'https://www.thevistassummerlin.com';
+  const baseUrl = getSiteUrl();
   const currentDate = new Date().toISOString();
   
   try {

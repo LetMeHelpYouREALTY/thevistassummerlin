@@ -7,6 +7,7 @@ import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOffic
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import RealScoutListings from '@/components/RealScoutListings';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Ashton Park Community - Luxury Homes in The Vistas Summerlin | Dr. Jan Duffy',
@@ -23,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ashton Park Community - Luxury Homes in The Vistas Summerlin',
     description: 'Premier community featuring luxury homes with modern amenities and beautiful landscaping.',
-    url: 'https://www.thevistassummerlin.com/communities/ashton-park',
+    url: `${getSiteUrl()}/communities/ashton-park`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/ashton-park',
+    canonical: `${getSiteUrl()}/communities/ashton-park`,
   },
 };
 
@@ -43,9 +44,9 @@ export default function AshtonParkPage() {
         amenities={['Modern Architecture', 'Landscaped Grounds', 'Community Pool', 'Walking Trails', 'Tennis Courts', 'Community Center']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Ashton Park', url: 'https://www.thevistassummerlin.com/communities/ashton-park' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Ashton Park', url: `${getSiteUrl()}/communities/ashton-park` }
       ]} />
 
       <Navigation />

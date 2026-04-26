@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
 import { getNeighborhoodSlugs } from '@/constants/neighborhoods'
+import { getSiteUrl } from '@/lib/site-url'
 
-const baseUrl = 'https://www.thevistassummerlin.com'
+const baseUrl = getSiteUrl()
 
 /**
  * Vistas subcommunity routes that exist in `app/(routes)/communities/*` but are not in

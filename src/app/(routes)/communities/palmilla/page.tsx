@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Palmilla Community - Resort-Style Amenities in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Palmilla Community - Resort-Style Amenities in The Vistas Summerlin',
     description: 'Resort-style community featuring luxury homes with palm landscaping and spa facilities.',
-    url: 'https://www.thevistassummerlin.com/communities/palmilla',
+    url: `${getSiteUrl()}/communities/palmilla`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/palmilla',
+    canonical: `${getSiteUrl()}/communities/palmilla`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function PalmillaPage() {
         amenities={['Resort Pool', 'Palm Landscaping', 'Tennis Courts', 'Spa Facilities', 'Community Events', 'Walking Paths']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Palmilla', url: 'https://www.thevistassummerlin.com/communities/palmilla' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Palmilla', url: `${getSiteUrl()}/communities/palmilla` }
       ]} />
 
       <Navigation />

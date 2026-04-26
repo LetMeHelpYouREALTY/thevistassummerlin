@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Sage Hills Community - Natural Beauty in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Sage Hills Community - Natural Beauty in The Vistas Summerlin',
     description: 'Natural beauty community featuring luxury homes with native landscaping and hiking trails.',
-    url: 'https://www.thevistassummerlin.com/communities/sage-hills',
+    url: `${getSiteUrl()}/communities/sage-hills`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/sage-hills',
+    canonical: `${getSiteUrl()}/communities/sage-hills`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function SageHillsPage() {
         amenities={['Natural Landscaping', 'Hiking Trails', 'Community Pool', 'Native Gardens', 'Walking Paths', 'Community Center']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Sage Hills', url: 'https://www.thevistassummerlin.com/communities/sage-hills' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Sage Hills', url: `${getSiteUrl()}/communities/sage-hills` }
       ]} />
 
       <Navigation />

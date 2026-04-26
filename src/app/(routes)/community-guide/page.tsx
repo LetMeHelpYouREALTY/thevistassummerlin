@@ -4,6 +4,7 @@ import Footer from '@/components/sections/footer';
 import { VoiceSearchFAQ, AnswerEngineOptimization } from '@/components/VoiceSearchOptimization';
 import { MapPin, Home, Users, Star, Award, TrendingUp, Shield, TreePine, Mountain, ShoppingBag, UtensilsCrossed, Zap, Sparkles, Heart, ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'The Vistas Summerlin Community Guide - Complete Neighborhood Information',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The Vistas Summerlin Community Guide - Complete Neighborhood Information',
     description: 'Everything you need to know about living in The Vistas Summerlin community.',
-    url: 'https://www.thevistassummerlin.com/community-guide',
+    url: `${getSiteUrl()}/community-guide`,
     type: 'website',
   },
 };

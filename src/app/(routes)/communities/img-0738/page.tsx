@@ -37,6 +37,7 @@ import {
 import { RealScoutWidget } from "@/components/RealScoutWidget";
 import Link from 'next/link';
 import Image from 'next/image';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Kingwood Community - The Vistas Summerlin | Royal-Inspired Luxury Homes',
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kingwood Community - The Vistas Summerlin',
     description: 'Royal-inspired homes with majestic mountain views and luxury finishes.',
-    url: 'https://www.thevistassummerlin.com/communities/img-0738',
+    url: `${getSiteUrl()}/communities/img-0738`,
     images: [
       {
         url: '/subcommunities/IMG_0738.JPG',

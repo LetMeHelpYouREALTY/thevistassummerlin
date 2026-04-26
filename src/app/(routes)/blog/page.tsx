@@ -4,6 +4,7 @@ import Footer from '@/components/sections/footer';
 import BlogPosts from '@/components/sections/blog-posts';
 import { BookOpen, TrendingUp, Users, Star, Zap, Sparkles, Heart, Award, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'The Vistas Summerlin Blog - Real Estate Insights & Market Updates',
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The Vistas Summerlin Blog - Real Estate Insights',
     description: 'Expert real estate analysis and market insights for The Vistas Summerlin community.',
-    url: 'https://www.thevistassummerlin.com/blog',
+    url: `${getSiteUrl()}/blog`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/blog',
+    canonical: `${getSiteUrl()}/blog`,
   },
 };
 

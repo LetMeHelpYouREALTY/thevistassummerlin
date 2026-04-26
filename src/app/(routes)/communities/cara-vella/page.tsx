@@ -6,6 +6,7 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Cara Vella Community - Mediterranean Luxury in The Vistas Summerlin | Dr. Jan Duffy',
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Cara Vella Community - Mediterranean Luxury in The Vistas Summerlin',
     description: 'Mediterranean-inspired luxury community featuring elegant homes with private courtyards and resort amenities.',
-    url: 'https://www.thevistassummerlin.com/communities/cara-vella',
+    url: `${getSiteUrl()}/communities/cara-vella`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/cara-vella',
+    canonical: `${getSiteUrl()}/communities/cara-vella`,
   },
 };
 
@@ -42,9 +43,9 @@ export default function CaraVellaPage() {
         amenities={['Mediterranean Architecture', 'Private Courtyards', 'Resort Amenities', 'Golf Course Access', 'Mountain Views', 'Community Center']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Cara Vella', url: 'https://www.thevistassummerlin.com/communities/cara-vella' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Cara Vella', url: `${getSiteUrl()}/communities/cara-vella` }
       ]} />
 
       <Navigation />

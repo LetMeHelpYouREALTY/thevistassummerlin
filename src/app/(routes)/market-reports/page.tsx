@@ -3,6 +3,7 @@ import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { BarChart, TrendingUp, Home, DollarSign, Calendar, Download, Eye } from 'lucide-react';
 import Link from 'next/link';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'The Vistas Summerlin Market Reports | Real Estate Market Analysis',
@@ -18,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The Vistas Summerlin Market Reports',
     description: 'Comprehensive real estate market analysis and trends for The Vistas Summerlin.',
-    url: 'https://www.thevistassummerlin.com/market-reports',
+    url: `${getSiteUrl()}/market-reports`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/market-reports',
+    canonical: `${getSiteUrl()}/market-reports`,
   },
 };
 

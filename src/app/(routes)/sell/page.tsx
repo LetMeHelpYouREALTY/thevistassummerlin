@@ -4,6 +4,7 @@ import Footer from '@/components/sections/footer';
 import { FAQSchema } from '@/components/StructuredData';
 import { Home, DollarSign, TrendingUp, Users, Phone, Mail, Calendar, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Sell Your Home in The Vistas Summerlin, Las Vegas 89138 | Dr. Jan Duffy',
@@ -19,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Sell Your Home in The Vistas Summerlin',
     description: 'Expert guidance from Jan Duffy to sell your home quickly and for top dollar.',
-    url: 'https://www.thevistassummerlin.com/sell',
+    url: `${getSiteUrl()}/sell`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/sell',
+    canonical: `${getSiteUrl()}/sell`,
   },
 };
 

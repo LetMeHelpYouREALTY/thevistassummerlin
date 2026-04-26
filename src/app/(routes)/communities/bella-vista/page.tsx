@@ -7,6 +7,7 @@ import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOffic
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import RealScoutListings from '@/components/RealScoutListings';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Bella Vista Community - Luxury Homes in The Vistas Summerlin | Dr. Jan Duffy',
@@ -23,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Bella Vista Community - Luxury Homes in The Vistas Summerlin',
     description: 'Beautiful community featuring elegant homes with mountain views and landscaped gardens.',
-    url: 'https://www.thevistassummerlin.com/communities/bella-vista',
+    url: `${getSiteUrl()}/communities/bella-vista`,
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.thevistassummerlin.com/communities/bella-vista',
+    canonical: `${getSiteUrl()}/communities/bella-vista`,
   },
 };
 
@@ -43,9 +44,9 @@ export default function BellaVistaPage() {
         amenities={['Mountain Views', 'Elegant Architecture', 'Private Patios', 'Landscaped Gardens', 'Community Pool', 'Walking Paths']}
       />
       <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.thevistassummerlin.com' },
-        { name: 'Communities', url: 'https://www.thevistassummerlin.com/communities' },
-        { name: 'Bella Vista', url: 'https://www.thevistassummerlin.com/communities/bella-vista' }
+        { name: 'Home', url: `${getSiteUrl()}` },
+        { name: 'Communities', url: `${getSiteUrl()}/communities` },
+        { name: 'Bella Vista', url: `${getSiteUrl()}/communities/bella-vista` }
       ]} />
 
       <Navigation />
