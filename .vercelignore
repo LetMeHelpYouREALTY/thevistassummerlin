@@ -1,0 +1,9 @@
+.next
+node_modules
+.git
+.cursor
+.qodo
+.roo
+.ssh
+thevistassummerlin-1
+*.log
