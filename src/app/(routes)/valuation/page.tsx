@@ -25,19 +25,19 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Free Home Valuation - The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Get your free, accurate home valuation for The Vistas Summerlin. Dr. Jan Duffy provides professional market analysis and pricing strategy for luxury homes.',
+  title: 'Home Valuation | The Vistas Summerlin Seller Pricing Guide',
+  description: 'Get a home valuation for The Vistas Summerlin with local pricing strategy, market comps, and seller-focused guidance from Dr. Jan Duffy.',
   keywords: [
     'home valuation The Vistas Summerlin',
-    'free home appraisal Las Vegas',
+    'Summerlin seller pricing strategy',
     'property value estimate',
-    'Dr. Jan Duffy home valuation',
-    'Summerlin home pricing',
-    'luxury home market analysis'
+    'Las Vegas market comps',
+    'Dr. Jan Duffy valuation',
+    'luxury home pricing Summerlin'
   ],
   openGraph: {
-    title: 'Free Home Valuation - The Vistas Summerlin | Dr. Jan Duffy',
-    description: 'Get your free, accurate home valuation with professional market analysis.',
+    title: 'Home Valuation | The Vistas Summerlin Seller Pricing Guide',
+    description: 'See your likely market value with local comps and seller-focused pricing guidance.',
     url: 'https://www.thevistassummerlin.com/valuation',
     type: 'website',
   },

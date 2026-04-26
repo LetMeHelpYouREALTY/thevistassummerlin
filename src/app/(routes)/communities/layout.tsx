@@ -2,16 +2,23 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'The Vistas Summerlin Communities | Dr. Jan Duffy',
+  title: 'The Vistas Summerlin Communities | Neighborhood Guide & Homes for Sale',
   description:
-    'Explore The Vistas Summerlin communities in Las Vegas, including luxury neighborhoods, amenities, and current home opportunities.',
+    'Explore The Vistas Summerlin neighborhood guide with community-by-community home styles, amenities, and links to active homes for sale in Las Vegas.',
+  keywords: [
+    'The Vistas Summerlin communities',
+    'Summerlin neighborhood guide',
+    'Vistas Summerlin homes for sale',
+    'Las Vegas luxury neighborhoods',
+    'Canterra Kingwood Santalina',
+  ],
   alternates: {
     canonical: 'https://www.thevistassummerlin.com/communities',
   },
   openGraph: {
-    title: 'The Vistas Summerlin Communities',
+    title: 'The Vistas Summerlin Communities | Neighborhood Guide',
     description:
-      'Explore Vistas Summerlin neighborhoods and available homes with Dr. Jan Duffy.',
+      'Compare The Vistas Summerlin neighborhoods, amenities, and active home opportunities.',
     url: 'https://www.thevistassummerlin.com/communities',
   },
 };

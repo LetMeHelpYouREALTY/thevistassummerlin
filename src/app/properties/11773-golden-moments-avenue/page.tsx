@@ -7,8 +7,8 @@ import Footer from '@/components/sections/footer';
 import { PropertyImageGallery, goldenMomentsImages } from '@/components/PropertyImageGallery';
 
 export const metadata: Metadata = {
-  title: "11773 Golden Moments Avenue - Luxury Home in The Vistas Summerlin | $738,700",
-  description: "Discover this move-in ready 4-bedroom, 3-bath home in The Vistas Summerlin. Two spacious primary suites, modern chef's kitchen, huge landscaped yard. MLS #2722090. Schedule your private tour today!",
+  title: "11773 Golden Moments Avenue | The Vistas Summerlin Home for Sale",
+  description: "View listing details for 11773 Golden Moments Avenue in The Vistas Summerlin, including beds, baths, square footage, map, and showing options.",
   keywords: [
     "11773 Golden Moments Avenue",
     "The Vistas Summerlin homes for sale",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     "Golden Moments Avenue Las Vegas"
   ],
   openGraph: {
-    title: "11773 Golden Moments Avenue - Luxury Home in The Vistas Summerlin",
-    description: "Move-in ready 4-bedroom, 3-bath home in The Vistas Summerlin. Two spacious primary suites, modern chef's kitchen. $738,700",
+    title: "11773 Golden Moments Avenue | The Vistas Summerlin Home for Sale",
+    description: "Explore this The Vistas Summerlin property with photos, map, and showing details.",
     url: "https://www.thevistassummerlin.com/properties/11773-golden-moments-avenue",
          images: [
            {
@@ -31,6 +31,9 @@ export const metadata: Metadata = {
              alt: "11773 Golden Moments Avenue - The Vistas Summerlin",
            },
          ],
+  },
+  alternates: {
+    canonical: "https://www.thevistassummerlin.com/properties/11773-golden-moments-avenue",
   },
 };
 

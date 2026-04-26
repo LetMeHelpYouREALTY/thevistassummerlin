@@ -2,27 +2,26 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'Property Search | The Vistas Summerlin Homes by Dr. Jan Duffy',
+  title: 'Property Search | The Vistas Summerlin Homes for Sale',
   description:
-    'Search homes for sale in The Vistas Summerlin, Las Vegas with Dr. Jan Duffy. Explore luxury listings, pricing, and neighborhood options.',
+    'Search The Vistas Summerlin homes for sale by price, beds, baths, and property type. Use focused filters to find active Las Vegas listings.',
   keywords: [
-    'property search',
-    'homes for sale',
+    'The Vistas Summerlin homes for sale',
+    'property search Las Vegas',
     'The Vistas Summerlin',
-    'luxury homes',
-    'Las Vegas homes',
+    'Summerlin luxury homes',
     'single family homes',
     'townhomes',
     'condos',
-    'Dr. Jan Duffy',
+    'active MLS listings',
   ],
   alternates: {
     canonical: 'https://www.thevistassummerlin.com/search',
   },
   openGraph: {
-    title: 'Property Search | The Vistas Summerlin',
+    title: 'Search The Vistas Summerlin Homes for Sale',
     description:
-      'Search homes for sale in The Vistas Summerlin with local guidance from Dr. Jan Duffy.',
+      'Filter active homes for sale in The Vistas Summerlin by price and property type.',
     url: 'https://www.thevistassummerlin.com/search',
     images: [
       {

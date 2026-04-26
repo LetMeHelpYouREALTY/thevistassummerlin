@@ -22,8 +22,8 @@ import {
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions - The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Get answers to common questions about The Vistas Summerlin, Canterra community, home prices, amenities, and Dr. Jan Duffy\'s real estate services with flexible scheduling.',
+  title: 'The Vistas Summerlin FAQ | Buyer, Seller, and Community Questions',
+  description: 'Get direct answers to common The Vistas Summerlin questions about communities, pricing, amenities, and buying or selling with Dr. Jan Duffy.',
   keywords: [
     'The Vistas Summerlin FAQ',
     'Canterra community questions',
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     'real estate agent questions'
   ],
   openGraph: {
-    title: 'Frequently Asked Questions - The Vistas Summerlin | Dr. Jan Duffy',
-    description: 'Get answers to common questions about The Vistas Summerlin, Canterra community, home prices, amenities, and Dr. Jan Duffy\'s real estate services.',
+    title: 'The Vistas Summerlin FAQ | Buyer, Seller, and Community Questions',
+    description: 'Read practical answers on The Vistas Summerlin neighborhoods, pricing, and process.',
     url: 'https://www.thevistassummerlin.com/faq',
   },
   alternates: {
