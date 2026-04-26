@@ -6,8 +6,8 @@ import { Home, DollarSign, TrendingUp, Users, Phone, Mail, Calendar, CheckCircle
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Sell Your Home in The Vistas Summerlin | Jan Duffy Real Estate',
-  description: 'Sell your home in The Vistas Summerlin with expert realtor Jan Duffy. Get a free home valuation, market analysis, and professional marketing. 15+ years experience.',
+  title: 'Sell Your Home in The Vistas Summerlin, Las Vegas 89138 | Dr. Jan Duffy',
+  description: 'Get a seller-first plan for The Vistas Summerlin with address-level comps, prep checklist, and listing strategy from Dr. Jan Duffy.',
   keywords: [
     'sell home The Vistas Summerlin',
     'home valuation Summerlin',
@@ -41,8 +41,7 @@ export default function SellPage() {
               <span className="block text-green-200">The Vistas Summerlin</span>
             </h1>
             <p className="text-xl lg:text-2xl text-green-100 max-w-3xl mx-auto mb-8">
-              Get expert guidance from Jan Duffy to sell your home quickly and for top dollar. 
-              15+ years of experience in The Vistas community.
+              I price homes by subcommunity, not ZIP-code averages. Tell me your address and I will map your closest comps.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -73,9 +72,9 @@ export default function SellPage() {
             
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
               <p className="text-xl mb-6">
-                Ready to sell your home in The Vistas Summerlin? Dr. Jan Duffy offers expert 
-                real estate services with over 12 years of experience in The Vistas community. 
-                Her office at 11312 Parkside Way provides convenient access and deep local 
+                Ready to sell your home in The Vistas Summerlin? Dr. Jan Duffy offers seller-first
+                real estate service built on recent closings and neighborhood-level pricing.
+                Her office at 2827 Paradise Rd, Suite 2 provides deep local
                 market knowledge to help you achieve top dollar for your luxury home.
               </p>
               
@@ -84,7 +83,7 @@ export default function SellPage() {
               </h3>
               
               <p className="mb-6">
-                Dr. Jan Duffy specializes exclusively in The Vistas Summerlin real estate market, 
+                Dr. Jan Duffy specializes in The Vistas Summerlin real estate market,
                 providing personalized service with flexible scheduling that works around your 
                 lifestyle. Her deep understanding of the community's 28 distinct subcommunities 
                 and current market trends ensures your home is positioned for maximum value and 
@@ -108,9 +107,9 @@ export default function SellPage() {
               </h3>
               
               <p className="mb-6">
-                Don't wait to start your home selling journey in The Vistas Summerlin. Contact 
+                Start your home selling journey in The Vistas Summerlin. Contact
                 Dr. Jan Duffy at (702) 500-0607 for your free home valuation and expert market 
-                analysis. Her office at 11312 Parkside Way provides convenient access for all 
+                analysis. Her office at 2827 Paradise Rd, Suite 2 provides convenient access for all
                 your real estate needs.
               </p>
             </div>

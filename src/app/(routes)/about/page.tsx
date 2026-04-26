@@ -117,8 +117,8 @@ export default function AboutPage() {
               
               <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
                 <p className="text-xl mb-6">
-                  Dr. Jan Duffy has been serving The Vistas Summerlin community for over 12 years, 
-                  establishing herself as the premier real estate expert for luxury homes in Las Vegas. 
+                  Dr. Jan Duffy has been serving The Vistas Summerlin community for over 12 years,
+                  with a focus on local pricing and practical seller and buyer guidance.
                   With deep knowledge of The Vistas market and personalized service that adapts to your 
                   schedule, Dr. Duffy provides exceptional guidance for both buyers and sellers.
                 </p>
@@ -128,9 +128,8 @@ export default function AboutPage() {
                 </h3>
                 
                 <p className="mb-6">
-                  Dr. Jan Duffy specializes exclusively in <Link href="/communities" className="text-blue-600 hover:text-blue-800 font-semibold underline">The Vistas Summerlin</Link>, Las Vegas's most 
-                  prestigious master-planned community. Her office is strategically located at 
-                  11312 Parkside Way, right in the heart of The Vistas community, providing 
+                  Dr. Jan Duffy specializes in <Link href="/communities" className="text-blue-600 hover:text-blue-800 font-semibold underline">The Vistas Summerlin</Link>. Her office is located at
+                  2827 Paradise Rd, Suite 2, Las Vegas, NV 89109, and she regularly works with Vistas owners and buyers, providing
                   unparalleled access to local market insights and community knowledge. This 
                   specialized focus allows Dr. Duffy to offer expert guidance on luxury homes 
                   ranging from $800,000 to over $2.5 million. <Link href="/search" className="text-blue-600 hover:text-blue-800 font-semibold underline">Browse current listings</Link> or <Link href="/valuation" className="text-blue-600 hover:text-blue-800 font-semibold underline">get your home's value</Link>.
@@ -157,7 +156,7 @@ export default function AboutPage() {
                   sales, property valuations, market analysis, and investment consulting. Her deep 
                   understanding of The Vistas community's 28 distinct subcommunities, from 
                   Mediterranean-inspired Portofino to the royal elegance of Kingwood, ensures 
-                  clients find their perfect match in this prestigious Las Vegas community.
+                  clients find the right fit in this Las Vegas community.
                 </p>
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">
@@ -224,9 +223,9 @@ export default function AboutPage() {
               </div>
               
               <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Award Recognition</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Community Recognition</h3>
                 <p className="text-gray-600">
-                  Summerlin continues to be recognized as one of the nation's premier master-planned communities.
+                  Summerlin continues to expand with new neighborhoods, retail, and recreation options.
                 </p>
               </div>
             </div>
@@ -267,7 +266,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
                     <CheckCircle className="w-6 h-6 text-green-500" />
-                    <span className="text-gray-700">500+ Successful Transactions</span>
+                    <span className="text-gray-700">Active across 28 Vistas subcommunities</span>
                   </div>
                 </div>
               </div>
@@ -426,15 +425,15 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Users className="w-8 h-8 text-blue-600" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2 group-hover:scale-110 transition-transform">500+</div>
-                <div className="text-gray-600">Happy Families</div>
+                <div className="text-3xl font-bold text-gray-900 mb-2 group-hover:scale-110 transition-transform">28</div>
+                <div className="text-gray-600">Vistas Subcommunities</div>
               </div>
               <div className="text-center bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
                 <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <TrendingUp className="w-8 h-8 text-green-600" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2 group-hover:scale-110 transition-transform">$2.1B</div>
-                <div className="text-gray-600">Total Sales Volume</div>
+                <div className="text-3xl font-bold text-gray-900 mb-2 group-hover:scale-110 transition-transform">2009</div>
+                <div className="text-gray-600">Tracking Vistas Since</div>
               </div>
               <div className="text-center bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
                 <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">

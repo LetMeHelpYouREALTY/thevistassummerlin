@@ -141,7 +141,7 @@ export default function HomeEvaluationSection() {
               <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
                 <div className="flex items-center space-x-2 bg-green-50 px-4 py-2 rounded-full">
                   <Shield className="w-4 h-4 text-green-600" />
-                  <span className="text-green-700 font-medium">Bank-Level Security</span>
+                  <span className="text-green-700 font-medium">Private and confidential</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full">
                   <Clock className="w-4 h-4 text-blue-600" />
@@ -161,8 +161,8 @@ export default function HomeEvaluationSection() {
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
                 <BarChart3 className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">AI-Powered Analysis</h3>
-              <p className="text-blue-100 text-sm">Advanced algorithms analyze 50+ market factors for unparalleled accuracy.</p>
+              <h3 className="text-lg font-semibold text-white mb-2">Local pricing review</h3>
+              <p className="text-blue-100 text-sm">Dr. Jan reviews subcommunity-level comps and recent closings.</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">

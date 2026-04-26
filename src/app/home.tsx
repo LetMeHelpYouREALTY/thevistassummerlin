@@ -15,7 +15,7 @@ export default function Home() {
   const faqTeasers = [
     {
       q: 'What is The Vistas Summerlin?',
-      a: 'A premier Summerlin master-planned community with luxury neighborhoods, parks, and nearby golf and lifestyle amenities.',
+      a: 'A Summerlin master-planned community with neighborhood parks, trails, and nearby golf access.',
     },
     {
       q: 'How much do homes cost in The Vistas Summerlin?',

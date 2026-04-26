@@ -85,8 +85,8 @@ export default function HomeEvaluationSection() {
           </h2>
           
           <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Our advanced AI-powered valuation tool analyzes millions of data points to provide 
-            you with the most accurate home value estimate in The Vistas Summerlin market.
+            Get a valuation baseline first, then review recent Vistas comps with Dr. Jan
+            before you price your home.
           </p>
         </div>
 
@@ -158,7 +158,7 @@ export default function HomeEvaluationSection() {
                 <div className="flex flex-wrap items-center justify-center gap-8 text-sm">
                   <div className="flex items-center space-x-2 bg-green-50 px-4 py-2 rounded-full">
                     <Shield className="w-4 h-4 text-green-600" />
-                    <span className="text-green-700 font-medium">Bank-Level Security</span>
+                    <span className="text-green-700 font-medium">Private and confidential</span>
                   </div>
                   <div className="flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full">
                     <Clock className="w-4 h-4 text-blue-600" />
@@ -166,7 +166,7 @@ export default function HomeEvaluationSection() {
                   </div>
                   <div className="flex items-center space-x-2 bg-yellow-50 px-4 py-2 rounded-full">
                     <Award className="w-4 h-4 text-yellow-600" />
-                    <span className="text-yellow-700 font-medium">99.2% Accuracy</span>
+                    <span className="text-yellow-700 font-medium">Seller-focused follow-up</span>
                   </div>
                 </div>
               </div>
@@ -187,10 +187,10 @@ export default function HomeEvaluationSection() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                      AI-Powered Analysis
+                      Local pricing analysis
                     </h4>
                     <p className="text-gray-600 leading-relaxed">
-                      Advanced algorithms analyze 50+ market factors for unparalleled accuracy
+                      Recent nearby closings and subcommunity-level pricing context
                     </p>
                   </div>
                 </div>

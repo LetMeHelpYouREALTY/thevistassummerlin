@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, Mail, MapPin, ArrowRight, Star, Award, Users, TrendingUp, Facebook, Twitter, Instagram, Linkedin, Youtube, MessageCircle, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Facebook, Twitter, Instagram, Linkedin, Youtube, MessageCircle, Heart } from 'lucide-react';
 
 const footerLinks = {
   communities: [
@@ -22,6 +22,7 @@ const footerLinks = {
   resources: [
     { name: 'Blog & News', href: '/blog' },
     { name: 'Market Analysis', href: '/market-analysis' },
+    { name: 'Recently Sold', href: '/sold' },
     { name: 'Investment Guide', href: '/investment' },
     { name: 'Featured Property', href: '/properties/11773-golden-moments-avenue' },
     { name: 'About Dr. Jan Duffy', href: '/about' }
@@ -65,11 +66,10 @@ export default function Footer() {
               </h3>
               <div className="mb-4">
                 <p className="text-[#D4A843] font-semibold mb-2">Homes by Dr. Jan Duffy</p>
-                <p className="text-sm text-blue-200">Preferred Realtor | Award-Winning Service</p>
+                <p className="text-sm text-blue-200">Berkshire Hathaway HomeServices Nevada Properties</p>
               </div>
               <p className="text-blue-100 mb-6 leading-relaxed">
-                Dr. Jan Duffy, your preferred realtor, guides you through 28 unique subcommunities in Las Vegas' most 
-                prestigious residential area. Discover luxury homes with world-class amenities and award-winning expertise.
+                I track pricing in all 28 Vistas subcommunities. If you are selling, I will show you the nearby closings and where buyers are negotiating this month.
               </p>
             </div>
             
@@ -95,7 +95,7 @@ export default function Footer() {
                 <div className="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-purple-300" />
                 </div>
-                <span className="text-blue-100">Las Vegas, NV 89138</span>
+                <span className="text-blue-100">2827 Paradise Rd, Suite 2, Las Vegas, NV 89109</span>
               </div>
             </div>
 
@@ -175,36 +175,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 py-8 border-t border-white/20">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-              <Users className="w-6 h-6 text-blue-300" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">500+</div>
-            <div className="text-blue-200 text-sm">Happy Families</div>
-          </div>
-          <div className="text-center">
-            <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-              <TrendingUp className="w-6 h-6 text-green-300" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">$2.1B</div>
-            <div className="text-blue-200 text-sm">Sales Volume</div>
-          </div>
-          <div className="text-center">
-            <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-              <Award className="w-6 h-6 text-purple-300" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">15+</div>
-            <div className="text-blue-200 text-sm">Years Experience</div>
-          </div>
-          <div className="text-center">
-            <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-              <Star className="w-6 h-6 text-yellow-300" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">98%</div>
-            <div className="text-blue-200 text-sm">Satisfaction</div>
-          </div>
+        <div className="mb-12 py-8 border-t border-white/20">
+          <p className="text-blue-100 text-sm text-center">
+            Coverage includes Barrington, Kingwood, Santalina, Portofino, Canterra, and 23 additional Vistas subcommunities.
+          </p>
         </div>
 
         {/* Newsletter Signup */}
@@ -233,7 +207,9 @@ export default function Footer() {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-blue-200 mb-4 md:mb-0">
-              <span className="text-[0.75rem] text-[#6b5f8a]">© 2024 The Vistas Summerlin. All rights reserved. License S.0197614.LLC</span>
+              <span className="text-[0.75rem] text-[#6b5f8a]">
+                © {new Date().getFullYear()} The Vistas Summerlin. License S.0197614.LLC. Berkshire Hathaway HomeServices Nevada Properties.
+              </span>
             </div>
             
             <div className="flex items-center space-x-6">

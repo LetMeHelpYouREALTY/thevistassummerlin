@@ -51,7 +51,7 @@ export default function FAQPage() {
       questions: [
         {
           question: 'What is The Vistas Summerlin?',
-          answer: 'The Vistas Summerlin is Las Vegas\'s premier master-planned luxury community, developed in 2000 as Summerlin West\'s first community. It features 815 acres of European-inspired village design with 28+ subcommunities, luxury homes ranging from $800K to $2.5M+, and world-class amenities including TPC Summerlin golf course access.'
+          answer: 'The Vistas Summerlin is a master-planned community in Las Vegas, developed in 2000 as Summerlin West\'s first village. It includes 28 subcommunities, homes across multiple price ranges, and access to trails, parks, and nearby TPC Summerlin.'
         },
         {
           question: 'Where is The Vistas Summerlin located?',
@@ -68,7 +68,7 @@ export default function FAQPage() {
       questions: [
         {
           question: 'What makes Canterra community unique?',
-          answer: 'Canterra is The Vistas Summerlin\'s premier community featuring oversized lots up to 11,761 sq ft, dual master suite floor plans perfect for multi-generational living, flexible square footage (1,829-2,787 sq ft), and Summerlin mandated features with 15% outdoor living space and 360-degree design.'
+          answer: 'Canterra is known for larger lots up to 11,761 sq ft, dual primary suite floor plans, and flexible square footage around 1,829-2,787 sq ft. Many owners choose Canterra for multi-generational layouts and outdoor living space.'
         },
         {
           question: 'What are the benefits of oversized lots in Canterra?',

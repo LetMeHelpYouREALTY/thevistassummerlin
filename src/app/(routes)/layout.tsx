@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "The Vistas Summerlin | Luxury Homes by Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-  description: "Discover luxury homes in The Vistas Summerlin, Las Vegas's premier master-planned community. Dr. Jan Duffy offers expert real estate services with flexible scheduling. Featured Canterra community with oversized lots and dual master suites.",
+  description: "Discover homes in The Vistas Summerlin, Las Vegas 89138. Dr. Jan Duffy offers seller and buyer guidance with subcommunity-level market insight and flexible scheduling.",
   keywords: [
     "The Vistas Summerlin",
     "Vistas Summerlin homes for sale",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "The Vistas Summerlin | Luxury Homes by Dr. Jan Duffy",
-    description: "Discover luxury homes in The Vistas Summerlin, Las Vegas's premier master-planned community. Dr. Jan Duffy offers expert real estate services with flexible scheduling.",
+    description: "Discover homes in The Vistas Summerlin with local market guidance from Dr. Jan Duffy.",
     url: "https://www.thevistassummerlin.com",
     siteName: "The Vistas Summerlin | Homes by Dr. Jan Duffy",
     images: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "The Vistas Summerlin | Luxury Homes by Dr. Jan Duffy",
-    description: "Discover luxury homes in The Vistas Summerlin, Las Vegas's premier master-planned community. Dr. Jan Duffy offers expert real estate services with flexible scheduling.",
+    description: "Discover homes in The Vistas Summerlin with local market guidance from Dr. Jan Duffy.",
     images: ["/subcommunities/IMG_0737.JPG"],
   },
   alternates: {

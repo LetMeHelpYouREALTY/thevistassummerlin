@@ -5,11 +5,9 @@ import Link from 'next/link';
 import { 
   Search, 
   Home, 
-  MapPin, 
   Filter, 
   Star, 
   TrendingUp, 
-  Calendar, 
   Phone,
   ArrowRight,
   Sparkles,
@@ -20,6 +18,7 @@ import {
   Clock,
   Users
 } from 'lucide-react';
+import { HomeSearch } from '@/components/HomeSearch';
 
 const propertyTypes = [
   {
@@ -97,15 +96,14 @@ export default function SearchPage() {
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-              Find Your Dream Home in
+              Browse Live MLS Homes in
               <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 The Vistas Summerlin
               </span>
             </h1>
             
             <p className="text-xl lg:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed mb-12">
-              Search through 500+ luxury properties across 28 exclusive subcommunities. 
-              Discover homes that match your lifestyle with our advanced AI-powered search tools.
+              Start with active listings, then call Dr. Jan for subcommunity-level strategy and recent closings before you write.
             </p>
 
             {/* Quick Stats */}
@@ -131,7 +129,7 @@ export default function SearchPage() {
         </div>
       </section>
 
-      {/* V0 Advanced Search Widget */}
+      {/* Search Widget */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,21 +141,14 @@ export default function SearchPage() {
             </div>
             
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              AI-Powered Property Search
+              Vistas Home Search
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our intelligent search engine analyzes millions of data points to find properties 
-              that perfectly match your lifestyle and investment goals.
+              Live MLS inventory by Dr. Jan Duffy with filters for beds, baths, price, and property type.
             </p>
           </div>
           
-          <div className="bg-gradient-to-br from-slate-900 to-indigo-900 rounded-3xl shadow-2xl p-8 lg:p-12 border border-indigo-200">
-            <div className="max-w-4xl mx-auto">
-              <realscout-advanced-search 
-                agent-encoded-id="QWdlbnQtMjI1MDUw"
-              />
-            </div>
-          </div>
+          <HomeSearch title="Vistas Home Search" />
         </div>
       </section>
 

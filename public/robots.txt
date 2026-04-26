@@ -1,10 +1,16 @@
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
-Disallow: /*.vercel.app/
+
+User-agent: CCBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
 
 Sitemap: https://www.thevistassummerlin.com/sitemap.xml
-Sitemap: https://www.thevistassummerlin.com/image-sitemap.xml
-Host: https://www.thevistassummerlin.com

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronDown, Home as HomeIcon, MapPin, TrendingUp, Phone, Star, Users, Award, Sparkles, ArrowRight, Play, Zap, Shield, Heart } from 'lucide-react';
+import { ChevronDown, Home as HomeIcon, TrendingUp, Phone, ArrowRight } from 'lucide-react';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import GradientCard from '@/components/ui/GradientCard';
 
@@ -54,65 +54,40 @@ export default function Hero() {
           {/* Left Column - Main Content */}
           <div className="text-white space-y-8">
             {/* Trust Badge with Enhanced Animation */}
-            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-blue-100 font-medium shadow-lg hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <Star className="w-5 h-5 text-yellow-400 fill-current animate-pulse" />
-              <span>Preferred Realtor - Dr. Jan Duffy</span>
-              <Zap className="w-4 h-4 text-yellow-400 animate-bounce" />
+            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-blue-100 font-medium shadow-lg">
+              <span>Dr. Jan Duffy | S.0197614.LLC</span>
             </div>
 
             {/* Main Headline with Staggered Animation */}
             <div className="space-y-4">
               <h1 className="hero-headline text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
                 <span className={`block text-white transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                  Find Your Perfect
+                  What&apos;s Your Home Worth
                 </span>
                 <span className={`block text-[#D4A843] transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                  Home in
-                </span>
-                <span className={`block text-white transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                  The Vistas
-                </span>
-                <span className={`block text-[#D4A843] transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                  Summerlin
+                  in The Vistas Summerlin?
                 </span>
               </h1>
             </div>
 
             {/* Subtitle with Fade-in */}
             <p className={`text-xl lg:text-2xl font-light max-w-2xl leading-relaxed text-blue-100 transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-              Award-winning realtor Dr. Jan Duffy guides you through 28 prestigious subcommunities in Las Vegas' most exclusive area. 
-              Where luxury meets lifestyle, and every home tells a story of sophistication.
+              I have worked every Vistas subcommunity since 2009. Pricing in Barrington is different from Kingwood and Santalina. I will show you where buyers are paying a premium this month.
             </p>
-
-            {/* Enhanced Urgency Alert */}
-            <div className={`bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-sm border border-red-400/30 rounded-2xl p-6 transition-all duration-1000 delay-1200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-              <div className="flex items-center space-x-3 text-red-100 mb-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
-                <span className="font-bold text-lg">LIMITED AVAILABILITY - ACT FAST!</span>
-                <Heart className="w-5 h-5 text-red-400 animate-pulse" />
-              </div>
-              <p className="text-red-100">Only 12 premium properties remaining in The Vistas Summerlin</p>
-            </div>
 
             {/* Enhanced Key Stats with Hover Effects */}
             <div className={`grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 py-6 transition-all duration-1000 delay-1400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
               <div className="text-center stat-glass-card">
-                <div className="stat-value">
-                  <AnimatedCounter end={19} />
-                </div>
-                <div className="stat-label">Listings</div>
+                <div className="stat-value">28</div>
+                <div className="stat-label">Subcommunities</div>
               </div>
               <div className="text-center stat-glass-card col-span-2 md:col-span-1">
-                <div className="stat-value">
-                  <AnimatedCounter end={647} prefix="$" suffix="K" />
-                </div>
-                <div className="stat-label">Median Price</div>
+                <div className="stat-value">2009</div>
+                <div className="stat-label">Tracking Vistas Since</div>
               </div>
               <div className="text-center stat-glass-card">
-                <div className="stat-value">
-                  1.2
-                </div>
-                <div className="stat-label">Days on Market</div>
+                <div className="stat-value">Now</div>
+                <div className="stat-label">Last Updated</div>
               </div>
             </div>
 
@@ -124,32 +99,29 @@ export default function Hero() {
               >
                 <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 <span>Call Dr. Jan: (702) 500-0607</span>
-                <Zap className="w-4 h-4 group-hover:animate-pulse" />
               </a>
               
               <Link 
-                href="/communities" 
+                href="/valuation" 
                 className="btn-secondary px-8 py-4 shadow-lg flex items-center justify-center space-x-2 hover:text-[#D4A843] w-full sm:w-auto"
               >
-                <MapPin className="w-5 h-5" />
-                <span>Explore Communities</span>
+                <HomeIcon className="w-5 h-5" />
+                <span>Get My Vistas Value</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/search"
+                className="btn-secondary px-8 py-4 shadow-lg flex items-center justify-center space-x-2 hover:text-[#D4A843] w-full sm:w-auto"
+              >
+                <span>Browse Vistas Homes</span>
               </Link>
             </div>
 
             {/* Enhanced Trust Indicators */}
             <div className={`flex items-center space-x-8 pt-8 transition-all duration-1000 delay-1800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-              <div className="flex items-center space-x-2 text-blue-100 hover:text-white transition-colors group">
-                <Users className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span className="text-sm">500+ Happy Families</span>
-              </div>
-              <div className="flex items-center space-x-2 text-blue-100 hover:text-white transition-colors group">
-                <Award className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span className="text-sm">15+ Years Experience</span>
-              </div>
-              <div className="flex items-center space-x-2 text-blue-100 hover:text-white transition-colors group">
+              <div className="flex items-center space-x-2 text-blue-100 transition-colors group">
                 <TrendingUp className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span className="text-sm">$2.1B Sales Volume</span>
+                <span className="text-sm">Barrington | Kingwood | Santalina | Portofino | Canterra + 23 more</span>
               </div>
             </div>
           </div>
@@ -181,12 +153,12 @@ export default function Hero() {
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className="bg-blue-50 rounded-xl p-3 hover:bg-blue-100 transition-colors group">
-                    <div className="text-lg font-bold text-blue-600 group-hover:scale-110 transition-transform">98%</div>
-                    <div className="text-xs text-gray-600">Accuracy Rate</div>
+                    <div className="text-lg font-bold text-blue-600 group-hover:scale-110 transition-transform">Local</div>
+                    <div className="text-xs text-gray-600">Subcommunity Comps</div>
                   </div>
                   <div className="bg-green-50 rounded-xl p-3 hover:bg-green-100 transition-colors group">
-                    <div className="text-lg font-bold text-green-600 group-hover:scale-110 transition-transform">24hr</div>
-                    <div className="text-xs text-gray-600">Response Time</div>
+                    <div className="text-lg font-bold text-green-600 group-hover:scale-110 transition-transform">Fast</div>
+                    <div className="text-xs text-gray-600">Seller Follow-up</div>
                   </div>
                 </div>
               </div>
@@ -219,10 +191,9 @@ export default function Hero() {
       <div className="absolute bottom-20 left-20 z-10 hidden lg:block">
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
           <div className="text-white text-sm">
-            <div className="font-bold mb-1">Trusted by</div>
+            <div className="font-bold mb-1">Seller-first strategy</div>
             <div className="text-blue-300 flex items-center space-x-1">
-              <Heart className="w-3 h-3 animate-pulse" />
-              <span>500+ Families</span>
+              <span>Address-level pricing calls</span>
             </div>
           </div>
         </div>
