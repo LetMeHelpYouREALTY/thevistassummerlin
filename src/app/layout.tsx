@@ -169,6 +169,18 @@ export default function RootLayout({
       </head>
       <body className={`antialiased ${playfair.variable} ${dmSans.variable} font-secondary text-text-light bg-deep`}>
         {children}
+        <section className="section-shell dark-luxury-bg">
+          <div className="max-w-7xl mx-auto">
+            {React.createElement('realscout-office-listings', {
+              'agent-encoded-id': 'QWdlbnQtMjI1MDUw',
+              'sort-order': 'STATUS_AND_SIGNIFICANT_CHANGE',
+              'listing-status': 'For Sale',
+              'property-types': 'SFR,LAL',
+              'price-min': '500000',
+              suppressHydrationWarning: true,
+            })}
+          </div>
+        </section>
       </body>
     </html>
   );
