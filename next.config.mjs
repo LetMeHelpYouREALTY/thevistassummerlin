@@ -1,11 +1,11 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig = {
   typedRoutes: false,
-  outputFileTracingRoot: __dirname,
+  outputFileTracingRoot: projectRoot,
   images: {
     remotePatterns: [
       {

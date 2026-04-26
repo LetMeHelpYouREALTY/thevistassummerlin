@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React from 'react';
 import { MapPin, Phone, Clock, Star, MessageCircle, Calendar, Users, Award, TrendingUp } from 'lucide-react';
-
+import { gbpTelHref, getGbpMapEmbedUrl, getGbpLinks } from '@/lib/gbp';
 export default function GoogleBusinessProfileWidget() {
-  const [reviews, setReviews] = useState([
+  const reviews = [
     {
       id: 1,
       name: "Sarah M.",
@@ -29,15 +29,11 @@ export default function GoogleBusinessProfileWidget() {
       date: "2024-01-02",
       verified: true
     }
-  ]);
+  ];
 
-  const [stats, setStats] = useState({
-    totalReviews: 150,
-    averageRating: 4.9,
-    responseRate: "100%",
-    responseTime: "< 2 hours"
-  });
-
+  const mapEmbedSrc = getGbpMapEmbedUrl();
+  const { directions: directionsUrl, reviews: reviewsUrl } = getGbpLinks();
+  const telHref = gbpTelHref();
   return (
     <section className="py-16 bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative overflow-hidden">
       {/* Background Elements */}
@@ -55,7 +51,7 @@ export default function GoogleBusinessProfileWidget() {
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Trusted by <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">150+ Families</span>
+            Local Expertise for <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">The Vistas Summerlin</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -76,7 +72,7 @@ export default function GoogleBusinessProfileWidget() {
                 <Phone className="w-5 h-5 text-green-600" />
                 <div>
                   <p className="font-semibold text-gray-900">Phone</p>
-                  <a href="tel:+17025000607" className="text-blue-600 hover:text-blue-700">(702) 500-0607</a>
+                  <a href={telHref} className="text-blue-600 hover:text-blue-700">(702) 500-0607</a>
                 </div>
               </div>
               
@@ -97,10 +93,20 @@ export default function GoogleBusinessProfileWidget() {
               </div>
             </div>
 
+            <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200">
+              <iframe
+                title="Google Map - The Vistas Summerlin office"
+                src={mapEmbedSrc}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-56 w-full"
+              />
+            </div>
+
             {/* Quick Actions */}
             <div className="mt-8 space-y-3">
               <a
-                href="tel:+17025000607"
+                href={telHref}
                 className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-2xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
@@ -108,11 +114,13 @@ export default function GoogleBusinessProfileWidget() {
               </a>
               
               <a
-                href="/contact"
+                href={directionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-2xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>Send Message</span>
+                <span>Get Directions</span>
               </a>
             </div>
           </div>
@@ -122,14 +130,14 @@ export default function GoogleBusinessProfileWidget() {
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold text-gray-900 flex items-center">
                 <Star className="w-6 h-6 mr-2 text-yellow-500" />
-                Recent Reviews
+                Client Highlights
               </h3>
               <div className="text-right">
                 <div className="flex items-center space-x-1">
                   <Star className="w-5 h-5 text-yellow-500 fill-current" />
-                  <span className="text-2xl font-bold text-gray-900">{stats.averageRating}</span>
+                  <span className="text-2xl font-bold text-gray-900">Google</span>
                 </div>
-                <p className="text-sm text-gray-600">{stats.totalReviews} reviews</p>
+                <p className="text-sm text-gray-600">View latest profile details</p>
               </div>
             </div>
 
@@ -160,7 +168,7 @@ export default function GoogleBusinessProfileWidget() {
 
             <div className="mt-6 text-center">
               <a
-                href="https://g.page/r/your-google-business-profile"
+                href={reviewsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-700 font-semibold text-sm"
@@ -184,8 +192,8 @@ export default function GoogleBusinessProfileWidget() {
                     <Star className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-blue-100">Average Rating</p>
-                    <p className="text-2xl font-bold">{stats.averageRating}/5.0</p>
+                    <p className="text-blue-100">Google Rating</p>
+                    <p className="text-2xl font-bold">See Profile</p>
                   </div>
                 </div>
               </div>
@@ -196,8 +204,8 @@ export default function GoogleBusinessProfileWidget() {
                     <Users className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-blue-100">Total Reviews</p>
-                    <p className="text-2xl font-bold">{stats.totalReviews}+</p>
+                    <p className="text-blue-100">Customer Reviews</p>
+                    <p className="text-2xl font-bold">Live on Google</p>
                   </div>
                 </div>
               </div>
@@ -208,8 +216,8 @@ export default function GoogleBusinessProfileWidget() {
                     <MessageCircle className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-blue-100">Response Rate</p>
-                    <p className="text-2xl font-bold">{stats.responseRate}</p>
+                    <p className="text-blue-100">Response Time</p>
+                    <p className="text-2xl font-bold">Fast Follow-Up</p>
                   </div>
                 </div>
               </div>
@@ -220,8 +228,8 @@ export default function GoogleBusinessProfileWidget() {
                     <Award className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-blue-100">Response Time</p>
-                    <p className="text-2xl font-bold">{stats.responseTime}</p>
+                    <p className="text-blue-100">Consultation</p>
+                    <p className="text-2xl font-bold">By Appointment</p>
                   </div>
                 </div>
               </div>
@@ -250,7 +258,7 @@ export default function GoogleBusinessProfileWidget() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025000607"
+                href={telHref}
                 className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-2xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />

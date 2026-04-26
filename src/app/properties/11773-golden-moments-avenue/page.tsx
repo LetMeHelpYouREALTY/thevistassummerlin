@@ -1,10 +1,13 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, MapPin, Bed, Bath, Square, Calendar, DollarSign, Car, Home, TreePine, Phone, Mail, ExternalLink } from 'lucide-react';
+import { MapPin, Bed, Bath, Square, Calendar, Car, Home, TreePine, Phone, Mail, ExternalLink } from 'lucide-react';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { PropertyImageGallery, goldenMomentsImages } from '@/components/PropertyImageGallery';
+
+// Keep server-rendered so Vercel Windows prebuild can package this route (see (routes)/layout).
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: "11773 Golden Moments Avenue | The Vistas Summerlin Home for Sale",
@@ -79,7 +82,7 @@ function PropertySchema() {
     "mlsNumber": "2722090",
     "listingAgent": {
       "@type": "RealEstateAgent",
-      "name": "Jan Duffy",
+      "name": "Dr. Jan Duffy",
       "url": "https://www.thevistassummerlin.com"
     },
     "amenityFeature": [
@@ -217,7 +220,7 @@ export default function GoldenMomentsProperty() {
                     className="btn-secondary flex items-center justify-center space-x-2 px-6 py-4 w-full"
                   >
                     <Phone className="w-5 h-5" />
-                    <span>Call Jan Duffy</span>
+                    <span>Call Dr. Jan Duffy</span>
                   </a>
                 </div>
 
@@ -417,7 +420,7 @@ export default function GoldenMomentsProperty() {
                       className="btn-secondary flex items-center justify-center space-x-2 w-full py-3"
                     >
                       <Mail className="w-5 h-5" />
-                      <span>Email Jan</span>
+                      <span>Email Dr. Jan</span>
                     </a>
                   </div>
                 </div>

@@ -22,7 +22,9 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-6">
-              <span className="font-primary font-medium">Preferred Realtor: Dr. Jan Duffy | The Vistas Summerlin</span>
+              <span className="font-primary font-medium">
+                Dr. Jan Duffy · The Vistas Summerlin, Las Vegas NV
+              </span>
             </div>
             <div className="flex items-center space-x-6">
               <a href="tel:+17025000607" className="flex items-center hover:text-link-blue transition-colors duration-200">
@@ -47,7 +49,12 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center group">
+            <Link
+              href="/"
+              className="flex items-center group"
+              title="The Vistas Summerlin homes for sale | Dr. Jan Duffy, Las Vegas real estate"
+              aria-label="The Vistas Summerlin — home"
+            >
               <div className="text-2xl lg:text-3xl font-primary font-bold text-primary-navy group-hover:text-link-blue transition-colors duration-300">
                 The Vistas Summerlin
               </div>
@@ -55,7 +62,7 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8" id="main-navigation" aria-label="Primary">
             <Link 
               href="/" 
               className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-50"
@@ -88,8 +95,10 @@ export default function Navigation() {
                 <div className="absolute left-0 mt-2 w-96 bg-white border border-gray-200 rounded-lg shadow-xl max-h-96 overflow-y-auto z-50">
                   <div className="p-6">
                     <div className="mb-4">
-                      <h3 className="text-lg font-primary font-semibold text-gray-900 mb-2">All Communities</h3>
-                      <p className="text-sm text-gray-600">Discover luxury living in The Vistas Summerlin</p>
+                      <h3 className="text-lg font-primary font-semibold text-gray-900 mb-2">Vistas neighborhoods</h3>
+                      <p className="text-sm text-gray-600">
+                        Summerlin subcommunities — photos, pricing, and local expertise
+                      </p>
                     </div>
                     <Link
                       href="/communities"
@@ -144,32 +153,61 @@ export default function Navigation() {
                       className="block px-4 py-3 text-sm font-primary font-medium text-gray-900 hover:bg-link-blue hover:text-white rounded-md transition-colors duration-200 mb-2"
                       onClick={() => setShowPropertiesDropdown(false)}
                     >
-                      Search Properties
+                      Search Summerlin homes (MLS)
+                    </Link>
+                    <Link
+                      href="/valuation"
+                      className="block px-4 py-3 text-sm font-primary font-medium text-gray-900 hover:bg-link-blue hover:text-white rounded-md transition-colors duration-200 mb-2"
+                      onClick={() => setShowPropertiesDropdown(false)}
+                    >
+                      What&apos;s my home worth?
                     </Link>
                     <Link
                       href="/sell"
                       className="block px-4 py-3 text-sm font-primary font-medium text-gray-900 hover:bg-link-blue hover:text-white rounded-md transition-colors duration-200 mb-2"
                       onClick={() => setShowPropertiesDropdown(false)}
                     >
-                      Sell Your Home
+                      Sell your Vistas home
+                    </Link>
+                    <Link
+                      href="/properties/11773-golden-moments-avenue"
+                      className="block px-4 py-3 text-sm font-primary font-medium text-gray-900 hover:bg-link-blue hover:text-white rounded-md transition-colors duration-200 mb-2"
+                      onClick={() => setShowPropertiesDropdown(false)}
+                    >
+                      Featured Canterra listing
                     </Link>
                     <Link
                       href="/market-reports"
                       className="block px-4 py-3 text-sm font-primary font-medium text-gray-900 hover:bg-link-blue hover:text-white rounded-md transition-colors duration-200"
                       onClick={() => setShowPropertiesDropdown(false)}
                     >
-                      Market Reports
+                      Market reports
                     </Link>
                   </div>
                 </div>
               )}
             </div>
 
+            <Link
+              href="/valuation"
+              className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-50"
+              title="Free home value estimate for The Vistas Summerlin"
+            >
+              Home value
+            </Link>
+
             <Link 
               href="/blog" 
               className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-50"
             >
               Blog
+            </Link>
+
+            <Link
+              href="/faq"
+              className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-50"
+            >
+              FAQ
             </Link>
             
             <Link 
@@ -193,19 +231,28 @@ export default function Navigation() {
             <Link
               href="/search"
               className="flex items-center px-4 py-2 text-sm font-primary font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200"
+              title="Search MLS listings in The Vistas and Summerlin"
             >
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-              Search
+              Search homes
             </Link>
             
+            <Link
+              href="/contact"
+              className="text-sm font-primary font-medium text-link-blue hover:text-primary-navy transition-colors"
+            >
+              Get in touch
+            </Link>
+
             {/* Primary CTA */}
             <Link 
               href="/search" 
               className="bg-link-blue text-white px-6 py-3 rounded-lg text-sm font-primary font-semibold hover:bg-primary-navy transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              title="Browse active Vistas and Summerlin listings"
             >
-              Find Your Home
+              See listings
             </Link>
           </div>
 
@@ -251,21 +298,35 @@ export default function Navigation() {
                 className="block px-4 py-3 text-base font-primary font-medium text-gray-700 hover:text-link-blue hover:bg-gray-50 rounded-lg transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Search Properties
+                Search Summerlin homes
+              </Link>
+              <Link
+                href="/valuation"
+                className="block px-4 py-3 text-base font-primary font-medium text-gray-700 hover:text-link-blue hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                What&apos;s my home worth?
               </Link>
               <Link 
                 href="/sell" 
                 className="block px-4 py-3 text-base font-primary font-medium text-gray-700 hover:text-link-blue hover:bg-gray-50 rounded-lg transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Sell Your Home
+                Sell your home
               </Link>
               <Link 
                 href="/market-reports" 
                 className="block px-4 py-3 text-base font-primary font-medium text-gray-700 hover:text-link-blue hover:bg-gray-50 rounded-lg transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Market Reports
+                Market reports
+              </Link>
+              <Link
+                href="/faq"
+                className="block px-4 py-3 text-base font-primary font-medium text-gray-700 hover:text-link-blue hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQ
               </Link>
               <Link 
                 href="/about" 
@@ -304,7 +365,7 @@ export default function Navigation() {
                   className="block w-full text-center bg-link-blue text-white px-6 py-3 rounded-lg text-base font-primary font-semibold hover:bg-primary-navy transition-colors duration-200 shadow-md"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Find Your Home
+                  See MLS listings
                 </Link>
               </div>
             </div>

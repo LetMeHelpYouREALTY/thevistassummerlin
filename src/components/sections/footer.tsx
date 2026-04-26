@@ -5,35 +5,31 @@ import { Phone, Mail, MapPin, ArrowRight, Facebook, Twitter, Instagram, Linkedin
 
 const footerLinks = {
   communities: [
-    { name: 'All Communities', href: '/communities' },
-    { name: 'Barrington', href: '/communities/barrington' },
-    { name: 'Kingwood', href: '/communities/kingwood' },
+    { name: 'All Vistas neighborhoods', href: '/communities' },
+    { name: 'Barrington (Summerlin)', href: '/communities/barrington' },
+    { name: 'Kingwood (The Vistas)', href: '/communities/kingwood' },
     { name: 'Santalina', href: '/communities/santalina' },
     { name: 'Portofino', href: '/communities/portofino' },
-    { name: 'View All Communities', href: '/communities' }
+    { name: 'Canterra', href: '/communities/canterra' }
   ],
   services: [
-    { name: 'Home Valuation', href: '/valuation' },
-    { name: 'Market Reports', href: '/market-reports' },
-    { name: 'Property Search', href: '/search' },
-    { name: 'Sell Your Home', href: '/sell' },
-    { name: 'Community Guide', href: '/community-guide' }
+    { name: "What's my Las Vegas home worth?", href: '/valuation' },
+    { name: 'Search Summerlin & Vistas MLS', href: '/search' },
+    { name: 'Sell your Vistas home', href: '/sell' },
+    { name: 'Summerlin market reports', href: '/market-reports' },
+    { name: 'Vistas community guide', href: '/community-guide' }
   ],
   resources: [
-    { name: 'Blog & News', href: '/blog' },
-    { name: 'Market Analysis', href: '/market-analysis' },
-    { name: 'Recently Sold', href: '/sold' },
-    { name: 'Investment Guide', href: '/investment' },
-    { name: 'Featured Property', href: '/properties/11773-golden-moments-avenue' },
-    { name: 'About Dr. Jan Duffy', href: '/about' }
+    { name: 'Las Vegas & Summerlin real estate FAQ', href: '/faq' },
+    { name: 'Client reviews & testimonials', href: '/testimonials' },
+    { name: 'Dr. Jan Duffy — your REALTOR', href: '/agents/dr-jan-duffy' },
+    { name: 'Blog: market & neighborhood news', href: '/blog' },
+    { name: 'Market analysis', href: '/market-analysis' },
+    { name: 'Recently sold (The Vistas)', href: '/sold' },
+    { name: 'Investment properties (Las Vegas)', href: '/investment' },
+    { name: 'Featured Canterra listing', href: '/properties/11773-golden-moments-avenue' },
+    { name: 'About this site', href: '/about' }
   ],
-  company: [
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Sitemap', href: '/sitemap.xml' }
-  ]
 };
 
 const socialLinks = [
@@ -176,8 +172,9 @@ export default function Footer() {
         </div>
 
         <div className="mb-12 py-8 border-t border-white/20">
-          <p className="text-blue-100 text-sm text-center">
-            Coverage includes Barrington, Kingwood, Santalina, Portofino, Canterra, and 23 additional Vistas subcommunities.
+          <p className="text-blue-100 text-sm text-center max-w-3xl mx-auto leading-relaxed">
+            Las Vegas, Nevada real estate in Summerlin&rsquo;s The Vistas: Barrington, Kingwood, Santalina, Portofino, Canterra, and
+            23 more subcommunities. Dr. Jan Duffy is a licensed REALTOR&reg; (Nevada) with Berkshire Hathaway HomeServices Nevada Properties.
           </p>
         </div>
 
@@ -212,7 +209,25 @@ export default function Footer() {
               </span>
             </div>
             
-            <div className="flex items-center space-x-6">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+              <Link
+                href="/contact"
+                className="text-blue-200 hover:text-[#D4A843] transition-colors duration-200"
+              >
+                Contact
+              </Link>
+              <Link
+                href="/faq"
+                className="text-blue-200 hover:text-[#D4A843] transition-colors duration-200"
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/agents/dr-jan-duffy"
+                className="text-blue-200 hover:text-[#D4A843] transition-colors duration-200"
+              >
+                Dr. Jan Duffy
+              </Link>
               <Link 
                 href="/privacy"
                 className="text-blue-200 hover:text-[#D4A843] transition-colors duration-200"

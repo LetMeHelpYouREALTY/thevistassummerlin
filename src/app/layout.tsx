@@ -18,6 +18,7 @@ import {
   ArticleSchema
 } from '@/components/StructuredData';
 import { CalendlyBadge } from '@/components/CalendlyBadge';
+import { GbpActionStrip } from '@/components/sections/gbp-action-strip';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -111,10 +112,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
-        />
+        {/* Fonts: Playfair + DM Sans via next/font/google (self-hosted); do not add Google Fonts links or @import — avoids duplicate network + render blocking */}
         {/* Theme color for supported browsers (Chrome, Safari, Edge) */}
         <meta name="theme-color" content="#2C3E50" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#1a252f" media="(prefers-color-scheme: dark)" />
@@ -138,9 +136,9 @@ export default function RootLayout({
         <link rel="icon" href="/android-chrome-512x512.png" sizes="512x512" type="image/png" />
         <link rel="apple-touch-icon" href="/android-chrome-192x192.png" />
         
-        {/* Performance Optimization - Preconnect to RealScout */}
-        <link rel="preconnect" href="https://em.realscout.com" />
-        <link rel="preconnect" href="https://www.realscout.com" />
+        {/* Performance: preconnect with crossOrigin so hints match subresource fetches (avoids "unused" preconnect warnings) */}
+        <link rel="preconnect" href="https://em.realscout.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.realscout.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://em.realscout.com" />
         <link rel="dns-prefetch" href="https://www.realscout.com" />
         
@@ -160,20 +158,21 @@ export default function RootLayout({
         <ReviewSchema />
         <ServiceSchema />
         
-        {/* RealScout Widget Script - Loaded once for all pages */}
-        <Script 
-          src="https://em.realscout.com/widgets/realscout-web-components.umd.js" 
-          type="module" 
-          strategy="beforeInteractive"
+        {/* RealScout: afterInteractive so first paint is not behind ~200KB+ widget eval (LCP/TBT) */}
+        <Script
+          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
+          type="module"
+          strategy="afterInteractive"
           id="realscout-widgets"
         />
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           id="calendly-widget-js"
         />
       </head>
       <body className={`antialiased ${playfair.variable} ${dmSans.variable} font-secondary text-text-light bg-deep`}>
+        <GbpActionStrip />
         {children}
         <CalendlyBadge url="https://calendly.com/drjanduffy" />
       </body>

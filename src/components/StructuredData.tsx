@@ -179,10 +179,19 @@ export function FAQSchema() {
 
 // Local Business Schema
 export function LocalBusinessSchema() {
+  const mapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  const gbpPlaceId = process.env.NEXT_PUBLIC_GBP_PLACE_ID;
+  const businessAddress = "11312 Parkside Way, Las Vegas, NV 89138";
+  const encodedAddress = encodeURIComponent(businessAddress);
+  const hasMap = mapsApiKey && gbpPlaceId
+    ? `https://www.google.com/maps/embed/v1/place?key=${mapsApiKey}&q=place_id:${gbpPlaceId}`
+    : `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    "name": "Berkshire Hathaway HomeServices Nevada Properties - Dr. Jan Duffy",
+    "@id": "https://www.thevistassummerlin.com/#real-estate-agent",
+    "name": "Homes by Dr. Jan Duffy",
     "description": "Premier real estate services for The Vistas Summerlin luxury community. Expert guidance from Dr. Jan Duffy with flexible scheduling.",
     "url": "https://www.thevistassummerlin.com",
     "telephone": "+1-702-500-0607",
@@ -200,10 +209,29 @@ export function LocalBusinessSchema() {
       "latitude": "36.1699",
       "longitude": "-115.1398"
     },
-    "openingHours": "Mo-Su 08:00-20:00",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ],
     "priceRange": "$$$",
     "paymentAccepted": "Cash, Check, Credit Card, Financing",
     "currenciesAccepted": "USD",
+    "hasMap": hasMap,
+    "sameAs": [
+      "https://www.thevistassummerlin.com"
+    ],
     "areaServed": {
       "@type": "Place",
       "name": "The Vistas Summerlin, Las Vegas, NV"
@@ -507,66 +535,9 @@ export function PropertySchema({
 
 // Review Schema for testimonials
 export function ReviewSchema() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Dr. Jan Duffy - The Vistas Summerlin Real Estate Expert",
-    "description": "Premier real estate services for The Vistas Summerlin luxury community with flexible scheduling that works around YOUR lifestyle.",
-    "url": "https://www.thevistassummerlin.com",
-    "telephone": "+1-702-500-0607",
-    "email": "DrJanSells@TheVistasSummerlin.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "11312 Parkside Way",
-      "addressLocality": "Las Vegas",
-      "addressRegion": "NV",
-      "postalCode": "89138",
-      "addressCountry": "US"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Sarah M."
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "Dr. Jan Duffy made our home buying experience in The Vistas Summerlin seamless. Her flexible scheduling worked perfectly with our busy lifestyle, and her expertise in the community was invaluable."
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Michael R."
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "We found our dream home in Canterra thanks to Dr. Jan's knowledge of The Vistas Summerlin's unique communities. Her attention to detail and personalized service exceeded our expectations."
-      }
-    ]
-  };
-
-  return (
-    <Script
-      id="review-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  // Google review rich results are ineligible for self-authored LocalBusiness/Organization pages.
+  // Keep this as a no-op to avoid publishing self-serving aggregateRating/review markup.
+  return null;
 }
 
 // Service Schema for real estate services

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { VistasRealScoutOfficeListings } from "@/components/VistasRealScoutOfficeListings";
 
 export type PostHeroOfficeListingsProps = {
@@ -17,7 +18,8 @@ export type PostHeroOfficeListingsProps = {
 
 /**
  * Placed immediately after the page hero so the RealScout office widget loads below the
- * first viewport and does not compete with the hero for attention.
+ * first viewport. RealScout listing images/JS are deferred until this section
+ * is near the viewport to improve LCP/TBT.
  */
 export function PostHeroOfficeListings({
   title,
@@ -30,9 +32,34 @@ export function PostHeroOfficeListings({
   className = "",
 }: PostHeroOfficeListingsProps) {
   const isDark = tone === "dark";
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [shouldLoadWidget, setShouldLoadWidget] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") {
+      setShouldLoadWidget(true);
+      return;
+    }
+    const obs = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            setShouldLoadWidget(true);
+            obs.disconnect();
+            return;
+          }
+        }
+      },
+      { root: null, rootMargin: "200px 0px", threshold: 0 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   return (
     <section
+      ref={sectionRef}
       id="live-mls-office-listings"
       aria-label="Live MLS office listings"
       className={[
@@ -74,16 +101,30 @@ export function PostHeroOfficeListings({
         <div
           className={
             isDark
-              ? "bg-white/10 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-white/20"
-              : "bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-200/80"
+              ? "bg-white/10 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-white/20 min-h-[28rem]"
+              : "bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-200/80 min-h-[28rem]"
           }
         >
-          <VistasRealScoutOfficeListings
-            bandKey={bandKey}
-            sort-order={sortOrder}
-            listing-status={listingStatus}
-            property-types={propertyTypes}
-          />
+          {shouldLoadWidget ? (
+            <VistasRealScoutOfficeListings
+              bandKey={bandKey}
+              sort-order={sortOrder}
+              listing-status={listingStatus}
+              property-types={propertyTypes}
+            />
+          ) : (
+            <div
+              className="flex h-[26rem] flex-col items-center justify-center gap-3 text-center"
+              role="status"
+              aria-live="polite"
+              aria-busy="true"
+            >
+              <div className="h-10 w-10 animate-pulse rounded-full bg-slate-300/40 dark:bg-white/20" />
+              <p className={isDark ? "text-sm text-slate-200" : "text-sm text-slate-500"}>
+                Loading live MLS listings…
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>

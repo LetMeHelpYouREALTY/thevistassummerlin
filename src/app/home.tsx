@@ -81,7 +81,8 @@ export default function Home() {
                     fill
                     className="object-cover"
                     priority
-                    quality={90}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={78}
                     placeholder="blur"
                     blurDataURL={BLUR_DATA_URLS.house}
                   />
@@ -94,7 +95,8 @@ export default function Home() {
                         width={64}
                         height={48}
                         className="object-cover w-full h-full"
-                        quality={80}
+                        sizes="64px"
+                        quality={60}
                       />
                     </div>
                     <div className="w-16 h-12 rounded-lg overflow-hidden border-2 border-white/50 shadow-lg hover:border-white/80 transition-colors">
@@ -104,7 +106,8 @@ export default function Home() {
                         width={64}
                         height={48}
                         className="object-cover w-full h-full"
-                        quality={80}
+                        sizes="64px"
+                        quality={60}
                       />
                     </div>
                     <div className="w-16 h-12 rounded-lg overflow-hidden border-2 border-white/50 shadow-lg hover:border-white/80 transition-colors">
@@ -114,7 +117,8 @@ export default function Home() {
                         width={64}
                         height={48}
                         className="object-cover w-full h-full"
-                        quality={80}
+                        sizes="64px"
+                        quality={60}
                       />
                     </div>
                   </div>
