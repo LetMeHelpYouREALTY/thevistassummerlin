@@ -99,7 +99,7 @@ export default function SellPage() {
               <p className="text-xl mb-6">
                 Ready to sell your home in The Vistas Summerlin? Dr. Jan Duffy offers seller-first
                 real estate service built on recent closings and neighborhood-level pricing.
-                Her office at 2827 Paradise Rd, Suite 2 provides deep local
+                Her office at 11312 Parkside Way provides deep local
                 market knowledge to help you achieve top dollar for your luxury home.
               </p>
               
@@ -134,7 +134,7 @@ export default function SellPage() {
               <p className="mb-6">
                 Start your home selling journey in The Vistas Summerlin. Contact
                 Dr. Jan Duffy at (702) 500-0607 for your free home valuation and expert market 
-                analysis. Her office at 2827 Paradise Rd, Suite 2 provides convenient access for all
+                analysis. Her office at 11312 Parkside Way provides convenient access for all
                 your real estate needs.
               </p>
             </div>

@@ -34,10 +34,7 @@ export default function AboutPage() {
             <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-pink-500/10 rounded-full blur-lg animate-pulse delay-300"></div>
             
             {/* Grid pattern overlay */}
-            <div className="absolute inset-0 opacity-5" style={{
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-              backgroundSize: '50px 50px'
-            }}></div>
+            <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.3)_1px,transparent_0)] bg-[length:50px_50px]"></div>
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,7 +126,7 @@ export default function AboutPage() {
                 
                 <p className="mb-6">
                   Dr. Jan Duffy specializes in <Link href="/communities" className="text-blue-600 hover:text-blue-800 font-semibold underline">The Vistas Summerlin</Link>. Her office is located at
-                  2827 Paradise Rd, Suite 2, Las Vegas, NV 89109, and she regularly works with Vistas owners and buyers, providing
+                  11312 Parkside Way, Las Vegas, NV 89138, and she regularly works with Vistas owners and buyers, providing
                   unparalleled access to local market insights and community knowledge. This 
                   specialized focus allows Dr. Duffy to offer expert guidance on luxury homes 
                   ranging from $800,000 to over $2.5 million. <Link href="/search" className="text-blue-600 hover:text-blue-800 font-semibold underline">Browse current listings</Link> or <Link href="/valuation" className="text-blue-600 hover:text-blue-800 font-semibold underline">get your home's value</Link>.
@@ -306,7 +303,7 @@ export default function AboutPage() {
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900">Location</div>
-                        <div className="text-gray-700">Las Vegas, NV 89138</div>
+                        <div className="text-gray-700">11312 Parkside Way, Las Vegas, NV 89138</div>
                       </div>
                     </div>
                   </div>

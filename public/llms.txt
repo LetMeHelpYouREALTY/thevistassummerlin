@@ -7,7 +7,7 @@ Agent:
 - Brokerage: Berkshire Hathaway HomeServices Nevada Properties
 - Phone: 702-500-0607
 - Email: DrJanSells@TheVistasSummerlin.com
-- Office: 2827 Paradise Rd, Suite 2, Las Vegas, NV 89109
+- Office: 11312 Parkside Way, Las Vegas, NV 89138
 
 Key pages:
 - / : Seller-first homepage and valuation CTA

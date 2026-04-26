@@ -191,7 +191,7 @@ export default function Contact() {
                       <div>
                         <p className="text-sm font-secondary text-text-light">Address</p>
                         <p className="text-lg font-primary font-medium text-text-dark">
-                          The Vistas Summerlin<br />
+                          11312 Parkside Way<br />
                           Las Vegas, NV 89138
                         </p>
                       </div>
