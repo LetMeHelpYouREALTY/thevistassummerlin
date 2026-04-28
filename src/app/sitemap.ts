@@ -22,34 +22,30 @@ const EXTRA_COMMUNITY_SLUGS = [
   'img-0739',
 ] as const
 
-const staticRoutes: Array<{
-  path: string
-  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']
-  priority: number
-}> = [
-  { path: '', changeFrequency: 'weekly', priority: 1.0 },
-  { path: '/search', changeFrequency: 'weekly', priority: 0.95 },
-  { path: '/communities', changeFrequency: 'weekly', priority: 0.95 },
-  { path: '/properties/11773-golden-moments-avenue', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/valuation', changeFrequency: 'monthly', priority: 0.88 },
-  { path: '/sell', changeFrequency: 'monthly', priority: 0.82 },
-  { path: '/about', changeFrequency: 'monthly', priority: 0.75 },
-  { path: '/contact', changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/agents/dr-jan-duffy', changeFrequency: 'monthly', priority: 0.78 },
-  { path: '/community-guide', changeFrequency: 'monthly', priority: 0.72 },
-  { path: '/blog', changeFrequency: 'weekly', priority: 0.65 },
-  { path: '/faq', changeFrequency: 'monthly', priority: 0.68 },
-  { path: '/testimonials', changeFrequency: 'monthly', priority: 0.62 },
-  { path: '/market-reports', changeFrequency: 'weekly', priority: 0.65 },
-  { path: '/market-analysis', changeFrequency: 'weekly', priority: 0.62 },
-  { path: '/investment', changeFrequency: 'monthly', priority: 0.6 },
-  { path: '/sold', changeFrequency: 'monthly', priority: 0.58 },
-  { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
-  { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
+const staticRoutes = [
+  { path: '' },
+  { path: '/search' },
+  { path: '/communities' },
+  { path: '/properties/11773-golden-moments-avenue' },
+  { path: '/valuation' },
+  { path: '/sell' },
+  { path: '/about' },
+  { path: '/contact' },
+  { path: '/agents/dr-jan-duffy' },
+  { path: '/community-guide' },
+  { path: '/blog' },
+  { path: '/faq' },
+  { path: '/testimonials' },
+  { path: '/market-reports' },
+  { path: '/market-analysis' },
+  { path: '/investment' },
+  { path: '/sold' },
+  { path: '/privacy' },
+  { path: '/terms' },
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date()
+  // `NEXT_PUBLIC_BASE_URL` should match the canonical Search Console property host.
   const fromConstants = getNeighborhoodSlugs()
   const communitySlugs = [
     ...new Set([...fromConstants, ...EXTRA_COMMUNITY_SLUGS]),
@@ -57,16 +53,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${baseUrl}${route.path}`,
-    lastModified: now,
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
   }))
 
   const communityEntries: MetadataRoute.Sitemap = communitySlugs.map((slug) => ({
     url: `${baseUrl}/communities/${slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: slug === 'canterra' || slug === 'portofino' ? 0.85 : 0.8,
   }))
 
   return [...staticEntries, ...communityEntries]

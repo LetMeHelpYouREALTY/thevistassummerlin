@@ -5,7 +5,6 @@ import { getSiteUrl } from '@/lib/site-url';
 
 export async function GET() {
   const baseUrl = getSiteUrl();
-  const currentDate = new Date().toISOString();
   
   try {
     // Get community images from public/subcommunities directory
@@ -63,7 +62,6 @@ export async function GET() {
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${allImages.map(img => `  <url>
     <loc>${img.pageUrl}</loc>
-    <lastmod>${currentDate}</lastmod>
     <image:image>
       <image:loc>${img.url}</image:loc>
       <image:caption><![CDATA[${img.caption}]]></image:caption>
@@ -87,7 +85,6 @@ ${allImages.map(img => `  <url>
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>${baseUrl}</loc>
-    <lastmod>${currentDate}</lastmod>
     <image:image>
       <image:loc>${baseUrl}/logo.png</image:loc>
       <image:caption><![CDATA[The Vistas Summerlin Logo - Luxury Real Estate]]></image:caption>
