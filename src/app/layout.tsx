@@ -1,10 +1,9 @@
-import React from 'react';
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import "@/styles/realscout-widgets.css";
 import Script from 'next/script';
-import { ReactNode } from 'react';
 import { 
   RealEstateExpertSchema, 
   FAQSchema, 
@@ -14,8 +13,6 @@ import {
   OrganizationSchema,
   ReviewSchema,
   ServiceSchema,
-  BreadcrumbSchema,
-  ArticleSchema
 } from '@/components/StructuredData';
 import { CalendlyBadge } from '@/components/CalendlyBadge';
 import { GbpActionStrip } from '@/components/sections/gbp-action-strip';
