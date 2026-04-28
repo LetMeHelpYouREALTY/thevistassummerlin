@@ -14,7 +14,7 @@ Key pages:
 - /valuation : Home value and seller pricing guidance
 - /sell : Seller process and listing strategy
 - /sold : Recent Vistas sales snapshots by subcommunity
-- /subcommunities : Hyperlocal neighborhood pages
+- /communities : Subcommunity directory (The Vistas Summerlin)
 - /search : Live MLS home search
 - /about : Dr. Jan Duffy bio and credentials
 

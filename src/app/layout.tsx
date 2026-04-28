@@ -20,6 +20,20 @@ import { getSiteUrl } from '@/lib/site-url';
 
 const siteUrl = getSiteUrl();
 
+/** Supports server-only or `NEXT_PUBLIC_*` (if duplicated in Vercel for tooling). */
+const googleSiteVerification =
+  process.env.GOOGLE_SITE_VERIFICATION?.trim() ||
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() ||
+  undefined;
+
+const bingSiteVerification = process.env.BING_SITE_VERIFICATION?.trim();
+const yandexSiteVerification = process.env.YANDEX_SITE_VERIFICATION?.trim();
+
+const verificationMeta: NonNullable<Metadata["other"]> = {};
+if (bingSiteVerification) verificationMeta["msvalidate.01"] = bingSiteVerification;
+if (yandexSiteVerification)
+  verificationMeta["yandex-verification"] = yandexSiteVerification;
+
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-heading',
@@ -35,6 +49,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  manifest: "/manifest.json",
   title: {
     default: "The Vistas Summerlin | Berkshire Hathaway HomeServices Nevada Properties - Dr. Jan Duffy",
     template: "%s | The Vistas Summerlin | Berkshire Hathaway HomeServices Nevada Properties"
@@ -91,14 +106,10 @@ export const metadata: Metadata = {
     description: "The Vistas Summerlin offers luxury homes starting at $800K. Expert realtor Dr. Jan Duffy specializing in The Vistas community with flexible scheduling that works around YOUR lifestyle.",
     images: ["/subcommunities/IMG_0737.JPG"],
   },
-  verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION,
-  },
-  other: {
-    'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION || "",
-    'msvalidate.01': process.env.BING_SITE_VERIFICATION || "",
-    'yandex-verification': process.env.YANDEX_SITE_VERIFICATION || "",
-  },
+  ...(googleSiteVerification
+    ? { verification: { google: googleSiteVerification } }
+    : {}),
+  ...(Object.keys(verificationMeta).length ? { other: verificationMeta } : {}),
   alternates: {
     canonical: siteUrl,
   },
@@ -123,7 +134,6 @@ export default function RootLayout({
         <meta name="geo.position" content="36.1699;-115.1398" />
         <meta name="ICBM" content="36.1699, -115.1398" />
         <meta name="language" content="en-US" />
-        <meta name="revisit-after" content="7 days" />
         
         {/* RSS Feed for Google Discover Follow Feature */}
         <link rel="alternate" type="application/rss+xml" 

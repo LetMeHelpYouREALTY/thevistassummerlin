@@ -10,7 +10,7 @@ export function RealEstateExpertSchema() {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     "name": "Dr. Jan Duffy",
-    "description": "Las Vegas real estate expert with flexible scheduling that works around YOUR lifestyle. Based in Summerlin, serving discerning buyers, sellers, and investors across Henderson, Enterprise, and Southwest Vegas. With 12+ years of Nevada market expertise.",
+    "description": "Las Vegas real estate expert with flexible scheduling that works around your lifestyle. Based in Summerlin, serving buyers, sellers, and investors across Henderson, Enterprise, and Southwest Las Vegas.",
     "url": siteUrl,
     "telephone": "+1-702-500-0607",
     "email": "DrJanSells@TheVistasSummerlin.com",
@@ -102,14 +102,14 @@ export function RealEstateExpertSchema() {
       "@type": "EducationalOrganization",
       "name": "University of Nevada, Las Vegas"
     },
-    "award": [
-      "Berkshire Hathaway HomeServices Nevada Properties Agent",
-      "Top Producer - The Vistas Summerlin",
-      "Luxury Home Specialist"
-    ],
     "memberOf": {
       "@type": "Organization",
       "name": "Berkshire Hathaway HomeServices Nevada Properties"
+    },
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "Nevada real estate license",
+      "value": "S.0197614.LLC"
     }
   };
 
@@ -337,7 +337,10 @@ export function WebsiteSchema() {
     "url": siteUrl,
     "potentialAction": {
       "@type": "SearchAction",
-      "target": `${siteUrl}/search?q={search_term_string}`,
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${siteUrl}/search?q={search_term_string}`
+      },
       "query-input": "required name=search_term_string"
     },
     "publisher": {
