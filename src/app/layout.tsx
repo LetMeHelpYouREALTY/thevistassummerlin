@@ -141,6 +141,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.realscout.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://em.realscout.com" />
         <link rel="dns-prefetch" href="https://www.realscout.com" />
+        <link rel="preconnect" href="https://assets.calendly.com" crossOrigin="anonymous" />
+        {/* Calendly badge: official stylesheet (required for correct badge chrome) */}
+        <link
+          href="https://assets.calendly.com/assets/external/widget.css"
+          rel="stylesheet"
+        />
         
         {/* Business Information */}
         <meta name="business:contact_data:locality" content="Las Vegas" />
@@ -167,14 +173,15 @@ export default function RootLayout({
         />
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           id="calendly-widget-js"
         />
       </head>
       <body className={`antialiased ${playfair.variable} ${dmSans.variable} font-secondary text-text-light bg-deep`}>
         <GbpActionStrip />
+        {/* Floating badge: init matches Calendly snippet (15min event, brand colors); see CalendlyBadge + globals.css placement */}
+        <CalendlyBadge />
         {children}
-        <CalendlyBadge url="https://calendly.com/drjanduffy" />
       </body>
     </html>
   );

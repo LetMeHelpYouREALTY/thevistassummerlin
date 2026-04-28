@@ -4,6 +4,7 @@ import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import RealScoutAdvancedSearch from '@/components/RealScoutAdvancedSearch';
 import Link from 'next/link';
+import { CalendlyButton } from '@/components/CalendlyButton';
 
 export default function Sell() {
   return (
@@ -172,13 +173,13 @@ export default function Sell() {
               Get started with a free consultation and market analysis
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
-                href="/contact"
-                className="bg-success-green text-white px-10 py-4 rounded-default text-lg font-secondary font-medium hover:bg-link-blue transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                Schedule Consultation
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <CalendlyButton
+                utmCampaign="sell-page"
+                label="Schedule Consultation"
+                showIcons={false}
+                className="bg-success-green text-white px-10 py-4 rounded-default text-lg font-secondary font-medium hover:bg-link-blue transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto justify-center"
+              />
               <Link
                 href="/market-reports"
                 className="border-2 border-success-green text-success-green px-10 py-4 rounded-default text-lg font-secondary font-medium hover:bg-success-green hover:text-white transition-all duration-300 transform hover:scale-105"

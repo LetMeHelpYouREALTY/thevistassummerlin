@@ -12,6 +12,7 @@ Use this file as the **project-specific** anchor for Cursor Agent / Composer. Gl
 
 - **Site URL:** `src/lib/site-url.ts` (`getSiteUrl`, `siteAbsoluteUrl`)
 - **GBP / NAP helpers:** `src/lib/gbp.ts` — office address, `tel:` pattern, Maps/reviews URLs (env: `NEXT_PUBLIC_GBP_*`, `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`)
+- **Calendly:** `src/lib/calendly.ts` — `CALENDLY_URL_15MIN`, `CALENDLY_URL_SHOWING`, `buildCalendlyUrl()` for UTM → FUB. UI: `CalendlyBadge` (global), `CalendlyButton`, `CalendlyEmbed`. **One** `widget.js` + `widget.css` in root `layout.tsx` only.
 - **Global chrome:** `src/app/layout.tsx` — `GbpActionStrip`, RealScout script (once, `afterInteractive`, `type="module"`), Calendly `widget.js` (`id="calendly-widget-js"`)
 - **Structured data:** `src/components/StructuredData.tsx` (and related)
 

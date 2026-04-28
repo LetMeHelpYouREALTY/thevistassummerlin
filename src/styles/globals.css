@@ -635,3 +635,24 @@
     }
   }
 }
+
+/*
+ * Calendly badge widget — fixed position is injected by Calendly.
+ * Anchor upper-right just below the GBP strip (“header / above main nav” area on desktop).
+ */
+.calendly-badge-widget {
+  position: fixed !important;
+  top: 3.5rem !important;
+  bottom: auto !important;
+  right: 0.75rem !important;
+  left: auto !important;
+  z-index: 100 !important;
+}
+
+@media (max-width: 640px) {
+  .calendly-badge-widget {
+    top: auto !important;
+    bottom: 1rem !important;
+    right: 0.5rem !important;
+  }
+}

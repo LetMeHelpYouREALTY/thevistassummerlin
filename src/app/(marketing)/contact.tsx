@@ -206,7 +206,7 @@ export default function Contact() {
                     <p className="text-body font-secondary text-text-light mb-4">
                       Book a convenient time to discuss your real estate needs with Dr. Duffy.
                     </p>
-                    <CalendlyButton url="https://calendly.com/drjanduffy/showing" />
+                    <CalendlyButton utmCampaign="marketing-contact" />
                   </div>
 
                   {/* Response Time */}

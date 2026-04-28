@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
-import { MapPin, Phone, Clock, Star, MessageCircle, Calendar, Users, Award, TrendingUp } from 'lucide-react';
+import { MapPin, Phone, Clock, Star, MessageCircle, Users, Award, TrendingUp } from 'lucide-react';
 import { gbpTelHref, getGbpMapEmbedUrl, getGbpLinks } from '@/lib/gbp';
+import { CalendlyButton } from '@/components/CalendlyButton';
 export default function GoogleBusinessProfileWidget() {
   const reviews = [
     {
@@ -236,13 +237,12 @@ export default function GoogleBusinessProfileWidget() {
             </div>
 
             <div className="mt-8 text-center">
-              <a
-                href="/contact"
+              <CalendlyButton
+                utmCampaign="gbp-widget-card"
+                label="Schedule Consultation"
+                showIcons
                 className="w-full bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-2xl font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
-              >
-                <Calendar className="w-5 h-5" />
-                <span>Schedule Consultation</span>
-              </a>
+              />
             </div>
           </div>
         </div>

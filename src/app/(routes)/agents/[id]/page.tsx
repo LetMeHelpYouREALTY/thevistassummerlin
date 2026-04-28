@@ -57,7 +57,7 @@ export default async function AgentProfilePage({ params }: AgentPageProps) {
       </p>
 
       <div className="mb-6">
-        <CalendlyButton url="https://calendly.com/drjanduffy/showing" />
+        <CalendlyButton utmCampaign="agents-profile" />
       </div>
 
       <div className="flex flex-wrap gap-4 text-sm">

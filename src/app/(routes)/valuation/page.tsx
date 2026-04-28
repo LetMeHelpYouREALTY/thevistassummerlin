@@ -68,7 +68,7 @@ export default function ValuationPage() {
             Discover your home's true market value in today's competitive Las Vegas real estate market.
           </p>
           <div className="flex justify-center space-x-4">
-            <CalendlyButton url="https://calendly.com/drjanduffy" />
+            <CalendlyButton utmCampaign="valuation-hero" />
             <Link
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors shadow-lg"
@@ -197,7 +197,7 @@ export default function ValuationPage() {
               </div>
 
               <div className="mt-8 space-y-4">
-                <CalendlyButton url="https://calendly.com/drjanduffy" />
+                <CalendlyButton utmCampaign="valuation-section" />
                 <a
                   href="tel:+17025000607"
                   className="flex items-center justify-center space-x-2 w-full border-2 border-blue-600 text-blue-600 py-3 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-colors"
@@ -311,7 +311,7 @@ export default function ValuationPage() {
                   With flexible scheduling and personalized service, getting your valuation is convenient and stress-free.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <CalendlyButton url="https://calendly.com/drjanduffy" />
+                  <CalendlyButton utmCampaign="valuation-cta" />
                   <Link
                     href="/contact"
                     className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
@@ -338,7 +338,7 @@ export default function ValuationPage() {
               Pick a time that works for you and we will review local comps.
             </p>
           </div>
-          <CalendlyEmbed url="https://calendly.com/drjanduffy" />
+          <CalendlyEmbed utmCampaign="valuation-inline" />
         </div>
       </section>
 

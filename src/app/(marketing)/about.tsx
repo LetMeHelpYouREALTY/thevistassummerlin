@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { CalendlyButton } from '@/components/CalendlyButton';
 
 export default function About() {
   return (
@@ -171,12 +172,12 @@ export default function About() {
             Whether you're buying, selling, or just exploring The Vistas Summerlin, Dr. Duffy is here to provide the expert guidance you deserve.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-full text-lg shadow-lg transition-all duration-300 transform hover:scale-105 inline-block"
-            >
-              Schedule a Consultation
-            </Link>
+            <CalendlyButton
+              utmCampaign="marketing-about"
+              label="Schedule a Consultation"
+              showIcons={false}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-full text-lg shadow-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-center justify-center"
+            />
             <Link
               href="/market-reports"
               className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 inline-block"
