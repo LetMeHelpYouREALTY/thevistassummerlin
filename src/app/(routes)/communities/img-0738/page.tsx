@@ -39,7 +39,7 @@ import Image from 'next/image';
 import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 export const metadata = brandPageMetadata({
   title: 'Kingwood | Community guide',
-  description: 'Discover Kingwood in The Vistas Summerlin. Royal-inspired homes with majestic mountain views, luxury finishes, and resort-style amenities. DDr. Jan Duffy.',
+  description: 'Discover Kingwood in The Vistas Summerlin. Royal-inspired homes with majestic mountain views, luxury finishes, and resort-style amenities. Dr. Jan Duffy.',
   path: '/communities/img-0738',
   keywords: withBrandKeywords(['Kingwood Summerlin homes', 'Kingwood Las Vegas real estate', 'The Vistas Kingwood community', 'Summerlin Kingwood homes for sale', 'Dr. Jan Duffy Kingwood realtor', 'luxury homes Kingwood', 'Kingwood real estate agent', 'mountain view homes Summerlin']),
   socialTitle: 'Kingwood Community - The Vistas Summerlin',
