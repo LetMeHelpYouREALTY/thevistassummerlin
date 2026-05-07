@@ -30,6 +30,7 @@ import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { FAQSchema, BreadcrumbSchema } from '@/components/StructuredData';
 import { getSiteUrl } from '@/lib/site-url';
+import { BRAND_OG_DEFAULT_IMAGE, brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
 // Enhanced Community Hero Section
 const CommunityHero = ({ community }: { community: CommunityData }) => (
@@ -318,51 +319,40 @@ const PropertiesSection = ({ community }: { community: CommunityData }) => (
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const site = getSiteUrl();
   const community = await getCommunityBySlug(slug);
-  
+
   if (!community) {
     return {
       title: 'Community Not Found',
+      robots: { index: false, follow: false },
     };
   }
 
-  return {
-    title: `${community.name} - The Vistas Summerlin | Luxury Homes & Community Guide`,
-    description: `Discover ${community.name} in The Vistas Summerlin. ${community.description} Expert realtor Jan Duffy helps you find your dream home.`,
-    keywords: [
+  const lead = community.description.trim();
+  const clipped = lead.length > 110 ? `${lead.slice(0, 107).trim()}…` : lead;
+  let description = `${clipped} Data-informed guidance from Dr. Jan Duffy across 28 Vistas Summerlin subcommunities.`;
+  if (description.length > 160) {
+    description = `${description.slice(0, 157).trim()}…`;
+  }
+
+  return brandPageMetadata({
+    title: `${community.name} | Community guide`,
+    description,
+    path: `/communities/${slug}`,
+    keywords: withBrandKeywords([
       `${community.name} Summerlin homes`,
       `${community.name} Las Vegas real estate`,
       `The Vistas ${community.name}`,
       `Summerlin ${community.name} community`,
-      `Jan Duffy ${community.name}`,
       `luxury homes ${community.name}`,
-      `${community.name} real estate agent`
-    ],
-    openGraph: {
-      title: `${community.name} - The Vistas Summerlin Community`,
-      description: `${community.description} Expert guidance from Jan Duffy.`,
-      url: `${site}/communities/${slug}`,
-      images: [
-        {
-          url: community.image || '/subcommunities/IMG_0737.JPG',
-          width: 1200,
-          height: 630,
-          alt: `${community.name} community`,
-        },
-      ],
-      type: 'article',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `${community.name} - The Vistas Summerlin`,
-      description: `${community.description}`,
-      images: [community.image || '/subcommunities/IMG_0737.JPG'],
-    },
-    alternates: {
-      canonical: `${site}/communities/${slug}`,
-    },
-  };
+      `${community.name} real estate agent`,
+    ]),
+    socialTitle: `${community.name} | The Vistas Summerlin`,
+    socialDescription: clipped,
+    ogImage: community.image || BRAND_OG_DEFAULT_IMAGE,
+    ogImageAlt: `${community.name} — The Vistas Summerlin`,
+    ogType: 'article',
+  });
 }
 
 export default async function CommunityPage({ params }: { params: Promise<{ slug: string }> }) {

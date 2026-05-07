@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
@@ -40,43 +39,15 @@ import {
 import { RealScoutWidget } from "@/components/RealScoutWidget";
 import Link from 'next/link';
 import Image from 'next/image';
-import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Portofino Community - The Vistas Summerlin | 213 Coastal-Inspired Homes',
-  description: 'Discover Portofino in The Vistas Summerlin. 213 coastal-inspired homes with Mediterranean charm, resort-style amenities, and waterfront living concepts. Expert realtor Jan Duffy helps you find your dream home.',
-  keywords: [
-    'Portofino Summerlin homes',
-    'Portofino Las Vegas real estate',
-    'The Vistas Portofino community',
-    'Summerlin Portofino homes for sale',
-    'Jan Duffy Portofino realtor',
-    'coastal homes Summerlin',
-    'Portofino real estate agent',
-    '213 homes Portofino',
-    'Mediterranean homes Las Vegas'
-  ],
-  openGraph: {
-    title: 'Portofino Community - The Vistas Summerlin | 213 Coastal-Inspired Homes',
-    description: '213 coastal-inspired homes featuring Mediterranean charm and resort-style amenities.',
-    url: `${getSiteUrl()}/communities/portofino`,
-    images: [
-      {
-        url: '/subcommunities/IMG_0737.JPG',
-        width: 1200,
-        height: 630,
-        alt: 'Portofino community in The Vistas Summerlin',
-      },
-    ],
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Portofino Community - The Vistas Summerlin | 213 Coastal-Inspired Homes',
-    description: '213 coastal-inspired homes featuring Mediterranean charm and resort-style amenities.',
-    images: ['/subcommunities/IMG_0737.JPG'],
-  },
-};
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
+export const metadata = brandPageMetadata({
+  title: 'Portofino | Community guide',
+  description: 'Discover Portofino in The Vistas Summerlin. 213 coastal-inspired homes with Mediterranean charm, resort-style amenities, and waterfront living concepts Dr. Jan Duffy.',
+  path: '/communities/portofino',
+  keywords: withBrandKeywords(['Portofino Summerlin homes', 'Portofino Las Vegas real estate', 'The Vistas Portofino community', 'Summerlin Portofino homes for sale', 'Dr. Jan Duffy Portofino realtor', 'coastal homes Summerlin', 'Portofino real estate agent', '213 homes Portofino', 'Mediterranean homes Las Vegas']),
+  socialTitle: 'Portofino Community - The Vistas Summerlin | 213 Coastal-Inspired Homes',
+  socialDescription: '213 coastal-inspired homes featuring Mediterranean charm and resort-style amenities.',
+});
 
 export default function PortofinoCommunityPage() {
   return (
@@ -137,7 +108,7 @@ export default function PortofinoCommunityPage() {
                   className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-blue-900 transition-colors shadow-lg flex items-center justify-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Call Jan Duffy</span>
+                  <span>Call Dr. Jan Duffy</span>
                 </a>
               </div>
             </div>
@@ -250,7 +221,7 @@ export default function PortofinoCommunityPage() {
             <aside className="lg:col-span-1 space-y-8">
               {/* Contact Card */}
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-blue-800 mb-4">Contact Jan Duffy</h3>
+                <h3 className="text-2xl font-bold text-blue-800 mb-4">Contact Dr. Jan Duffy</h3>
                 <p className="text-blue-700 mb-6">
                   Your trusted real estate expert for Portofino. Get personalized assistance today!
                 </p>
@@ -451,7 +422,7 @@ export default function PortofinoCommunityPage() {
             Ready to Embrace Coastal Living?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Experience the Mediterranean charm of Portofino. Let Jan Duffy help you 
+            Experience the Mediterranean charm of Portofino. Let Dr. Jan Duffy help you 
             find your coastal retreat in this welcoming community of 213 homes.
           </p>
           
@@ -466,7 +437,7 @@ export default function PortofinoCommunityPage() {
               href="tel:+17025000607"
               className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-blue-900 transition-colors shadow-lg"
             >
-              Call Jan Duffy
+              Call Dr. Jan Duffy
             </a>
           </div>
         </div>

@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { 
@@ -34,41 +33,15 @@ import {
 import { RealScoutWidget } from "@/components/RealScoutWidget";
 import Link from 'next/link';
 import Image from 'next/image';
-import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Barrington Community - The Vistas Summerlin | Luxury Homes & Lifestyle',
-  description: 'Discover Barrington in The Vistas Summerlin. Elegant homes with sophisticated architecture, premium amenities, and family-friendly living. Expert realtor Jan Duffy helps you find your dream home.',
-  keywords: [
-    'Barrington Summerlin homes',
-    'Barrington Las Vegas real estate',
-    'The Vistas Barrington community',
-    'Summerlin Barrington homes for sale',
-    'Jan Duffy Barrington realtor',
-    'luxury homes Barrington',
-    'Barrington real estate agent'
-  ],
-  openGraph: {
-    title: 'Barrington Community - The Vistas Summerlin',
-    description: 'Elegant homes with sophisticated architecture and premium amenities in Barrington.',
-    url: `${getSiteUrl()}/communities/img-0737`,
-    images: [
-      {
-        url: '/subcommunities/IMG_0737.JPG',
-        width: 1200,
-        height: 630,
-        alt: 'Barrington community in The Vistas Summerlin',
-      },
-    ],
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Barrington Community - The Vistas Summerlin',
-    description: 'Elegant homes with sophisticated architecture and premium amenities.',
-    images: ['/subcommunities/IMG_0737.JPG'],
-  },
-};
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
+export const metadata = brandPageMetadata({
+  title: 'Barrington | Community guide',
+  description: 'Barrington in The Vistas Summerlin—elegant homes with sophisticated architecture, premium amenities, and family-friendly living. Explore listings with Dr. Jan Duffy.',
+  path: '/communities/img-0737',
+  keywords: withBrandKeywords(['Barrington Summerlin homes', 'Barrington Las Vegas real estate', 'The Vistas Barrington community', 'Summerlin Barrington homes for sale', 'Dr. Jan Duffy Barrington realtor', 'luxury homes Barrington', 'Barrington real estate agent']),
+  socialTitle: 'Barrington Community - The Vistas Summerlin',
+  socialDescription: 'Elegant homes with sophisticated architecture and premium amenities in Barrington.',
+});
 
 export default function BarringtonCommunityPage() {
   return (

@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,35 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Canterra Community - Oversized Lots & Dual Master Suites in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Canterra in The Vistas Summerlin featuring oversized lots up to 11,761 sq ft, dual master suite floor plans, and flexible square footage from 1,829-2,787 sq ft. Perfect for multi-generational living.',
-  keywords: [
-    'Canterra The Vistas Summerlin',
-    'oversized lots Las Vegas',
-    'dual master suite homes',
-    'multi-generational homes',
-    'Canterra Las Vegas real estate',
-    'Dr. Jan Duffy Canterra',
-    'big lot homes Summerlin',
-    'homes for sale Canterra',
-    'The Vistas Summerlin Canterra',
-    '11,761 square foot lots',
-    'pool installation lots',
-    'RV parking homes'
-  ],
-  openGraph: {
-    title: 'Canterra Community - Oversized Lots & Dual Master Suites in The Vistas Summerlin',
-    description: 'Oversized lots up to 11,761 sq ft with dual master suite floor plans perfect for multi-generational living in The Vistas Summerlin.',
-    url: `${getSiteUrl()}/communities/canterra`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/canterra`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Canterra | Community guide',
+  description: 'Discover Canterra in The Vistas Summerlin featuring oversized lots up to 11,761 sq ft, dual master suite floor plans, and flexible square footage from 1,829–2,787 sq ft—ideal for multi-generational living. Dr. Jan Duffy.',
+  path: '/communities/canterra',
+  keywords: withBrandKeywords(['Canterra The Vistas Summerlin', 'oversized lots Las Vegas', 'dual master suite homes', 'multi-generational homes', 'Canterra Las Vegas real estate', 'Dr. Jan Duffy Canterra', 'big lot homes Summerlin', 'homes for sale Canterra', 'The Vistas Summerlin Canterra', '11,761 square foot lots', 'pool installation lots', 'RV parking homes']),
+  socialTitle: 'Canterra Community - Oversized Lots & Dual Master Suites in The Vistas Summerlin',
+  socialDescription: 'Oversized lots up to 11,761 sq ft with dual master suite floor plans perfect for multi-generational living in The Vistas Summerlin.',
+});
 
 export default function CanterraPage() {
   return (

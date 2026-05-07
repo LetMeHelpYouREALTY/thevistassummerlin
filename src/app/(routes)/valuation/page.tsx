@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { FAQSchema } from '@/components/StructuredData';
@@ -6,7 +5,7 @@ import { CalendlyButton } from '@/components/CalendlyButton';
 import { CalendlyEmbed } from '@/components/CalendlyEmbed';
 import HomeEvaluationSection from '@/components/sections/home-evaluation-v0';
 import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import {
   Calculator,
   Home,
@@ -26,27 +25,19 @@ import {
   Sparkles,
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Home Valuation | The Vistas Summerlin Seller Pricing Guide',
-  description: 'Get a home valuation for The Vistas Summerlin with local pricing strategy, market comps, and seller-focused guidance from Dr. Jan Duffy.',
-  keywords: [
+export const metadata = brandPageMetadata({
+  title: 'Home valuation | Seller pricing',
+  description:
+    'Home valuation context for The Vistas Summerlin—comps, pricing bands, and strategy from Dr. Jan Duffy.',
+  path: '/valuation',
+  keywords: withBrandKeywords([
     'home valuation The Vistas Summerlin',
     'Summerlin seller pricing strategy',
-    'property value estimate',
-    'Las Vegas market comps',
+    'property value estimate Las Vegas',
     'Dr. Jan Duffy valuation',
-    'luxury home pricing Summerlin'
-  ],
-  openGraph: {
-    title: 'Home Valuation | The Vistas Summerlin Seller Pricing Guide',
-    description: 'See your likely market value with local comps and seller-focused pricing guidance.',
-    url: `${getSiteUrl()}/valuation`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/valuation`,
-  },
-};
+  ]),
+  socialTitle: 'Home valuation | The Vistas Summerlin',
+});
 
 export default function ValuationPage() {
   return (

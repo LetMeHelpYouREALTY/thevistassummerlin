@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -7,30 +6,16 @@ import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOffic
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import RealScoutListings from '@/components/RealScoutListings';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Ashton Park Community - Luxury Homes in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Ashton Park, a premier community in The Vistas Summerlin featuring luxury homes with modern amenities and beautiful landscaping. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Ashton Park The Vistas Summerlin',
-    'luxury homes Ashton Park',
-    'Ashton Park Las Vegas real estate',
-    'Dr. Jan Duffy Ashton Park',
-    'Ashton Park community features',
-    'homes for sale Ashton Park',
-    'The Vistas Summerlin Ashton Park'
-  ],
-  openGraph: {
-    title: 'Ashton Park Community - Luxury Homes in The Vistas Summerlin',
-    description: 'Premier community featuring luxury homes with modern amenities and beautiful landscaping.',
-    url: `${getSiteUrl()}/communities/ashton-park`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/ashton-park`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Ashton Park | Community guide',
+  description: 'Discover Ashton Park, a premier community in The Vistas Summerlin featuring luxury homes with modern amenities and beautiful landscaping. Expert real Dr. Jan Duffy.',
+  path: '/communities/ashton-park',
+  keywords: withBrandKeywords(['Ashton Park The Vistas Summerlin', 'luxury homes Ashton Park', 'Ashton Park Las Vegas real estate', 'Dr. Jan Duffy Ashton Park', 'Ashton Park community features', 'homes for sale Ashton Park', 'The Vistas Summerlin Ashton Park']),
+  socialTitle: 'Ashton Park Community - Luxury Homes in The Vistas Summerlin',
+  socialDescription: 'Premier community featuring luxury homes with modern amenities and beautiful landscaping.',
+});
 
 export default function AshtonParkPage() {
   return (

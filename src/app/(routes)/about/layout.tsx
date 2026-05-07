@@ -1,25 +1,18 @@
-import type { Metadata } from 'next';
-import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'About Dr. Jan Duffy | The Vistas Summerlin Real Estate Expert',
-  description: 'Meet Dr. Jan Duffy, REALTOR serving The Vistas Summerlin with local market expertise, flexible scheduling, and buyer/seller strategy.',
-  keywords: [
+export const metadata = brandPageMetadata({
+  title: 'About Dr. Jan Duffy',
+  description:
+    'Meet Dr. Jan Duffy—local market expertise, data-informed strategy, and personalized service for buyers and sellers across 28 Vistas Summerlin subcommunities.',
+  path: '/about',
+  keywords: withBrandKeywords([
     'Dr. Jan Duffy REALTOR',
     'The Vistas Summerlin real estate expert',
     'Las Vegas REALTOR Summerlin',
     'buyer seller strategy Summerlin',
-  ],
-  openGraph: {
-    title: 'About Dr. Jan Duffy | The Vistas Summerlin Real Estate Expert',
-    description: 'Local market specialist for The Vistas Summerlin with proven buyer and seller guidance.',
-    url: `${getSiteUrl()}/about`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/about`,
-  },
-};
+  ]),
+  socialTitle: 'About Dr. Jan Duffy | The Vistas Summerlin real estate expert',
+});
 
 export default function AboutLayout({
   children,

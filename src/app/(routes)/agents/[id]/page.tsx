@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CalendlyButton } from '@/components/CalendlyButton';
 import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
 type AgentPageProps = {
   params: Promise<{ id: string }>;
@@ -10,27 +11,28 @@ type AgentPageProps = {
 
 export async function generateMetadata({ params }: AgentPageProps): Promise<Metadata> {
   const { id } = await params;
-  const canonical = `${getSiteUrl()}/agents/${id}`;
 
   if (id !== 'dr-jan-duffy') {
     return {
-      title: 'Agent Not Found | The Vistas Summerlin',
+      title: 'Agent Not Found',
       robots: { index: false, follow: false },
     };
   }
 
-  return {
-    title: 'Dr. Jan Duffy REALTOR | The Vistas Summerlin',
+  return brandPageMetadata({
+    title: 'Dr. Jan Duffy REALTOR',
     description:
-      'Meet Dr. Jan Duffy, REALTOR with Berkshire Hathaway HomeServices Nevada Properties, specializing in The Vistas Summerlin and Las Vegas luxury homes.',
-    alternates: { canonical },
-    openGraph: {
-      title: 'Dr. Jan Duffy REALTOR | The Vistas Summerlin',
-      description:
-        'Local Vistas Summerlin market guidance and personalized home buying support from Dr. Jan Duffy.',
-      url: canonical,
-    },
-  };
+      'Dr. Jan Duffy, REALTOR with Berkshire Hathaway HomeServices Nevada Properties—local expertise, data-informed strategy, and personalized service in The Vistas Summerlin.',
+    path: `/agents/${id}`,
+    keywords: withBrandKeywords([
+      'Dr. Jan Duffy REALTOR',
+      'The Vistas Summerlin agent',
+      'Berkshire Hathaway HomeServices Nevada Properties',
+    ]),
+    socialTitle: 'Dr. Jan Duffy REALTOR | The Vistas Summerlin',
+    socialDescription:
+      'Local market guidance and flexible scheduling for buyers and sellers in The Vistas Summerlin.',
+  });
 }
 
 export default async function AgentProfilePage({ params }: AgentPageProps) {

@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Cara Vella Community - Mediterranean Luxury in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Cara Vella, a Mediterranean-inspired luxury community in The Vistas Summerlin featuring elegant homes with private courtyards and resort amenities. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Cara Vella The Vistas Summerlin',
-    'Mediterranean homes Cara Vella',
-    'Cara Vella Las Vegas real estate',
-    'Dr. Jan Duffy Cara Vella',
-    'Cara Vella community features',
-    'luxury homes Cara Vella',
-    'The Vistas Summerlin Cara Vella'
-  ],
-  openGraph: {
-    title: 'Cara Vella Community - Mediterranean Luxury in The Vistas Summerlin',
-    description: 'Mediterranean-inspired luxury community featuring elegant homes with private courtyards and resort amenities.',
-    url: `${getSiteUrl()}/communities/cara-vella`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/cara-vella`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Cara Vella | Community guide',
+  description: 'Discover Cara Vella, a Mediterranean-inspired luxury community in The Vistas Summerlin featuring elegant homes with private courtyards and resort Dr. Jan Duffy.',
+  path: '/communities/cara-vella',
+  keywords: withBrandKeywords(['Cara Vella The Vistas Summerlin', 'Mediterranean homes Cara Vella', 'Cara Vella Las Vegas real estate', 'Dr. Jan Duffy Cara Vella', 'Cara Vella community features', 'luxury homes Cara Vella', 'The Vistas Summerlin Cara Vella']),
+  socialTitle: 'Cara Vella Community - Mediterranean Luxury in The Vistas Summerlin',
+  socialDescription: 'Mediterranean-inspired luxury community featuring elegant homes with private courtyards and resort amenities.',
+});
 
 export default function CaraVellaPage() {
   return (

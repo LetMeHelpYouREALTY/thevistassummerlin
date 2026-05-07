@@ -17,6 +17,7 @@ import {
 import { CalendlyBadge } from '@/components/CalendlyBadge';
 import { GbpActionStrip } from '@/components/sections/gbp-action-strip';
 import { getSiteUrl } from '@/lib/site-url';
+import { BRAND_META_DESCRIPTION } from '@/lib/brand-kit';
 
 const siteUrl = getSiteUrl();
 
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     default: "The Vistas Summerlin | Berkshire Hathaway HomeServices Nevada Properties - Dr. Jan Duffy",
     template: "%s | The Vistas Summerlin | Berkshire Hathaway HomeServices Nevada Properties"
   },
-  description: "Luxury homes in The Vistas Summerlin starting at $800K. Expert realtor Dr. Jan Duffy with Berkshire Hathaway HomeServices specializing in Las Vegas luxury real estate.",
+  description: BRAND_META_DESCRIPTION,
   keywords: [
     "The Vistas Summerlin",
     "Vistas Summerlin homes for sale",
@@ -86,7 +87,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "The Vistas Summerlin | Homes by Dr. Jan Duffy - Las Vegas Expert",
-    description: "The Vistas Summerlin offers luxury homes starting at $800K. Expert realtor Dr. Jan Duffy specializing in The Vistas community with flexible scheduling that works around YOUR lifestyle.",
+    description: BRAND_META_DESCRIPTION,
     url: siteUrl,
     siteName: "The Vistas Summerlin | Homes by Dr. Jan Duffy",
     images: [
@@ -103,7 +104,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "The Vistas Summerlin | Homes by Dr. Jan Duffy - Las Vegas Expert",
-    description: "The Vistas Summerlin offers luxury homes starting at $800K. Expert realtor Dr. Jan Duffy specializing in The Vistas community with flexible scheduling that works around YOUR lifestyle.",
+    description: BRAND_META_DESCRIPTION,
     images: ["/subcommunities/IMG_0737.JPG"],
   },
   ...(googleSiteVerification

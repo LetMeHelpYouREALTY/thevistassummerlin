@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Summerfield Community - Summer Living in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Summerfield, a summer living community in The Vistas Summerlin featuring luxury homes with family amenities and community events. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Summerfield The Vistas Summerlin',
-    'summer homes Summerfield',
-    'Summerfield Las Vegas real estate',
-    'Dr. Jan Duffy Summerfield',
-    'Summerfield community features',
-    'luxury homes Summerfield',
-    'The Vistas Summerlin Summerfield'
-  ],
-  openGraph: {
-    title: 'Summerfield Community - Summer Living in The Vistas Summerlin',
-    description: 'Summer living community featuring luxury homes with family amenities and community events.',
-    url: `${getSiteUrl()}/communities/summerfield`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/summerfield`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Summerfield | Community guide',
+  description: 'Discover Summerfield, a summer living community in The Vistas Summerlin featuring luxury homes with family amenities and community events. Expert real Dr. Jan Duffy.',
+  path: '/communities/summerfield',
+  keywords: withBrandKeywords(['Summerfield The Vistas Summerlin', 'summer homes Summerfield', 'Summerfield Las Vegas real estate', 'Dr. Jan Duffy Summerfield', 'Summerfield community features', 'luxury homes Summerfield', 'The Vistas Summerlin Summerfield']),
+  socialTitle: 'Summerfield Community - Summer Living in The Vistas Summerlin',
+  socialDescription: 'Summer living community featuring luxury homes with family amenities and community events.',
+});
 
 export default function SummerfieldPage() {
   return (

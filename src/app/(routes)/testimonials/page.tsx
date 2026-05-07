@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { 
@@ -20,29 +19,22 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'Client Testimonials - The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Read real client testimonials and reviews for Dr. Jan Duffy\'s real estate services in The Vistas Summerlin. See why clients choose her flexible scheduling and expert local knowledge.',
-  keywords: [
+export const metadata = brandPageMetadata({
+  title: 'Client testimonials',
+  description:
+    'Client feedback for Dr. Jan Duffy in The Vistas Summerlin—flexible scheduling, local expertise, and data-informed guidance.',
+  path: '/testimonials',
+  keywords: withBrandKeywords([
     'Dr. Jan Duffy testimonials',
     'The Vistas Summerlin reviews',
     'Las Vegas real estate agent reviews',
     'Berkshire Hathaway agent testimonials',
     'Summerlin home buying reviews',
-    'real estate client testimonials',
-    'Vistas Summerlin client feedback',
-    'Canterra community reviews'
-  ],
-  openGraph: {
-    title: 'Client Testimonials - The Vistas Summerlin | Dr. Jan Duffy',
-    description: 'Read real client testimonials and reviews for Dr. Jan Duffy\'s real estate services in The Vistas Summerlin.',
-    url: `${getSiteUrl()}/testimonials`,
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/testimonials`,
-  },
-};
+  ]),
+  socialTitle: 'Client testimonials | Dr. Jan Duffy',
+});
 
 export default function TestimonialsPage() {
   const testimonials = [

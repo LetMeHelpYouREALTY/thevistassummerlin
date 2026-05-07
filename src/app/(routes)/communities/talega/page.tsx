@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign, Crown } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Talega Community - Contemporary Luxury in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Talega, a contemporary luxury community in The Vistas Summerlin featuring elegant homes with modern design and premium amenities. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Talega The Vistas Summerlin',
-    'contemporary luxury homes Talega',
-    'Talega Las Vegas real estate',
-    'Dr. Jan Duffy Talega',
-    'Talega community features',
-    'luxury homes Talega',
-    'The Vistas Summerlin Talega'
-  ],
-  openGraph: {
-    title: 'Talega Community - Contemporary Luxury in The Vistas Summerlin',
-    description: 'Contemporary luxury community featuring elegant homes with modern design and premium amenities.',
-    url: `${getSiteUrl()}/communities/talega`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/talega`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Talega | Community guide',
+  description: 'Discover Talega, a contemporary luxury community in The Vistas Summerlin featuring elegant homes with modern design and premium amenities. Expert real Dr. Jan Duffy.',
+  path: '/communities/talega',
+  keywords: withBrandKeywords(['Talega The Vistas Summerlin', 'contemporary luxury homes Talega', 'Talega Las Vegas real estate', 'Dr. Jan Duffy Talega', 'Talega community features', 'luxury homes Talega', 'The Vistas Summerlin Talega']),
+  socialTitle: 'Talega Community - Contemporary Luxury in The Vistas Summerlin',
+  socialDescription: 'Contemporary luxury community featuring elegant homes with modern design and premium amenities.',
+});
 
 export default function TalegaPage() {
   return (

@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { 
@@ -37,42 +36,15 @@ import {
 import { RealScoutWidget } from "@/components/RealScoutWidget";
 import Link from 'next/link';
 import Image from 'next/image';
-import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Kingwood Community - The Vistas Summerlin | Royal-Inspired Luxury Homes',
-  description: 'Discover Kingwood in The Vistas Summerlin. Royal-inspired homes with majestic mountain views, luxury finishes, and resort-style amenities. Expert realtor Jan Duffy helps you find your dream home.',
-  keywords: [
-    'Kingwood Summerlin homes',
-    'Kingwood Las Vegas real estate',
-    'The Vistas Kingwood community',
-    'Summerlin Kingwood homes for sale',
-    'Jan Duffy Kingwood realtor',
-    'luxury homes Kingwood',
-    'Kingwood real estate agent',
-    'mountain view homes Summerlin'
-  ],
-  openGraph: {
-    title: 'Kingwood Community - The Vistas Summerlin',
-    description: 'Royal-inspired homes with majestic mountain views and luxury finishes.',
-    url: `${getSiteUrl()}/communities/img-0738`,
-    images: [
-      {
-        url: '/subcommunities/IMG_0738.JPG',
-        width: 1200,
-        height: 630,
-        alt: 'Kingwood community in The Vistas Summerlin',
-      },
-    ],
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Kingwood Community - The Vistas Summerlin',
-    description: 'Royal-inspired homes with majestic mountain views and luxury finishes.',
-    images: ['/subcommunities/IMG_0738.JPG'],
-  },
-};
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
+export const metadata = brandPageMetadata({
+  title: 'Kingwood | Community guide',
+  description: 'Discover Kingwood in The Vistas Summerlin. Royal-inspired homes with majestic mountain views, luxury finishes, and resort-style amenities. Dr. Jan Duffy.',
+  path: '/communities/img-0738',
+  keywords: withBrandKeywords(['Kingwood Summerlin homes', 'Kingwood Las Vegas real estate', 'The Vistas Kingwood community', 'Summerlin Kingwood homes for sale', 'Dr. Jan Duffy Kingwood realtor', 'luxury homes Kingwood', 'Kingwood real estate agent', 'mountain view homes Summerlin']),
+  socialTitle: 'Kingwood Community - The Vistas Summerlin',
+  socialDescription: 'Royal-inspired homes with majestic mountain views and luxury finishes.',
+});
 
 export default function KingwoodCommunityPage() {
   return (

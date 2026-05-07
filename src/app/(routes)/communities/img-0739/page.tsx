@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { 
@@ -38,42 +37,15 @@ import {
 import { RealScoutWidget } from "@/components/RealScoutWidget";
 import Link from 'next/link';
 import Image from 'next/image';
-import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Santalina Community - The Vistas Summerlin | Mediterranean-Inspired Living',
-  description: 'Discover Santalina in The Vistas Summerlin. Mediterranean-inspired homes with warm colors, outdoor living spaces, and community gardens. Expert realtor Jan Duffy helps you find your dream home.',
-  keywords: [
-    'Santalina Summerlin homes',
-    'Santalina Las Vegas real estate',
-    'The Vistas Santalina community',
-    'Summerlin Santalina homes for sale',
-    'Jan Duffy Santalina realtor',
-    'Mediterranean homes Summerlin',
-    'Santalina real estate agent',
-    'outdoor living homes Las Vegas'
-  ],
-  openGraph: {
-    title: 'Santalina Community - The Vistas Summerlin',
-    description: 'Mediterranean-inspired homes with warm colors and outdoor living spaces.',
-    url: `${getSiteUrl()}/communities/img-0739`,
-    images: [
-      {
-        url: '/subcommunities/IMG_0739.JPG',
-        width: 1200,
-        height: 630,
-        alt: 'Santalina community in The Vistas Summerlin',
-      },
-    ],
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Santalina Community - The Vistas Summerlin',
-    description: 'Mediterranean-inspired homes with warm colors and outdoor living spaces.',
-    images: ['/subcommunities/IMG_0739.JPG'],
-  },
-};
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
+export const metadata = brandPageMetadata({
+  title: 'Santalina | Community guide',
+  description: 'Discover Santalina in The Vistas Summerlin. Mediterranean-inspired homes with warm colors, outdoor living spaces, and community gardens. Dr. JaDr. Jan Duffy.',
+  path: '/communities/img-0739',
+  keywords: withBrandKeywords(['Santalina Summerlin homes', 'Santalina Las Vegas real estate', 'The Vistas Santalina community', 'Summerlin Santalina homes for sale', 'Dr. Jan Duffy Santalina realtor', 'Mediterranean homes Summerlin', 'Santalina real estate agent', 'outdoor living homes Las Vegas']),
+  socialTitle: 'Santalina Community - The Vistas Summerlin',
+  socialDescription: 'Mediterranean-inspired homes with warm colors and outdoor living spaces.',
+});
 
 export default function SantalinaCommunityPage() {
   return (

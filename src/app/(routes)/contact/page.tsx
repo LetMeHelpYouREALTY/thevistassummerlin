@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { FAQSchema } from '@/components/StructuredData';
@@ -7,29 +6,21 @@ import { CalendlyEmbed } from '@/components/CalendlyEmbed';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar, Star, Award, Users, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { PostHeroOfficeListings } from '@/components/sections/post-hero-office-listings';
-import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'Contact Dr. Jan Duffy - The Vistas Summerlin Real Estate Expert',
-  description: 'Contact Dr. Jan Duffy for personalized real estate services in The Vistas Summerlin. Flexible scheduling, expert guidance, and local market knowledge.',
-  keywords: [
+export const metadata = brandPageMetadata({
+  title: 'Contact Dr. Jan Duffy',
+  description:
+    'Reach Dr. Jan Duffy for The Vistas Summerlin—flexible scheduling, local market expertise, and data-informed buyer and seller guidance.',
+  path: '/contact',
+  keywords: withBrandKeywords([
     'contact Dr. Jan Duffy',
     'The Vistas Summerlin real estate agent',
     'Summerlin realtor contact',
-    'Las Vegas luxury real estate',
-    'Dr. Jan Duffy phone number',
-    'real estate consultation'
-  ],
-  openGraph: {
-    title: 'Contact Dr. Jan Duffy - The Vistas Summerlin Real Estate Expert',
-    description: 'Contact Dr. Jan Duffy for personalized real estate services in The Vistas Summerlin. Flexible scheduling, expert guidance, and local market knowledge.',
-    url: `${getSiteUrl()}/contact`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/contact`,
-  },
-};
+    'real estate consultation Las Vegas',
+  ]),
+  socialTitle: 'Contact Dr. Jan Duffy | The Vistas Summerlin',
+});
 
 export default function Contact() {
   return (

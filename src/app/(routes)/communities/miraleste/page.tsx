@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Miraleste Community - Elevated Living in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Miraleste, an elevated living community in The Vistas Summerlin featuring luxury homes with modern design and golf course access. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Miraleste The Vistas Summerlin',
-    'elevated homes Miraleste',
-    'Miraleste Las Vegas real estate',
-    'Dr. Jan Duffy Miraleste',
-    'Miraleste community features',
-    'luxury homes Miraleste',
-    'The Vistas Summerlin Miraleste'
-  ],
-  openGraph: {
-    title: 'Miraleste Community - Elevated Living in The Vistas Summerlin',
-    description: 'Elevated living community featuring luxury homes with modern design and golf course access.',
-    url: `${getSiteUrl()}/communities/miraleste`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/miraleste`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Miraleste | Community guide',
+  description: 'Discover Miraleste, an elevated living community in The Vistas Summerlin featuring luxury homes with modern design and golf course access. Expert real Dr. Jan Duffy.',
+  path: '/communities/miraleste',
+  keywords: withBrandKeywords(['Miraleste The Vistas Summerlin', 'elevated homes Miraleste', 'Miraleste Las Vegas real estate', 'Dr. Jan Duffy Miraleste', 'Miraleste community features', 'luxury homes Miraleste', 'The Vistas Summerlin Miraleste']),
+  socialTitle: 'Miraleste Community - Elevated Living in The Vistas Summerlin',
+  socialDescription: 'Elevated living community featuring luxury homes with modern design and golf course access.',
+});
 
 export default function MiralestePage() {
   return (

@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Vista Verde Community - Green Views in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Vista Verde, a green views community in The Vistas Summerlin featuring luxury homes with natural beauty and mountain views. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Vista Verde The Vistas Summerlin',
-    'green views homes Vista Verde',
-    'Vista Verde Las Vegas real estate',
-    'Dr. Jan Duffy Vista Verde',
-    'Vista Verde community features',
-    'luxury homes Vista Verde',
-    'The Vistas Summerlin Vista Verde'
-  ],
-  openGraph: {
-    title: 'Vista Verde Community - Green Views in The Vistas Summerlin',
-    description: 'Green views community featuring luxury homes with natural beauty and mountain views.',
-    url: `${getSiteUrl()}/communities/vista-verde`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/vista-verde`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Vista Verde | Community guide',
+  description: 'Discover Vista Verde, a green views community in The Vistas Summerlin featuring luxury homes with natural beauty and mountain views. Expert real estate Dr. Jan Duffy.',
+  path: '/communities/vista-verde',
+  keywords: withBrandKeywords(['Vista Verde The Vistas Summerlin', 'green views homes Vista Verde', 'Vista Verde Las Vegas real estate', 'Dr. Jan Duffy Vista Verde', 'Vista Verde community features', 'luxury homes Vista Verde', 'The Vistas Summerlin Vista Verde']),
+  socialTitle: 'Vista Verde Community - Green Views in The Vistas Summerlin',
+  socialDescription: 'Green views community featuring luxury homes with natural beauty and mountain views.',
+});
 
 export default function VistaVerdePage() {
   return (

@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -7,31 +6,16 @@ import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOffic
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import RealScoutListings from '@/components/RealScoutListings';
 import { RealEstateListingSchema, CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Santaluz Community - Luxury Homes in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Santaluz, a premium community in The Vistas Summerlin featuring luxury homes with mountain views, resort-style amenities, and golf course access. Homes from $800K-$2.5M.',
-  keywords: [
-    'Santaluz The Vistas Summerlin',
-    'luxury homes Santaluz',
-    'Santaluz Las Vegas real estate',
-    'mountain view homes Santaluz',
-    'resort amenities Santaluz',
-    'Dr. Jan Duffy Santaluz',
-    'Santaluz community features',
-    'golf course homes Santaluz'
-  ],
-  openGraph: {
-    title: 'Santaluz Community - Luxury Homes in The Vistas Summerlin',
-    description: 'Premium community with luxury homes featuring mountain views and resort-style amenities.',
-    url: `${getSiteUrl()}/communities/santaluz`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/santaluz`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Santaluz | Community guide',
+  description: 'Discover Santaluz, a premium community in The Vistas Summerlin featuring luxury homes with mountain views, resort-style amenities, and golf course access. Dr. Jan Duffy.',
+  path: '/communities/santaluz',
+  keywords: withBrandKeywords(['Santaluz The Vistas Summerlin', 'luxury homes Santaluz', 'Santaluz Las Vegas real estate', 'mountain view homes Santaluz', 'resort amenities Santaluz', 'Dr. Jan Duffy Santaluz', 'Santaluz community features', 'golf course homes Santaluz']),
+  socialTitle: 'Santaluz Community - Luxury Homes in The Vistas Summerlin',
+  socialDescription: 'Premium community with luxury homes featuring mountain views and resort-style amenities.',
+});
 
 export default function SantaluzPage() {
   return (

@@ -1,31 +1,21 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import RealScoutAdvancedSearch from '@/components/RealScoutAdvancedSearch';
-import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'Investment Opportunities - The Vistas Summerlin Real Estate',
-  description: 'Discover lucrative investment opportunities in The Vistas Summerlin luxury real estate. Get ROI analysis, market performance data, and investment strategies from expert realtor Dr. Jan Duffy. High-return properties from $800K-$2.5M+.',
-  keywords: [
+export const metadata = brandPageMetadata({
+  title: 'Investment | Luxury rental & equity',
+  description:
+    'Investment lens on The Vistas Summerlin—performance context, acquisition discipline, and strategy with Dr. Jan Duffy.',
+  path: '/investment',
+  keywords: withBrandKeywords([
     'The Vistas Summerlin investment properties',
-    'luxury real estate investment Las Vegas',
-    'Summerlin investment opportunities',
-    'real estate ROI The Vistas',
-    'Dr. Jan Duffy investment advisor',
-    'Las Vegas luxury home investment'
-  ],
-  openGraph: {
-    title: 'Investment Opportunities - The Vistas Summerlin Real Estate',
-    description: 'Comprehensive investment analysis and opportunities in The Vistas Summerlin.',
-    url: `${getSiteUrl()}/investment`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/investment`,
-  },
-};
+    'Las Vegas luxury real estate investment',
+    'Summerlin ROI context',
+    'Dr. Jan Duffy investment guidance',
+  ]),
+  socialTitle: 'Investment | The Vistas Summerlin',
+});
 
 const investmentStats = [
   {

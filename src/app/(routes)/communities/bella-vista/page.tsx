@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -7,30 +6,16 @@ import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOffic
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import RealScoutListings from '@/components/RealScoutListings';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Bella Vista Community - Luxury Homes in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Bella Vista, a beautiful community in The Vistas Summerlin featuring elegant homes with mountain views and landscaped gardens. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Bella Vista The Vistas Summerlin',
-    'luxury homes Bella Vista',
-    'Bella Vista Las Vegas real estate',
-    'Dr. Jan Duffy Bella Vista',
-    'Bella Vista community features',
-    'homes for sale Bella Vista',
-    'The Vistas Summerlin Bella Vista'
-  ],
-  openGraph: {
-    title: 'Bella Vista Community - Luxury Homes in The Vistas Summerlin',
-    description: 'Beautiful community featuring elegant homes with mountain views and landscaped gardens.',
-    url: `${getSiteUrl()}/communities/bella-vista`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/bella-vista`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Bella Vista | Community guide',
+  description: 'Discover Bella Vista, a beautiful community in The Vistas Summerlin featuring elegant homes with mountain views and landscaped gardens. Expert real estate Dr. Jan Duffy.',
+  path: '/communities/bella-vista',
+  keywords: withBrandKeywords(['Bella Vista The Vistas Summerlin', 'luxury homes Bella Vista', 'Bella Vista Las Vegas real estate', 'Dr. Jan Duffy Bella Vista', 'Bella Vista community features', 'homes for sale Bella Vista', 'The Vistas Summerlin Bella Vista']),
+  socialTitle: 'Bella Vista Community - Luxury Homes in The Vistas Summerlin',
+  socialDescription: 'Beautiful community featuring elegant homes with mountain views and landscaped gardens.',
+});
 
 export default function BellaVistaPage() {
   return (

@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Estancia Community - Ranch-Style Luxury in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Estancia, a ranch-style luxury community in The Vistas Summerlin featuring spacious homes with open spaces and horse trails. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Estancia The Vistas Summerlin',
-    'ranch homes Estancia',
-    'Estancia Las Vegas real estate',
-    'Dr. Jan Duffy Estancia',
-    'Estancia community features',
-    'luxury homes Estancia',
-    'The Vistas Summerlin Estancia'
-  ],
-  openGraph: {
-    title: 'Estancia Community - Ranch-Style Luxury in The Vistas Summerlin',
-    description: 'Ranch-style luxury community featuring spacious homes with open spaces and horse trails.',
-    url: `${getSiteUrl()}/communities/estancia`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/estancia`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Estancia | Community guide',
+  description: 'Discover Estancia, a ranch-style luxury community in The Vistas Summerlin featuring spacious homes with open spaces and horse trails. Expert real estate Dr. Jan Duffy.',
+  path: '/communities/estancia',
+  keywords: withBrandKeywords(['Estancia The Vistas Summerlin', 'ranch homes Estancia', 'Estancia Las Vegas real estate', 'Dr. Jan Duffy Estancia', 'Estancia community features', 'luxury homes Estancia', 'The Vistas Summerlin Estancia']),
+  socialTitle: 'Estancia Community - Ranch-Style Luxury in The Vistas Summerlin',
+  socialDescription: 'Ranch-style luxury community featuring spacious homes with open spaces and horse trails.',
+});
 
 export default function EstanciaPage() {
   return (

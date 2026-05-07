@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'San Marcos Community - Spanish Colonial Charm in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover San Marcos, a Spanish colonial charm community in The Vistas Summerlin featuring luxury homes with private courtyards and community amenities. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'San Marcos The Vistas Summerlin',
-    'Spanish colonial homes San Marcos',
-    'San Marcos Las Vegas real estate',
-    'Dr. Jan Duffy San Marcos',
-    'San Marcos community features',
-    'luxury homes San Marcos',
-    'The Vistas Summerlin San Marcos'
-  ],
-  openGraph: {
-    title: 'San Marcos Community - Spanish Colonial Charm in The Vistas Summerlin',
-    description: 'Spanish colonial charm community featuring luxury homes with private courtyards and community amenities.',
-    url: `${getSiteUrl()}/communities/san-marcos`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/san-marcos`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'San Marcos | Community guide',
+  description: 'Discover San Marcos, a Spanish colonial charm community in The Vistas Summerlin featuring luxury homes with private courtyards and community amenities Dr. Jan Duffy.',
+  path: '/communities/san-marcos',
+  keywords: withBrandKeywords(['San Marcos The Vistas Summerlin', 'Spanish colonial homes San Marcos', 'San Marcos Las Vegas real estate', 'Dr. Jan Duffy San Marcos', 'San Marcos community features', 'luxury homes San Marcos', 'The Vistas Summerlin San Marcos']),
+  socialTitle: 'San Marcos Community - Spanish Colonial Charm in The Vistas Summerlin',
+  socialDescription: 'Spanish colonial charm community featuring luxury homes with private courtyards and community amenities.',
+});
 
 export default function SanMarcosPage() {
   return (
