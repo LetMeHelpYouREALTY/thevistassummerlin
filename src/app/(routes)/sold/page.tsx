@@ -1,17 +1,15 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
-import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'Recently Sold Homes in The Vistas Summerlin, Las Vegas 89138 | Dr. Jan Duffy',
+export const metadata = brandPageMetadata({
+  title: 'Recently sold homes | Vistas Summerlin',
   description:
-    'Review 90-day sold home snapshots from The Vistas Summerlin with addresses, close dates, and subcommunity context for seller pricing decisions.',
-  alternates: {
-    canonical: `${getSiteUrl()}/sold`,
-  },
-};
+    'Recent sold snapshots for The Vistas Summerlin—addresses, close context, and subcommunity notes to inform seller pricing with Dr. Jan Duffy.',
+  path: '/sold',
+  keywords: withBrandKeywords(['sold homes Summerlin', 'The Vistas Summerlin comps', 'recent home sales 89138']),
+});
 
 const soldRows = [
   {

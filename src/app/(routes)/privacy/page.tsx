@@ -1,15 +1,15 @@
-import { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy - The Vistas Summerlin | Homes by Dr. Jan Duffy',
-  description: 'Privacy Policy for The Vistas Summerlin real estate website. How Dr. Jan Duffy protects your personal information.',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Privacy Policy',
+  description:
+    'Privacy Policy for The Vistas Summerlin real estate website: how Dr. Jan Duffy protects personal information, analytics, and inquiries.',
+  path: '/privacy',
+  keywords: withBrandKeywords(['privacy policy', 'The Vistas Summerlin website', 'real estate data protection']),
+  robots: { index: true, follow: true },
+});
 
 export default function PrivacyPage() {
   return (

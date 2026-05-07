@@ -1,31 +1,21 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import RealScoutAdvancedSearch from '@/components/RealScoutAdvancedSearch';
-import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'Market Analysis - The Vistas Summerlin Real Estate Market',
-  description: 'Comprehensive market analysis for The Vistas Summerlin luxury real estate. Get current prices, sales trends, and market forecasts from expert realtor Dr. Jan Duffy. Data-driven insights for buyers and sellers.',
-  keywords: [
+export const metadata = brandPageMetadata({
+  title: 'Market analysis | Luxury Summerlin',
+  description:
+    'Market analysis for The Vistas Summerlin—median trends, pace, and seller/buyer implications with Dr. Jan Duffy’s data-informed read.',
+  path: '/market-analysis',
+  keywords: withBrandKeywords([
     'The Vistas Summerlin market analysis',
     'Summerlin real estate trends',
     'Las Vegas luxury home market',
-    'The Vistas market data',
     'Dr. Jan Duffy market analysis',
-    'Summerlin home prices 2025'
-  ],
-  openGraph: {
-    title: 'Market Analysis - The Vistas Summerlin Real Estate Market',
-    description: 'Comprehensive market analysis and trends for The Vistas Summerlin area.',
-    url: `${getSiteUrl()}/market-analysis`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/market-analysis`,
-  },
-};
+  ]),
+  socialTitle: 'Market analysis | The Vistas Summerlin',
+});
 
 const marketStats = [
   {

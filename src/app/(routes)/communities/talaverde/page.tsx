@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Talaverde Community - Modern Amenities in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Talaverde, a modern amenities community in The Vistas Summerlin featuring luxury homes with contemporary design and community facilities. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Talaverde The Vistas Summerlin',
-    'modern amenities homes Talaverde',
-    'Talaverde Las Vegas real estate',
-    'Dr. Jan Duffy Talaverde',
-    'Talaverde community features',
-    'luxury homes Talaverde',
-    'The Vistas Summerlin Talaverde'
-  ],
-  openGraph: {
-    title: 'Talaverde Community - Modern Amenities in The Vistas Summerlin',
-    description: 'Modern amenities community featuring luxury homes with contemporary design and community facilities.',
-    url: `${getSiteUrl()}/communities/talaverde`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/talaverde`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Talaverde | Community guide',
+  description: 'Discover Talaverde, a modern amenities community in The Vistas Summerlin featuring luxury homes with contemporary design and community facilities. Expert Dr. Jan Duffy.',
+  path: '/communities/talaverde',
+  keywords: withBrandKeywords(['Talaverde The Vistas Summerlin', 'modern amenities homes Talaverde', 'Talaverde Las Vegas real estate', 'Dr. Jan Duffy Talaverde', 'Talaverde community features', 'luxury homes Talaverde', 'The Vistas Summerlin Talaverde']),
+  socialTitle: 'Talaverde Community - Modern Amenities in The Vistas Summerlin',
+  socialDescription: 'Modern amenities community featuring luxury homes with contemporary design and community facilities.',
+});
 
 export default function TalaverdePage() {
   return (

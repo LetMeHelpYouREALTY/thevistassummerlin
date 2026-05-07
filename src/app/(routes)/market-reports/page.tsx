@@ -1,31 +1,22 @@
-import { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { BarChart, TrendingUp, Home, DollarSign, Calendar, Download, Eye } from 'lucide-react';
 import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'The Vistas Summerlin Market Reports | Real Estate Market Analysis',
-  description: 'Get the latest market reports for The Vistas Summerlin. Comprehensive real estate market analysis, trends, and insights from expert realtor Jan Duffy.',
-  keywords: [
+export const metadata = brandPageMetadata({
+  title: 'Market reports | Summerlin trends',
+  description:
+    'The Vistas Summerlin market reports—pricing context, trend lines, and interpretation from Dr. Jan Duffy.',
+  path: '/market-reports',
+  keywords: withBrandKeywords([
     'The Vistas Summerlin market reports',
     'Summerlin real estate market analysis',
     'Las Vegas real estate trends',
-    'The Vistas market data',
-    'Jan Duffy market reports',
-    'Summerlin home prices'
-  ],
-  openGraph: {
-    title: 'The Vistas Summerlin Market Reports',
-    description: 'Comprehensive real estate market analysis and trends for The Vistas Summerlin.',
-    url: `${getSiteUrl()}/market-reports`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/market-reports`,
-  },
-};
+    'Summerlin home prices',
+  ]),
+  socialTitle: 'Market reports | The Vistas Summerlin',
+});
 
 export default function MarketReportsPage() {
   return (

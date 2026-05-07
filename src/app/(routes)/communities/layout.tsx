@@ -1,28 +1,21 @@
-import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'The Vistas Summerlin Communities | Neighborhood Guide & Homes for Sale',
+export const metadata = brandPageMetadata({
+  title: 'Vistas communities | Neighborhood guide',
   description:
-    'Explore The Vistas Summerlin neighborhood guide with community-by-community home styles, amenities, and links to active homes for sale in Las Vegas.',
-  keywords: [
+    'Explore all Summerlin subcommunities in The Vistas—amenities, character, and active home opportunities with data-informed guidance from Dr. Jan Duffy.',
+  path: '/communities',
+  keywords: withBrandKeywords([
     'The Vistas Summerlin communities',
     'Summerlin neighborhood guide',
     'Vistas Summerlin homes for sale',
-    'Las Vegas luxury neighborhoods',
-    'Canterra Kingwood Santalina',
-  ],
-  alternates: {
-    canonical: `${getSiteUrl()}/communities`,
-  },
-  openGraph: {
-    title: 'The Vistas Summerlin Communities | Neighborhood Guide',
-    description:
-      'Compare The Vistas Summerlin neighborhoods, amenities, and active home opportunities.',
-    url: `${getSiteUrl()}/communities`,
-  },
-};
+    'Canterra',
+    'Kingwood',
+    'Santalina',
+  ]),
+  socialTitle: 'The Vistas Summerlin communities | Neighborhood guide',
+});
 
 export default function CommunitiesLayout({ children }: { children: ReactNode }) {
   return children;

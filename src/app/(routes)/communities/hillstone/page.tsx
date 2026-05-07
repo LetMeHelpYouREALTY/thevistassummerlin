@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Hillstone Community - Mountain View Homes in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Hillstone, a mountain view community in The Vistas Summerlin featuring luxury homes with stone architecture and hiking access. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Hillstone The Vistas Summerlin',
-    'mountain view homes Hillstone',
-    'Hillstone Las Vegas real estate',
-    'Dr. Jan Duffy Hillstone',
-    'Hillstone community features',
-    'luxury homes Hillstone',
-    'The Vistas Summerlin Hillstone'
-  ],
-  openGraph: {
-    title: 'Hillstone Community - Mountain View Homes in The Vistas Summerlin',
-    description: 'Mountain view community featuring luxury homes with stone architecture and hiking access.',
-    url: `${getSiteUrl()}/communities/hillstone`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/hillstone`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Hillstone | Community guide',
+  description: 'Discover Hillstone, a mountain view community in The Vistas Summerlin featuring luxury homes with stone architecture and hiking access. Expert real estate Dr. Jan Duffy.',
+  path: '/communities/hillstone',
+  keywords: withBrandKeywords(['Hillstone The Vistas Summerlin', 'mountain view homes Hillstone', 'Hillstone Las Vegas real estate', 'Dr. Jan Duffy Hillstone', 'Hillstone community features', 'luxury homes Hillstone', 'The Vistas Summerlin Hillstone']),
+  socialTitle: 'Hillstone Community - Mountain View Homes in The Vistas Summerlin',
+  socialDescription: 'Mountain view community featuring luxury homes with stone architecture and hiking access.',
+});
 
 export default function HillstonePage() {
   return (

@@ -1,32 +1,24 @@
-import { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { FAQSchema } from '@/components/StructuredData';
 import { Home, DollarSign, TrendingUp, Users, Phone, Mail, Calendar, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'Sell Your Home in The Vistas Summerlin, Las Vegas 89138 | Dr. Jan Duffy',
-  description: 'Get a seller-first plan for The Vistas Summerlin with address-level comps, prep checklist, and listing strategy from Dr. Jan Duffy.',
-  keywords: [
+export const metadata = brandPageMetadata({
+  title: 'Sell your home | Vistas Summerlin',
+  description:
+    'Seller-first plan for The Vistas Summerlin—comps, prep checklist, and listing strategy with Dr. Jan Duffy’s data-informed approach.',
+  path: '/sell',
+  keywords: withBrandKeywords([
     'sell home The Vistas Summerlin',
     'home valuation Summerlin',
-    'real estate agent The Vistas',
-    'Jan Duffy sell home',
+    'Dr. Jan Duffy listing strategy',
     'Summerlin home sales',
-    'The Vistas real estate'
-  ],
-  openGraph: {
-    title: 'Sell Your Home in The Vistas Summerlin',
-    description: 'Expert guidance from Jan Duffy to sell your home quickly and for top dollar.',
-    url: `${getSiteUrl()}/sell`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/sell`,
-  },
-};
+  ]),
+  socialTitle: 'Sell your home in The Vistas Summerlin',
+  socialDescription: 'Expert listing guidance from Dr. Jan Duffy for Summerlin sellers.',
+});
 
 export default function SellPage() {
   const agentId = process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID || 'QWdlbnQtMjI1MDUw';

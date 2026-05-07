@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Palmilla Community - Resort-Style Amenities in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Palmilla, a resort-style community in The Vistas Summerlin featuring luxury homes with palm landscaping and spa facilities. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Palmilla The Vistas Summerlin',
-    'resort homes Palmilla',
-    'Palmilla Las Vegas real estate',
-    'Dr. Jan Duffy Palmilla',
-    'Palmilla community features',
-    'luxury homes Palmilla',
-    'The Vistas Summerlin Palmilla'
-  ],
-  openGraph: {
-    title: 'Palmilla Community - Resort-Style Amenities in The Vistas Summerlin',
-    description: 'Resort-style community featuring luxury homes with palm landscaping and spa facilities.',
-    url: `${getSiteUrl()}/communities/palmilla`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/palmilla`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Palmilla | Community guide',
+  description: 'Discover Palmilla, a resort-style community in The Vistas Summerlin featuring luxury homes with palm landscaping and spa facilities. Expert real estate Dr. Jan Duffy.',
+  path: '/communities/palmilla',
+  keywords: withBrandKeywords(['Palmilla The Vistas Summerlin', 'resort homes Palmilla', 'Palmilla Las Vegas real estate', 'Dr. Jan Duffy Palmilla', 'Palmilla community features', 'luxury homes Palmilla', 'The Vistas Summerlin Palmilla']),
+  socialTitle: 'Palmilla Community - Resort-Style Amenities in The Vistas Summerlin',
+  socialDescription: 'Resort-style community featuring luxury homes with palm landscaping and spa facilities.',
+});
 
 export default function PalmillaPage() {
   return (

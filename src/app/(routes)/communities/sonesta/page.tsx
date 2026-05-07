@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Sonesta Community - Resort-Style Living in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Sonesta, a resort-style living community in The Vistas Summerlin featuring luxury homes with spa facilities and resort amenities. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Sonesta The Vistas Summerlin',
-    'resort-style homes Sonesta',
-    'Sonesta Las Vegas real estate',
-    'Dr. Jan Duffy Sonesta',
-    'Sonesta community features',
-    'luxury homes Sonesta',
-    'The Vistas Summerlin Sonesta'
-  ],
-  openGraph: {
-    title: 'Sonesta Community - Resort-Style Living in The Vistas Summerlin',
-    description: 'Resort-style living community featuring luxury homes with spa facilities and resort amenities.',
-    url: `${getSiteUrl()}/communities/sonesta`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/sonesta`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Sonesta | Community guide',
+  description: 'Discover Sonesta, a resort-style living community in The Vistas Summerlin featuring luxury homes with spa facilities and resort amenities. Expert real Dr. Jan Duffy.',
+  path: '/communities/sonesta',
+  keywords: withBrandKeywords(['Sonesta The Vistas Summerlin', 'resort-style homes Sonesta', 'Sonesta Las Vegas real estate', 'Dr. Jan Duffy Sonesta', 'Sonesta community features', 'luxury homes Sonesta', 'The Vistas Summerlin Sonesta']),
+  socialTitle: 'Sonesta Community - Resort-Style Living in The Vistas Summerlin',
+  socialDescription: 'Resort-style living community featuring luxury homes with spa facilities and resort amenities.',
+});
 
 export default function SonestaPage() {
   return (

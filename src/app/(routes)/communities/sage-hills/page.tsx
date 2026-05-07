@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Sage Hills Community - Natural Beauty in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Sage Hills, a natural beauty community in The Vistas Summerlin featuring luxury homes with native landscaping and hiking trails. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Sage Hills The Vistas Summerlin',
-    'natural homes Sage Hills',
-    'Sage Hills Las Vegas real estate',
-    'Dr. Jan Duffy Sage Hills',
-    'Sage Hills community features',
-    'luxury homes Sage Hills',
-    'The Vistas Summerlin Sage Hills'
-  ],
-  openGraph: {
-    title: 'Sage Hills Community - Natural Beauty in The Vistas Summerlin',
-    description: 'Natural beauty community featuring luxury homes with native landscaping and hiking trails.',
-    url: `${getSiteUrl()}/communities/sage-hills`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/sage-hills`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Sage Hills | Community guide',
+  description: 'Discover Sage Hills, a natural beauty community in The Vistas Summerlin featuring luxury homes with native landscaping and hiking trails. Expert real Dr. Jan Duffy.',
+  path: '/communities/sage-hills',
+  keywords: withBrandKeywords(['Sage Hills The Vistas Summerlin', 'natural homes Sage Hills', 'Sage Hills Las Vegas real estate', 'Dr. Jan Duffy Sage Hills', 'Sage Hills community features', 'luxury homes Sage Hills', 'The Vistas Summerlin Sage Hills']),
+  socialTitle: 'Sage Hills Community - Natural Beauty in The Vistas Summerlin',
+  socialDescription: 'Natural beauty community featuring luxury homes with native landscaping and hiking trails.',
+});
 
 export default function SageHillsPage() {
   return (

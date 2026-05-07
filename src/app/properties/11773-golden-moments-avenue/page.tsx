@@ -1,11 +1,11 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, Bed, Bath, Square, Calendar, Car, Home, TreePine, Phone, Mail, ExternalLink } from 'lucide-react';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { PropertyImageGallery, goldenMomentsImages } from '@/components/PropertyImageGallery';
 import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
 // Keep server-rendered so Vercel Windows prebuild can package this route (see (routes)/layout).
 export const dynamic = 'force-dynamic';
@@ -13,36 +13,22 @@ export const dynamic = 'force-dynamic';
 const siteUrl = getSiteUrl();
 const propertyPath = '/properties/11773-golden-moments-avenue';
 
-export const metadata: Metadata = {
-  title: "11773 Golden Moments Avenue | The Vistas Summerlin Home for Sale",
-  description: "View listing details for 11773 Golden Moments Avenue in The Vistas Summerlin, including beds, baths, square footage, map, and showing options.",
-  keywords: [
-    "11773 Golden Moments Avenue",
-    "The Vistas Summerlin homes for sale",
-    "Canterra At The Vistas",
-    "Summerlin luxury homes",
-    "Las Vegas real estate",
-    "MLS 2722090",
-    "4 bedroom home Summerlin",
-    "Golden Moments Avenue Las Vegas"
-  ],
-  openGraph: {
-    title: "11773 Golden Moments Avenue | The Vistas Summerlin Home for Sale",
-    description: "Explore this The Vistas Summerlin property with photos, map, and showing details.",
-    url: `${siteUrl}${propertyPath}`,
-         images: [
-           {
-             url: "/subcommunities/IMG_0737.JPG",
-             width: 1200,
-             height: 630,
-             alt: "11773 Golden Moments Avenue - The Vistas Summerlin",
-           },
-         ],
-  },
-  alternates: {
-    canonical: `${siteUrl}${propertyPath}`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: '11773 Golden Moments Ave | Canterra listing',
+  description:
+    'Listing details for 11773 Golden Moments Avenue in The Vistas Summerlin (Canterra)—beds, baths, sq ft, map, and showing options with Dr. Jan Duffy.',
+  path: propertyPath,
+  keywords: withBrandKeywords([
+    '11773 Golden Moments Avenue',
+    'The Vistas Summerlin homes for sale',
+    'Canterra At The Vistas',
+    'MLS 2722090',
+    'Golden Moments Avenue Las Vegas',
+  ]),
+  socialTitle: '11773 Golden Moments Avenue | The Vistas Summerlin',
+  socialDescription:
+    'Explore this Canterra home with photos, map, and showing details.',
+});
 
 // Property Schema for MLS Listing
 function PropertySchema() {

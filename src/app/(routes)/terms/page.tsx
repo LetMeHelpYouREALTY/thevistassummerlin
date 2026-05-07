@@ -1,15 +1,15 @@
-import { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'Terms of Service - The Vistas Summerlin | Homes by Dr. Jan Duffy',
-  description: 'Terms of Service for The Vistas Summerlin real estate website. Dr. Jan Duffy\'s terms and conditions for real estate services.',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Terms of Service',
+  description:
+    'Terms of Service for The Vistas Summerlin website and Dr. Jan Duffy real estate services: disclaimers, permitted use, and Nevada brokerage compliance.',
+  path: '/terms',
+  keywords: withBrandKeywords(['terms of service', 'real estate website terms', 'Berkshire Hathaway HomeServices Nevada Properties']),
+  robots: { index: true, follow: true },
+});
 
 export default function TermsPage() {
   return (

@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Casa Rosa Community - Spanish-Inspired Elegance in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Casa Rosa, a Spanish-inspired elegant community in The Vistas Summerlin featuring luxury homes with private patios and landscaped gardens. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Casa Rosa The Vistas Summerlin',
-    'Spanish homes Casa Rosa',
-    'Casa Rosa Las Vegas real estate',
-    'Dr. Jan Duffy Casa Rosa',
-    'Casa Rosa community features',
-    'luxury homes Casa Rosa',
-    'The Vistas Summerlin Casa Rosa'
-  ],
-  openGraph: {
-    title: 'Casa Rosa Community - Spanish-Inspired Elegance in The Vistas Summerlin',
-    description: 'Spanish-inspired elegant community featuring luxury homes with private patios and landscaped gardens.',
-    url: `${getSiteUrl()}/communities/casa-rosa`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/casa-rosa`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Casa Rosa | Community guide',
+  description: 'Discover Casa Rosa, a Spanish-inspired elegant community in The Vistas Summerlin featuring luxury homes with private patios and landscaped gardens. Expert Dr. Jan Duffy.',
+  path: '/communities/casa-rosa',
+  keywords: withBrandKeywords(['Casa Rosa The Vistas Summerlin', 'Spanish homes Casa Rosa', 'Casa Rosa Las Vegas real estate', 'Dr. Jan Duffy Casa Rosa', 'Casa Rosa community features', 'luxury homes Casa Rosa', 'The Vistas Summerlin Casa Rosa']),
+  socialTitle: 'Casa Rosa Community - Spanish-Inspired Elegance in The Vistas Summerlin',
+  socialDescription: 'Spanish-inspired elegant community featuring luxury homes with private patios and landscaped gardens.',
+});
 
 export default function CasaRosaPage() {
   return (

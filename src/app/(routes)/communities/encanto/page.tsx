@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Encanto Community - Charming Living in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Encanto, a charming community in The Vistas Summerlin featuring luxury homes with community gardens and family-friendly amenities. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Encanto The Vistas Summerlin',
-    'charming homes Encanto',
-    'Encanto Las Vegas real estate',
-    'Dr. Jan Duffy Encanto',
-    'Encanto community features',
-    'luxury homes Encanto',
-    'The Vistas Summerlin Encanto'
-  ],
-  openGraph: {
-    title: 'Encanto Community - Charming Living in The Vistas Summerlin',
-    description: 'Charming community featuring luxury homes with community gardens and family-friendly amenities.',
-    url: `${getSiteUrl()}/communities/encanto`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/encanto`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Encanto | Community guide',
+  description: 'Discover Encanto, a charming community in The Vistas Summerlin featuring luxury homes with community gardens and family-friendly amenities. Expert real Dr. Jan Duffy.',
+  path: '/communities/encanto',
+  keywords: withBrandKeywords(['Encanto The Vistas Summerlin', 'charming homes Encanto', 'Encanto Las Vegas real estate', 'Dr. Jan Duffy Encanto', 'Encanto community features', 'luxury homes Encanto', 'The Vistas Summerlin Encanto']),
+  socialTitle: 'Encanto Community - Charming Living in The Vistas Summerlin',
+  socialDescription: 'Charming community featuring luxury homes with community gardens and family-friendly amenities.',
+});
 
 export default function EncantoPage() {
   return (

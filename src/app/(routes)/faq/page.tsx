@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { 
@@ -21,29 +20,23 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'The Vistas Summerlin FAQ | Buyer, Seller, and Community Questions',
-  description: 'Get direct answers to common The Vistas Summerlin questions about communities, pricing, amenities, and buying or selling with Dr. Jan Duffy.',
-  keywords: [
+export const metadata = brandPageMetadata({
+  title: 'FAQ | Buyers, sellers & communities',
+  description:
+    'Answers about The Vistas Summerlin—28 subcommunities, pricing context, amenities, and the buying or selling process with Dr. Jan Duffy.',
+  path: '/faq',
+  keywords: withBrandKeywords([
     'The Vistas Summerlin FAQ',
     'Canterra community questions',
     'Summerlin homes FAQ',
-    'Dr. Jan Duffy questions',
-    'Las Vegas real estate FAQ',
-    'Vistas Summerlin amenities',
     'home prices Summerlin',
-    'real estate agent questions'
-  ],
-  openGraph: {
-    title: 'The Vistas Summerlin FAQ | Buyer, Seller, and Community Questions',
-    description: 'Read practical answers on The Vistas Summerlin neighborhoods, pricing, and process.',
-    url: `${getSiteUrl()}/faq`,
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/faq`,
-  },
-};
+    'real estate agent questions',
+  ]),
+  socialTitle: 'The Vistas Summerlin FAQ',
+  socialDescription: 'Practical answers on neighborhoods, pricing, and the real estate process.',
+});
 
 export default function FAQPage() {
   const faqs = [

@@ -1,21 +1,22 @@
-import type { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import { VoiceSearchFAQ, AnswerEngineOptimization } from '@/components/VoiceSearchOptimization';
 import { MapPin, Home, Users, Star, Award, TrendingUp, Shield, TreePine, Mountain, ShoppingBag, UtensilsCrossed, Zap, Sparkles, Heart, ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'The Vistas Summerlin Community Guide - Complete Neighborhood Information',
-  description: 'Complete guide to The Vistas Summerlin community. Discover amenities, schools, lifestyle, and everything you need to know about living in this prestigious Las Vegas community.',
-  openGraph: {
-    title: 'The Vistas Summerlin Community Guide - Complete Neighborhood Information',
-    description: 'Everything you need to know about living in The Vistas Summerlin community.',
-    url: `${getSiteUrl()}/community-guide`,
-    type: 'website',
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Community guide | Lifestyle & amenities',
+  description:
+    'Living in The Vistas Summerlin—schools, trails, retail access, and neighborhood character with guidance from Dr. Jan Duffy.',
+  path: '/community-guide',
+  keywords: withBrandKeywords([
+    'The Vistas Summerlin lifestyle',
+    'Summerlin amenities',
+    'The Vistas schools and recreation',
+  ]),
+  socialTitle: 'The Vistas Summerlin community guide',
+});
 
 export default function CommunityGuidePage() {
   return (

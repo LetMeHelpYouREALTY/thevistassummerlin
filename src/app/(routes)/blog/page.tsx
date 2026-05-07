@@ -1,24 +1,22 @@
-import type { Metadata } from 'next';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import BlogPosts from '@/components/sections/blog-posts';
 import { BookOpen, TrendingUp, Users, Star, Zap, Sparkles, Heart, Award, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site-url';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 
-export const metadata: Metadata = {
-  title: 'The Vistas Summerlin Blog - Real Estate Insights & Market Updates',
-  description: 'Stay informed with expert analysis, market updates, and helpful guides for The Vistas Summerlin real estate market from Dr. Jan Duffy.',
-  openGraph: {
-    title: 'The Vistas Summerlin Blog - Real Estate Insights',
-    description: 'Expert real estate analysis and market insights for The Vistas Summerlin community.',
-    url: `${getSiteUrl()}/blog`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/blog`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Market insights & Summerlin updates',
+  description:
+    'Real estate perspective for The Vistas Summerlin—market trends, neighborhood notes, and practical guidance from Dr. Jan Duffy.',
+  path: '/blog',
+  keywords: withBrandKeywords([
+    'Summerlin real estate blog',
+    'The Vistas Summerlin market',
+    'Las Vegas luxury homes news',
+  ]),
+  socialTitle: 'The Vistas Summerlin | Real estate insights',
+});
 
 export default function BlogPage() {
   return (

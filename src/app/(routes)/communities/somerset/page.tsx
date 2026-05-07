@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/sections/navigation';
@@ -6,30 +5,16 @@ import Footer from '@/components/sections/footer';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
 import { MapPin, Home, Users, Star, ArrowRight, CheckCircle, Mountain, TreePine, Sparkles, Heart, Zap, Award, TrendingUp, Phone, Mail, Calendar, Bed, Bath, Square, DollarSign } from 'lucide-react';
 import { CommunitySchema, BreadcrumbSchema } from '@/components/StructuredData';
+import { brandPageMetadata, withBrandKeywords } from '@/lib/brand-metadata';
 import { getSiteUrl } from '@/lib/site-url';
-
-export const metadata: Metadata = {
-  title: 'Somerset Community - Traditional Luxury in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Somerset, a traditional luxury community in The Vistas Summerlin featuring elegant homes with formal gardens and community amenities. Expert real estate guidance from Dr. Jan Duffy.',
-  keywords: [
-    'Somerset The Vistas Summerlin',
-    'traditional luxury homes Somerset',
-    'Somerset Las Vegas real estate',
-    'Dr. Jan Duffy Somerset',
-    'Somerset community features',
-    'luxury homes Somerset',
-    'The Vistas Summerlin Somerset'
-  ],
-  openGraph: {
-    title: 'Somerset Community - Traditional Luxury in The Vistas Summerlin',
-    description: 'Traditional luxury community featuring elegant homes with formal gardens and community amenities.',
-    url: `${getSiteUrl()}/communities/somerset`,
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${getSiteUrl()}/communities/somerset`,
-  },
-};
+export const metadata = brandPageMetadata({
+  title: 'Somerset | Community guide',
+  description: 'Discover Somerset, a traditional luxury community in The Vistas Summerlin featuring elegant homes with formal gardens and community amenities. Expert real Dr. Jan Duffy.',
+  path: '/communities/somerset',
+  keywords: withBrandKeywords(['Somerset The Vistas Summerlin', 'traditional luxury homes Somerset', 'Somerset Las Vegas real estate', 'Dr. Jan Duffy Somerset', 'Somerset community features', 'luxury homes Somerset', 'The Vistas Summerlin Somerset']),
+  socialTitle: 'Somerset Community - Traditional Luxury in The Vistas Summerlin',
+  socialDescription: 'Traditional luxury community featuring elegant homes with formal gardens and community amenities.',
+});
 
 export default function SomersetPage() {
   return (
