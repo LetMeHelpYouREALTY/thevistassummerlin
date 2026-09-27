@@ -10,7 +10,7 @@ export const AMENITIES_FAQS: AmenityFaq[] = [
   {
     question: 'What grocery stores are near The Vistas Summerlin?',
     answer:
-      'Whole Foods Market at Downtown Summerlin and Smith\'s Food and Drug on West Charleston Boulevard are common grocery runs from The Vistas. Drive time varies with traffic and which Vistas neighborhood you are in.',
+      'Whole Foods Market on South Town Center Drive and Smith\'s Food and Drug on West Charleston Boulevard are common grocery runs from The Vistas. Drive time varies with traffic and which Vistas neighborhood you are in.',
   },
   {
     question: 'How far is The Vistas Summerlin from the Las Vegas Strip?',
@@ -75,7 +75,7 @@ export const CATEGORY_COPY: CategoryCopyBlock[] = [
     id: 'grocery',
     title: 'Grocery & everyday errands',
     paragraphs: [
-      'Whole Foods Market at Downtown Summerlin and Smith\'s Food and Drug on West Charleston Boulevard cover weekly shopping for many households.',
+      'Whole Foods Market on South Town Center Drive and Smith\'s Food and Drug on West Charleston Boulevard cover weekly shopping for many households.',
       'Specialty markets and big-box retailers are scattered along the 215 belt corridor for larger hauls.',
     ],
   },

@@ -51,7 +51,8 @@ export type CuratedPlace = {
     | 'ParkingFacility'
     | 'ExerciseGym'
     | 'School';
-  /** Optional lat/lng when verified from public maps listings */
+  /** Official page used to verify name and address */
+  sourceUrl: string;
   lat?: number;
   lng?: number;
 };
@@ -103,8 +104,7 @@ export const CATEGORY_PLACE_TYPES: Record<AmenityCategoryId, string[]> = {
 };
 
 /**
- * Curated, verifiable destinations near The Vistas (Summerlin west).
- * Used for SSR copy, fallback UI, and ItemList schema — not invented ratings or drive times.
+ * Curated destinations near The Vistas (Summerlin west). Addresses verified against official sources.
  */
 export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
   {
@@ -113,26 +113,29 @@ export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
     address: '1980 Festival Plaza Dr, Las Vegas, NV 89135',
     category: 'shopping',
     schemaType: 'ShoppingCenter',
+    sourceUrl: 'https://www.downtownsummerlin.com/',
     lat: 36.0697,
     lng: -115.3334,
   },
   {
-    id: 'whole-foods-dt-summerlin',
+    id: 'whole-foods-summerlin',
     name: 'Whole Foods Market',
-    address: '10655 Centennial Pkwy, Las Vegas, NV 89149',
+    address: '2475 S Town Center Dr, Las Vegas, NV 89135',
     category: 'grocery',
     schemaType: 'GroceryStore',
-    lat: 36.0721,
-    lng: -115.3322,
+    sourceUrl: 'https://www.wholefoodsmarket.com/stores/summerlin',
+    lat: 36.0719,
+    lng: -115.3315,
   },
   {
     id: 'smiths-charleston',
     name: "Smith's Food and Drug",
-    address: '9470 W Charleston Blvd, Las Vegas, NV 89117',
+    address: '9851 W Charleston Blvd, Las Vegas, NV 89117',
     category: 'grocery',
     schemaType: 'GroceryStore',
-    lat: 36.1582,
-    lng: -115.2978,
+    sourceUrl: 'https://www.smithsfoodanddrug.com/stores/grocery/nv/las-vegas/charleston-blvd/70600115',
+    lat: 36.1585,
+    lng: -115.303,
   },
   {
     id: 'summerlin-hospital',
@@ -140,17 +143,19 @@ export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
     address: '657 N Town Center Dr, Las Vegas, NV 89144',
     category: 'healthcare',
     schemaType: 'Hospital',
+    sourceUrl: 'https://www.thevalleyhealthsystem.com/locations/summerlin-hospital',
     lat: 36.0679,
     lng: -115.3341,
   },
   {
     id: 'tpc-las-vegas',
     name: 'TPC Las Vegas',
-    address: '1700 Village Center Cir, Las Vegas, NV 89134',
+    address: '9851 Canyon Run Dr, Las Vegas, NV 89144',
     category: 'golf',
     schemaType: 'GolfCourse',
-    lat: 36.1889,
-    lng: -115.3294,
+    sourceUrl: 'https://tpc.com/lasvegas/',
+    lat: 36.1882,
+    lng: -115.3405,
   },
   {
     id: 'palo-verde-hs',
@@ -158,6 +163,7 @@ export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
     address: '333 S Pavilion Center Dr, Las Vegas, NV 89144',
     category: 'schools',
     schemaType: 'School',
+    sourceUrl: 'https://pvh.ccsd.net/',
     lat: 36.0712,
     lng: -115.3375,
   },
@@ -167,6 +173,7 @@ export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
     address: '2350 Red Rock St, Las Vegas, NV 89135',
     category: 'schools',
     schemaType: 'School',
+    sourceUrl: 'https://srm.ccsd.net/',
     lat: 36.0645,
     lng: -115.3218,
   },
@@ -176,6 +183,7 @@ export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
     address: '1000 Scenic Loop Dr, Las Vegas, NV 89161',
     category: 'parks',
     schemaType: 'Park',
+    sourceUrl: 'https://www.nps.gov/redr/',
     lat: 36.1357,
     lng: -115.4279,
   },
@@ -185,26 +193,22 @@ export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
     address: '10588 Pine Glen Rd, Las Vegas, NV 89135',
     category: 'parks',
     schemaType: 'Park',
+    sourceUrl: 'https://www.summerlin.com/explore/parks/summerlin-centre-community-park/',
     lat: 36.0562,
     lng: -115.3211,
-  },
-  {
-    id: 'cvs-summerlin',
-    name: 'CVS Pharmacy',
-    address: '9430 W Sahara Ave, Las Vegas, NV 89117',
-    category: 'pharmacies',
-    schemaType: 'Pharmacy',
-    lat: 36.1444,
-    lng: -115.2986,
   },
 ];
 
 export function getKeylessMapEmbedUrl(): string {
   const { lat, lng } = VISTAS_COMMUNITY.center;
-  return `https://www.google.com/maps?q=${lat},${lng}&z=${VISTAS_COMMUNITY.defaultZoom}&output=embed`;
+  return `https://www.google.com/maps?q=${lat},${lng}&z=14&output=embed`;
 }
 
 export function directionsUrlForPlace(name: string, address: string): string {
   const q = encodeURIComponent(`${name}, ${address}`);
   return `https://www.google.com/maps/dir/?api=1&destination=${q}`;
+}
+
+export function curatedPlacesForCategory(category: AmenityCategoryId): CuratedPlace[] {
+  return CURATED_NEARBY_PLACES.filter((p) => p.category === category);
 }

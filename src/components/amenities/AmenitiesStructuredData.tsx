@@ -1,4 +1,4 @@
-import Script from 'next/script';
+import { JsonLd } from '@/components/json-ld';
 import { getSiteUrl } from '@/lib/site-url';
 import {
   CURATED_NEARBY_PLACES,
@@ -23,13 +23,7 @@ export function AmenitiesFaqSchema() {
     })),
   };
 
-  return (
-    <Script
-      id="amenities-faq-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="amenities-faq-schema" data={schema} />;
 }
 
 export function AmenitiesBreadcrumbSchema() {
@@ -47,13 +41,7 @@ export function AmenitiesBreadcrumbSchema() {
     ],
   };
 
-  return (
-    <Script
-      id="amenities-breadcrumb-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="amenities-breadcrumb-schema" data={schema} />;
 }
 
 export function AmenitiesPlacesItemListSchema() {
@@ -67,6 +55,7 @@ export function AmenitiesPlacesItemListSchema() {
       item: {
         '@type': place.schemaType,
         name: place.name,
+        url: place.sourceUrl,
         address: {
           '@type': 'PostalAddress',
           streetAddress: place.address.split(',')[0]?.trim() ?? place.address,
@@ -87,13 +76,7 @@ export function AmenitiesPlacesItemListSchema() {
     })),
   };
 
-  return (
-    <Script
-      id="amenities-itemlist-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="amenities-itemlist-schema" data={schema} />;
 }
 
 export function VistasCommunityPlaceSchema() {
@@ -123,13 +106,7 @@ export function VistasCommunityPlaceSchema() {
     },
   };
 
-  return (
-    <Script
-      id="vistas-place-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="vistas-place-schema" data={schema} />;
 }
 
 /** Extends agent areaServed for this community without replacing global RealEstateExpertSchema */
@@ -150,11 +127,5 @@ export function AmenitiesAgentAreaSchema() {
     },
   };
 
-  return (
-    <Script
-      id="amenities-agent-area-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="amenities-agent-area-schema" data={schema} />;
 }

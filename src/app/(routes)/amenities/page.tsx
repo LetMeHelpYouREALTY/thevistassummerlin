@@ -80,10 +80,9 @@ export default function AmenitiesPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Interactive amenity map</h2>
             <AmenityMap variant="full" mapHeight={480} />
             <p className="mt-4 text-sm text-gray-500">
-              Categories:{' '}
-              {Object.values(AMENITY_CATEGORY_LABELS).join(', ')}. Map data requires{' '}
-              <code className="text-xs bg-gray-100 px-1 rounded">NEXT_PUBLIC_GOOGLE_MAPS_API_KEY</code>
-              ; without it, a static embed and curated list appear instead.
+              Categories: {Object.values(AMENITY_CATEGORY_LABELS).join(', ')}. If live map data is
+              unavailable, you will still see a map embed and featured places near{' '}
+              {VISTAS_COMMUNITY.shortName}.
             </p>
           </div>
         </section>
