@@ -17,7 +17,8 @@ const footerLinks = {
     { name: 'Search Summerlin & Vistas MLS', href: '/search' },
     { name: 'Sell your Vistas home', href: '/sell' },
     { name: 'Summerlin market reports', href: '/market-reports' },
-    { name: 'Vistas community guide', href: '/community-guide' }
+    { name: 'Vistas community guide', href: '/community-guide' },
+    { name: 'Nearby amenities map', href: '/amenities' }
   ],
   resources: [
     { name: 'Las Vegas & Summerlin real estate FAQ', href: '/faq' },

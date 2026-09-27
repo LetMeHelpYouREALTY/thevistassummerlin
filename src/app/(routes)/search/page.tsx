@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { HomeSearch } from '@/components/HomeSearch';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
+import { AmenityMapSection } from '@/components/amenities/AmenityMapSection';
 
 const propertyTypes = [
   {
@@ -363,6 +364,8 @@ export default function SearchPage() {
           </div>
         </div>
       </section>
+
+      <AmenityMapSection variant="light" mapVariant="compact" />
 
       {/* V0 CTA Section */}
       <section className="py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden">

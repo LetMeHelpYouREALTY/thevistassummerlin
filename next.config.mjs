@@ -47,8 +47,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/amenities',
-        destination: '/community-guide',
+        source: '/nearby-amenities',
+        destination: '/amenities',
         permanent: true,
       },
       {
@@ -99,7 +99,7 @@ const nextConfig = {
               "base-uri 'self'; " +
               "frame-ancestors 'self' https://vercel.com https://*.vercel.com; " +
               "object-src 'none'; " +
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://assets.calendly.com; " +
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://assets.calendly.com https://maps.googleapis.com; " +
               "connect-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://*.calendly.com https:; " +
               "img-src 'self' data: blob: https:; " +
               "style-src 'self' 'unsafe-inline' https:; " +

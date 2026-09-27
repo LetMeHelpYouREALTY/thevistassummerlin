@@ -42,6 +42,7 @@ import {
 import { RealScoutWidget } from "@/components/RealScoutWidget";
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
+import { AmenityMapSection } from '@/components/amenities/AmenityMapSection';
 
 // V0 Community Hero Section
 const CommunityHero = () => (
@@ -536,6 +537,7 @@ export default function VistasCommunityPage() {
       <SEOContentSection />
       <CommunityCenterSection />
       <AmenitiesSection />
+      <AmenityMapSection variant="light" mapVariant="compact" />
       <RealEstateSection />
       <ContactSection />
       
