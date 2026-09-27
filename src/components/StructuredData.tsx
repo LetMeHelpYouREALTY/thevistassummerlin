@@ -1,5 +1,5 @@
 import React from 'react';
-import Script from 'next/script';
+import { JsonLd } from '@/components/json-ld';
 import { getSiteUrl } from '@/lib/site-url';
 
 const siteUrl = getSiteUrl();
@@ -110,16 +110,27 @@ export function RealEstateExpertSchema() {
       "@type": "PropertyValue",
       "name": "Nevada real estate license",
       "value": "S.0197614.LLC"
-    }
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ],
+    "@id": `${siteUrl}/#dr-jan-duffy`
   };
 
-  return (
-    <Script
-      id="real-estate-expert-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="real-estate-expert-schema" data={schema} />;
 }
 
 // FAQ Schema for common questions
@@ -171,92 +182,12 @@ export function FAQSchema() {
     ]
   };
 
-  return (
-    <Script
-      id="faq-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="faq-schema" data={schema} />;
 }
 
-// Local Business Schema
+/** @deprecated Use RealEstateExpertSchema only — avoids duplicate RealEstateAgent entities. */
 export function LocalBusinessSchema() {
-  const mapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-  const gbpPlaceId = process.env.NEXT_PUBLIC_GBP_PLACE_ID;
-  const businessAddress = "11312 Parkside Way, Las Vegas, NV 89138";
-  const encodedAddress = encodeURIComponent(businessAddress);
-  const hasMap = mapsApiKey && gbpPlaceId
-    ? `https://www.google.com/maps/embed/v1/place?key=${mapsApiKey}&q=place_id:${gbpPlaceId}`
-    : `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
-
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "@id": `${siteUrl}/#real-estate-agent`,
-    "name": "Homes by Dr. Jan Duffy",
-    "description": "Premier real estate services for The Vistas Summerlin luxury community. Expert guidance from Dr. Jan Duffy with flexible scheduling.",
-    "url": siteUrl,
-    "telephone": "+1-702-500-0607",
-    "email": "DrJanSells@TheVistasSummerlin.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "11312 Parkside Way",
-      "addressLocality": "Las Vegas",
-      "addressRegion": "NV",
-      "postalCode": "89138",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "36.1699",
-      "longitude": "-115.1398"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "08:00",
-        "closes": "20:00"
-      }
-    ],
-    "priceRange": "$$$",
-    "paymentAccepted": "Cash, Check, Credit Card, Financing",
-    "currenciesAccepted": "USD",
-    "hasMap": hasMap,
-    "sameAs": [
-      siteUrl
-    ],
-    "areaServed": {
-      "@type": "Place",
-      "name": "The Vistas Summerlin, Las Vegas, NV"
-    },
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": "36.1699",
-        "longitude": "-115.1398"
-      },
-      "geoRadius": "50000"
-    }
-  };
-
-  return (
-    <Script
-      id="local-business-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return null;
 }
 
 // Real Estate Listing Schema
@@ -318,13 +249,7 @@ export function RealEstateListingSchema() {
     "validThrough": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString()
   };
 
-  return (
-    <Script
-      id="real-estate-listing-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="real-estate-listing-schema" data={schema} />;
 }
 
 // Website Schema
@@ -350,13 +275,7 @@ export function WebsiteSchema() {
     }
   };
 
-  return (
-    <Script
-      id="website-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="website-schema" data={schema} />;
 }
 
 // Organization Schema
@@ -388,13 +307,7 @@ export function OrganizationSchema() {
     ]
   };
 
-  return (
-    <Script
-      id="organization-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="organization-schema" data={schema} />;
 }
 
 // Community Schema for individual community pages
@@ -442,13 +355,7 @@ export function CommunitySchema({
     }
   };
 
-  return (
-    <Script
-      id="community-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="community-schema" data={schema} />;
 }
 
 // Breadcrumb Schema for navigation
@@ -464,13 +371,7 @@ export function BreadcrumbSchema({ items }: { items: Array<{ name: string; url: 
     }))
   };
 
-  return (
-    <Script
-      id="breadcrumb-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="breadcrumb-schema" data={schema} />;
 }
 
 // Property Schema for individual listings
@@ -530,13 +431,7 @@ export function PropertySchema({
     "validThrough": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString()
   };
 
-  return (
-    <Script
-      id="property-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="property-schema" data={schema} />;
 }
 
 // Review Schema for testimonials
@@ -591,13 +486,7 @@ export function ServiceSchema() {
     }
   };
 
-  return (
-    <Script
-      id="service-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="service-schema" data={schema} />;
 }
 
 
@@ -641,11 +530,5 @@ export function ArticleSchema({
     }
   };
 
-  return (
-    <Script
-      id="article-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="article-schema" data={schema} />;
 }

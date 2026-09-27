@@ -5,8 +5,9 @@ import { FAQSchema } from '@/components/StructuredData';
 import { CalendlyButton } from '@/components/CalendlyButton';
 import { CalendlyEmbed } from '@/components/CalendlyEmbed';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar, Star, Award, Users, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Calendar, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { PostHeroOfficeListings } from '@/components/sections/post-hero-office-listings';
+import { ContactForm } from '@/components/forms/ContactForm';
 import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
@@ -182,100 +183,7 @@ export default function Contact() {
                   </p>
                 </div>
                 
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700">
-                        First Name *
-                      </label>
-                      <input 
-                        type="text" 
-                        id="firstName"
-                        name="firstName"
-                        className="w-full px-4 py-4 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:bg-white/70"
-                        required 
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700">
-                        Last Name *
-                      </label>
-                      <input 
-                        type="text" 
-                        id="lastName"
-                        name="lastName"
-                        className="w-full px-4 py-4 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:bg-white/70"
-                        required 
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700">
-                      Email Address *
-                    </label>
-                    <input 
-                      type="email" 
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-4 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:bg-white/70"
-                      required 
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700">
-                      Phone Number
-                    </label>
-                    <input 
-                      type="tel" 
-                      id="phone"
-                      name="phone"
-                      className="w-full px-4 py-4 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:bg-white/70"
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="subject" className="block text-sm font-semibold text-gray-700">
-                      Subject *
-                    </label>
-                    <select 
-                      id="subject"
-                      name="subject"
-                      className="w-full px-4 py-4 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:bg-white/70"
-                      required
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="buying">I'm interested in buying a home</option>
-                      <option value="selling">I'm interested in selling my home</option>
-                      <option value="market-report">I'd like a market report</option>
-                      <option value="consultation">I'd like to schedule a consultation</option>
-                      <option value="general">General inquiry</option>
-                    </select>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700">
-                      Message *
-                    </label>
-                    <textarea 
-                      id="message"
-                      name="message"
-                      rows={5} 
-                      className="w-full px-4 py-4 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:bg-white/70 resize-none"
-                      placeholder="Tell us about your real estate needs..."
-                      required 
-                    />
-                  </div>
-                  
-                  <button 
-                    type="submit" 
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-8 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center space-x-2"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    <span>Send Message</span>
-                  </button>
-                </form>
+                <ContactForm />
               </div>
 
               {/* V0 Contact Information */}

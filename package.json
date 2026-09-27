@@ -11,6 +11,7 @@
     "build:fast": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test:fub": "npx tsx --test src/lib/fub.test.ts",
     "monitor": "node .cursor/scripts/background-monitor.js",
     "modernize": "node scripts/v0-modernize.js",
     "modernize:all": "node scripts/v0-modernize.js --all",

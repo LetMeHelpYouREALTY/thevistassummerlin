@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PathBreadcrumbSchema } from '@/components/path-breadcrumb-schema';
 import { getSiteUrl } from '@/lib/site-url';
 
 const siteUrl = getSiteUrl();
@@ -10,8 +11,8 @@ const siteUrl = getSiteUrl();
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: "The Vistas Summerlin | Luxury Homes by Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-  description: "Discover homes in The Vistas Summerlin, Las Vegas 89138. Dr. Jan Duffy offers seller and buyer guidance with subcommunity-level market insight and flexible scheduling.",
+  title: "The Vistas Summerlin Homes | Dr. Jan Duffy",
+  description: "Discover homes in The Vistas Summerlin, Las Vegas 89138. Dr. Jan Duffy offers buyer and seller guidance with subcommunity-level market insight.",
   keywords: [
     "The Vistas Summerlin",
     "Vistas Summerlin homes for sale",
@@ -62,5 +63,10 @@ export default function RoutesLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <PathBreadcrumbSchema />
+      {children}
+    </>
+  );
 }
