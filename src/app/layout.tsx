@@ -7,7 +7,6 @@ import Script from 'next/script';
 import { 
   RealEstateExpertSchema, 
   FAQSchema, 
-  LocalBusinessSchema, 
   RealEstateListingSchema,
   WebsiteSchema,
   OrganizationSchema,
@@ -51,10 +50,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   manifest: "/manifest.json",
   title: {
-    default: "The Vistas Summerlin | Berkshire Hathaway HomeServices Nevada Properties - Dr. Jan Duffy",
-    template: "%s | The Vistas Summerlin | Berkshire Hathaway HomeServices Nevada Properties"
+    default: "The Vistas Summerlin Homes | Dr. Jan Duffy",
+    template: "%s | The Vistas Summerlin"
   },
-  description: "Luxury homes in The Vistas Summerlin starting at $800K. Expert realtor Dr. Jan Duffy with Berkshire Hathaway HomeServices specializing in Las Vegas luxury real estate.",
+  description: "Homes and neighborhoods in The Vistas Summerlin, Las Vegas. Dr. Jan Duffy, REALTOR, guides buyers and sellers across this master-planned Summerlin community.",
   keywords: [
     "The Vistas Summerlin",
     "Vistas Summerlin homes for sale",
@@ -167,7 +166,6 @@ export default function RootLayout({
         {/* 2025 SEO Schema Markup */}
         <RealEstateExpertSchema />
         <FAQSchema />
-        <LocalBusinessSchema />
         <RealEstateListingSchema />
         <WebsiteSchema />
         <OrganizationSchema />
