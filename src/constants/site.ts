@@ -33,6 +33,7 @@ export const NAVIGATION = {
       { name: 'Property Search', href: '/search' },
     ],
     resources: [
+      { name: 'Nearby Amenities', href: '/amenities' },
       { name: 'Blog', href: '/blog' },
       { name: 'FAQ', href: '/faq' },
       { name: 'About', href: '/about' },

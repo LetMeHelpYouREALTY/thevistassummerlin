@@ -11,6 +11,7 @@ import { PostHeroOfficeListings } from '@/components/sections/post-hero-office-l
 import { Phone, MapPin, ArrowRight, Sparkles, TrendingUp, DollarSign, Calendar, Bed, Bath, Square, ExternalLink, ChevronDown } from 'lucide-react';
 import FloatingActionButton from '@/components/ui/FloatingActionButton';
 import ScrollToTop from '@/components/ui/ScrollToTop';
+import { AmenityMapSection } from '@/components/amenities/AmenityMapSection';
 
 export default function Home() {
   const faqTeasers = [
@@ -244,6 +245,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <AmenityMapSection variant="dark" mapVariant="compact" />
 
         <HomeEvaluationSection />
 

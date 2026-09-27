@@ -33,6 +33,7 @@ const staticRoutes = [
   { path: '/contact' },
   { path: '/agents/dr-jan-duffy' },
   { path: '/community-guide' },
+  { path: '/amenities' },
   { path: '/blog' },
   { path: '/faq' },
   { path: '/testimonials' },

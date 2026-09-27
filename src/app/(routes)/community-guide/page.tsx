@@ -5,6 +5,7 @@ import { VoiceSearchFAQ, AnswerEngineOptimization } from '@/components/VoiceSear
 import { MapPin, Home, Users, Star, Award, TrendingUp, Shield, TreePine, Mountain, ShoppingBag, UtensilsCrossed, Zap, Sparkles, Heart, ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import { getSiteUrl } from '@/lib/site-url';
+import { AmenityMapSection } from '@/components/amenities/AmenityMapSection';
 
 export const metadata: Metadata = {
   title: 'The Vistas Summerlin Community Guide - Complete Neighborhood Information',
@@ -220,6 +221,8 @@ export default function CommunityGuidePage() {
         {/* SEO Content Sections */}
         <AnswerEngineOptimization />
         <VoiceSearchFAQ />
+
+        <AmenityMapSection variant="light" mapVariant="compact" className="border-t border-gray-200" />
 
         {/* Enhanced CTA Section */}
         <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
