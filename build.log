@@ -1,0 +1,118 @@
+
+> app@0.1.0 build
+> next build
+
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+   ▲ Next.js 15.5.15
+
+   Creating an optimized production build ...
+Browserslist: browsers data (caniuse-lite) is 16 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+
+Retrying 1/3...
+
+
+Retrying 1/3...
+
+
+Retrying 1/3...
+
+
+Retrying 1/3...
+
+
+Retrying 1/3...
+
+
+Retrying 1/3...
+ ✓ Compiled successfully in 18.5s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/41) ...
+   Generating static pages (10/41) 
+   Generating static pages (20/41) 
+   Generating static pages (30/41) 
+ ✓ Generating static pages (41/41)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                     Size  First Load JS
+┌ ○ /                                        8.46 kB         135 kB
+├ ○ /_not-found                                156 B         102 kB
+├ ƒ /about                                   14.1 kB         134 kB
+├ ƒ /agents/[id]                             2.03 kB         107 kB
+├ ƒ /api/contact                               156 B         102 kB
+├ ƒ /blog                                    4.04 kB         121 kB
+├ ƒ /communities                             11.7 kB         138 kB
+├ ● /communities/[slug]                      1.11 kB         127 kB
+├   ├ /communities/barrington
+├   ├ /communities/kingwood
+├   ├ /communities/santalina
+├   └ [+28 more paths]
+├ ƒ /communities/ashton-park                   892 B         127 kB
+├ ƒ /communities/bella-vista                   892 B         127 kB
+├ ƒ /communities/canterra                    1.73 kB         122 kB
+├ ƒ /communities/cara-vella                    892 B         127 kB
+├ ƒ /communities/casa-rosa                     892 B         127 kB
+├ ƒ /communities/encanto                       892 B         127 kB
+├ ƒ /communities/estancia                      892 B         127 kB
+├ ƒ /communities/hillstone                     892 B         127 kB
+├ ƒ /communities/img-0737                    1.11 kB         127 kB
+├ ƒ /communities/img-0738                    1.11 kB         127 kB
+├ ƒ /communities/img-0739                    1.11 kB         127 kB
+├ ƒ /communities/kingwood                    1.11 kB         127 kB
+├ ƒ /communities/macdonald-highlands         6.02 kB         132 kB
+├ ƒ /communities/miraleste                     892 B         127 kB
+├ ƒ /communities/palmilla                      892 B         127 kB
+├ ƒ /communities/portofino                     892 B         127 kB
+├ ƒ /communities/red-rock                    6.04 kB         132 kB
+├ ƒ /communities/sage-hills                    892 B         127 kB
+├ ƒ /communities/san-marcos                    892 B         127 kB
+├ ƒ /communities/santalina                   1.11 kB         127 kB
+├ ƒ /communities/santaluz                      892 B         127 kB
+├ ƒ /communities/solano                        892 B         127 kB
+├ ƒ /communities/somerset                      892 B         127 kB
+├ ƒ /communities/sonesta                       892 B         127 kB
+├ ƒ /communities/southern-highlands          6.17 kB         132 kB
+├ ƒ /communities/summerfield                   892 B         127 kB
+├ ƒ /communities/summerlin-west              6.17 kB         132 kB
+├ ƒ /communities/talaverde                     892 B         127 kB
+├ ƒ /communities/talega                        892 B         127 kB
+├ ƒ /communities/vista-verde                   892 B         127 kB
+├ ƒ /communities/vistas                      7.36 kB         118 kB
+├ ƒ /community-guide                         1.93 kB         113 kB
+├ ƒ /contact                                 4.65 kB         125 kB
+├ ƒ /faq                                     1.93 kB         113 kB
+├ ƒ /feed.xml                                  156 B         102 kB
+├ ƒ /image-sitemap.xml                         156 B         102 kB
+├ ƒ /investment                              2.23 kB         113 kB
+├ ƒ /market-analysis                         2.23 kB         113 kB
+├ ƒ /market-reports                          1.93 kB         113 kB
+├ ƒ /privacy                                 1.91 kB         113 kB
+├ ƒ /properties/11773-golden-moments-avenue     4 kB         115 kB
+├ ○ /robots.txt                                156 B         102 kB
+├ ƒ /search                                   5.8 kB         120 kB
+├ ƒ /sell                                    1.93 kB         113 kB
+├ ○ /sitemap.xml                               156 B         102 kB
+├ ƒ /sold                                    1.93 kB         113 kB
+├ ƒ /terms                                   1.91 kB         113 kB
+├ ƒ /testimonials                            1.93 kB         113 kB
+└ ƒ /valuation                               2.85 kB         114 kB
++ First Load JS shared by all                 102 kB
+  ├ chunks/1255-e7d9a543459f6354.js          45.9 kB
+  ├ chunks/4bd1b696-f785427dddbba9fb.js      54.2 kB
+  └ other shared chunks (total)              1.94 kB
+
+
+ƒ Middleware                                 34.1 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
