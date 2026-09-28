@@ -4,6 +4,7 @@ import { Playfair_Display, DM_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import "@/styles/realscout-widgets.css";
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import { 
   RealEstateExpertSchema, 
   FAQSchema, 
@@ -190,6 +191,7 @@ export default function RootLayout({
         {/* Floating badge: init matches Calendly snippet (15min event, brand colors); see CalendlyBadge + globals.css placement */}
         <CalendlyBadge />
         {children}
+        <Analytics />
       </body>
     </html>
   );
