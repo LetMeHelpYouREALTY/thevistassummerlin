@@ -269,14 +269,11 @@ export function VisitPlanner() {
     return () => {
       cancelled = true;
     };
-    // Mount once. Mode and amenity updates run in later effects.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [apiKey]);
 
   useEffect(() => {
     if (!ready) return;
     void loadAmenities(amenity);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ready, amenity]);
 
   useEffect(() => {
@@ -371,7 +368,7 @@ export function VisitPlanner() {
     }
   }
 
-  async function useMyLocation() {
+  async function shareCurrentLocation() {
     if (!navigator.geolocation) {
       setStatus("This browser cannot share a location. Enter an address instead.");
       return;
@@ -422,7 +419,7 @@ export function VisitPlanner() {
               </div>
               <button
                 type="button"
-                onClick={() => void useMyLocation()}
+                onClick={() => void shareCurrentLocation()}
                 className="text-sm font-semibold text-blue-700 underline-offset-2 hover:underline"
               >
                 Use my location
