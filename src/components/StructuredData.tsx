@@ -61,7 +61,7 @@ export function RealEstateExpertSchema() {
     ],
     "sameAs": [
       siteUrl,
-      "https://www.facebook.com/RealtorDrJanDuffySummerlin",
+      "https://www.facebook.com/VistasSummerlin",
       "https://www.instagram.com/drjanduffy/",
       "https://www.linkedin.com/showcase/berkshire-hathaway-homeservices-summerlin/",
       "https://www.youtube.com/@DrDuffy",
@@ -265,7 +265,8 @@ export function OrganizationSchema() {
       "addressCountry": "US"
     },
     "sameAs": [
-      siteUrl
+      siteUrl,
+      "https://www.facebook.com/VistasSummerlin"
     ]
   };
 

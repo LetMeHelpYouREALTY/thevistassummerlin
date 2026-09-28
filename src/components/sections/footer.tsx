@@ -34,7 +34,7 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { name: 'Facebook', href: 'https://www.facebook.com/RealtorDrJanDuffySummerlin', icon: Facebook },
+  { name: 'Facebook', href: 'https://www.facebook.com/VistasSummerlin', icon: Facebook },
   { name: 'Instagram', href: 'https://www.instagram.com/drjanduffy/', icon: Instagram },
   { name: 'LinkedIn', href: 'https://www.linkedin.com/showcase/berkshire-hathaway-homeservices-summerlin/', icon: Linkedin },
   { name: 'YouTube', href: 'https://www.youtube.com/@DrDuffy', icon: Youtube },
