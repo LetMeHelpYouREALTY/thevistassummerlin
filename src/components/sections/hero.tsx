@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronDown, Home as HomeIcon, TrendingUp, Phone, ArrowRight } from 'lucide-react';
 
 /**
@@ -31,8 +32,18 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen py-12 lg:py-20">
           <div className="text-white space-y-8">
-            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-blue-100 font-medium shadow-lg">
-              <span>Dr. Jan Duffy | The Vistas Summerlin</span>
+            <div className="flex items-center gap-4">
+              <Image
+                src="/images/dr-jan-duffy.png"
+                alt="Dr. Jan Duffy, real estate agent for The Vistas Summerlin in Las Vegas"
+                width={112}
+                height={112}
+                priority
+                className="h-24 w-24 shrink-0 rounded-full object-cover ring-2 ring-[#D4A843] sm:h-28 sm:w-28"
+              />
+              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-blue-100 font-medium shadow-lg">
+                <span>Dr. Jan Duffy | The Vistas Summerlin</span>
+              </div>
             </div>
 
             <div className="space-y-4">
@@ -98,9 +109,13 @@ export default function Hero() {
           <div>
             <div className="bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-8 border border-white/20 transition-shadow duration-300 hover:shadow-2xl">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <HomeIcon className="w-8 h-8 text-white" />
-                </div>
+                <Image
+                  src="/images/dr-jan-duffy.png"
+                  alt="Dr. Jan Duffy"
+                  width={72}
+                  height={72}
+                  className="mx-auto mb-4 h-16 w-16 rounded-full object-cover ring-2 ring-[#D4A843]"
+                />
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">What&apos;s Your Home Worth?</h2>
                 <p className="text-gray-600">Get an instant, data-driven estimate</p>
               </div>

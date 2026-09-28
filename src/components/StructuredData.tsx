@@ -248,7 +248,7 @@ export function OrganizationSchema() {
     "name": "The Vistas Summerlin | Homes by Dr. Jan Duffy",
     "description": "Premier real estate services specializing in The Vistas Summerlin luxury community.",
     "url": siteUrl,
-    "logo": `${siteUrl}/berkshire-hathaway-logo.png`,
+    "logo": `${siteUrl}/images/dr-jan-duffy.png`,
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-702-500-0607",

@@ -49,16 +49,16 @@ export default function Navigation() {
 
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex min-h-20 items-center justify-between py-2">
-          <div className="min-w-0 flex-shrink">
+        <div className="flex min-h-20 items-center justify-between gap-4 py-2">
+          <div className="shrink-0">
             <SiteLogo />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8" id="main-navigation" aria-label="Primary">
+          <nav className="hidden xl:flex min-w-0 flex-1 items-center justify-end gap-0.5" id="main-navigation" aria-label="Primary">
             <Link 
               href="/" 
-              className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-50"
+              className="whitespace-nowrap text-sm font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-2 py-2 rounded-md hover:bg-gray-50"
             >
               Home
             </Link>
@@ -66,7 +66,7 @@ export default function Navigation() {
             {/* Communities Dropdown */}
             <div className="relative">
               <button
-                className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 flex items-center px-3 py-2 rounded-md hover:bg-gray-50 group"
+                className="whitespace-nowrap text-sm font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 flex items-center px-2 py-2 rounded-md hover:bg-gray-50 group"
                 onClick={() => setShowCommunitiesDropdown(!showCommunitiesDropdown)}
                 onBlur={(e) => {
                   // Use requestIdleCallback for better performance
@@ -120,7 +120,7 @@ export default function Navigation() {
             {/* Properties Dropdown */}
             <div className="relative">
               <button
-                className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 flex items-center px-3 py-2 rounded-md hover:bg-gray-50 group"
+                className="whitespace-nowrap text-sm font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 flex items-center px-2 py-2 rounded-md hover:bg-gray-50 group"
                 onClick={() => setShowPropertiesDropdown(!showPropertiesDropdown)}
                 onBlur={(e) => {
                   // Use requestIdleCallback for better performance
@@ -183,7 +183,7 @@ export default function Navigation() {
 
             <Link
               href="/valuation"
-              className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-50"
+              className="whitespace-nowrap text-sm font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-2 py-2 rounded-md hover:bg-gray-50"
               title="Free home value estimate for The Vistas Summerlin"
             >
               Home value
@@ -191,35 +191,35 @@ export default function Navigation() {
 
             <Link 
               href="/blog" 
-              className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-50"
+              className="whitespace-nowrap text-sm font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-2 py-2 rounded-md hover:bg-gray-50"
             >
               Blog
             </Link>
 
             <Link
               href="/faq"
-              className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-50"
+              className="whitespace-nowrap text-sm font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-2 py-2 rounded-md hover:bg-gray-50"
             >
               FAQ
             </Link>
             
             <Link 
               href="/about" 
-              className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-50"
+              className="whitespace-nowrap text-sm font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-2 py-2 rounded-md hover:bg-gray-50"
             >
               About
             </Link>
             
             <Link 
               href="/contact" 
-              className="text-base font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-50"
+              className="whitespace-nowrap text-sm font-primary font-medium text-gray-800 hover:text-link-blue transition-colors duration-200 px-2 py-2 rounded-md hover:bg-gray-50"
             >
               Contact
             </Link>
           </nav>
 
           {/* Search and CTA Section */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden xl:flex shrink-0 items-center gap-2">
             {/* Search Button */}
             <Link
               href="/search"
@@ -250,7 +250,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-link-blue transition-colors duration-200 p-2 rounded-md hover:bg-gray-100"
@@ -270,7 +270,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <div className="px-4 pt-2 pb-6 space-y-1 bg-white border-t border-gray-200">
               <Link 
                 href="/" 

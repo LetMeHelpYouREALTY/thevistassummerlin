@@ -72,14 +72,14 @@ export const metadata: Metadata = {
   publisher: "The Vistas Summerlin | Homes by Dr. Jan Duffy",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "48x48" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
-      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.ico?v=20260928", sizes: "48x48" },
+      { url: "/favicon-32x32.png?v=20260928", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png?v=20260928", sizes: "48x48", type: "image/png" },
+      { url: "/android-chrome-192x192.png?v=20260928", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png?v=20260928", sizes: "512x512", type: "image/png" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
-    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png?v=20260928", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.ico?v=20260928",
   },
   robots: {
     index: true,
@@ -148,13 +148,13 @@ export default function RootLayout({
               href={`${siteUrl}/feed.xml`} 
               title="The Vistas Summerlin Updates" />
         
-        {/* Favicon: Dr. Jan Duffy portrait, every page */}
-        <link rel="icon" href="/favicon.ico" sizes="48x48" />
-        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
-        <link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png" />
-        <link rel="icon" href="/android-chrome-192x192.png" sizes="192x192" type="image/png" />
-        <link rel="icon" href="/android-chrome-512x512.png" sizes="512x512" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+        {/* Favicon: Dr. Jan Duffy portrait, every page. Query busts a cached tab icon. */}
+        <link rel="icon" href="/favicon.ico?v=20260928" sizes="48x48" />
+        <link rel="icon" href="/favicon-32x32.png?v=20260928" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/favicon-48x48.png?v=20260928" sizes="48x48" type="image/png" />
+        <link rel="icon" href="/android-chrome-192x192.png?v=20260928" sizes="192x192" type="image/png" />
+        <link rel="icon" href="/android-chrome-512x512.png?v=20260928" sizes="512x512" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260928" sizes="180x180" />
         
         {/* Performance: preconnect with crossOrigin so hints match subresource fetches (avoids "unused" preconnect warnings) */}
         <link rel="preconnect" href="https://em.realscout.com" crossOrigin="anonymous" />
