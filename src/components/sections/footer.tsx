@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Phone, Mail, MapPin, ArrowRight, Facebook, Twitter, Instagram, Linkedin, Youtube, MessageCircle, Heart } from 'lucide-react';
+import { SiteLogo } from '@/components/SiteLogo';
 
 const footerLinks = {
   communities: [
@@ -57,14 +58,8 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <h3 className="text-3xl font-bold mb-4">
-                The Vistas Summerlin
-              </h3>
-              <div className="mb-4">
-                <p className="text-[#D4A843] font-semibold mb-2">Homes by Dr. Jan Duffy</p>
-                <p className="text-sm text-blue-200">Berkshire Hathaway HomeServices Nevada Properties</p>
-              </div>
-              <p className="text-blue-100 mb-6 leading-relaxed">
+              <SiteLogo variant="dark" />
+              <p className="mb-6 mt-4 leading-relaxed text-blue-100">
                 I track pricing in all 28 Vistas subcommunities. If you are selling, I will show you the nearby closings and where buyers are negotiating this month.
               </p>
             </div>
@@ -174,7 +169,7 @@ export default function Footer() {
         <div className="mb-12 py-8 border-t border-white/20">
           <p className="text-blue-100 text-sm text-center max-w-3xl mx-auto leading-relaxed">
             Las Vegas, Nevada real estate in Summerlin&rsquo;s The Vistas: Barrington, Kingwood, Santalina, Portofino, Canterra, and
-            23 more subcommunities. Dr. Jan Duffy is a licensed REALTOR&reg; (Nevada) with Berkshire Hathaway HomeServices Nevada Properties.
+            23 more subcommunities. Dr. Jan Duffy is the real estate agent for Homes by Dr. Jan Duffy.
           </p>
         </div>
 
@@ -205,7 +200,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-blue-200 mb-4 md:mb-0">
               <span className="text-[0.75rem] text-[#6b5f8a]">
-                © {new Date().getFullYear()} The Vistas Summerlin. License S.0197614.LLC. Berkshire Hathaway HomeServices Nevada Properties.
+                © {new Date().getFullYear()} The Vistas Summerlin. Homes by Dr. Jan Duffy.
               </span>
             </div>
             

@@ -1,7 +1,7 @@
 {
-  "name": "Berkshire Hathaway HomeServices Nevada Properties - Dr. Jan Duffy",
-  "short_name": "BHHS Nevada Properties",
-  "description": "Las Vegas Real Estate by Dr. Jan Duffy REALTOR® - Berkshire Hathaway HomeServices Nevada Properties",
+  "name": "The Vistas Summerlin | Homes by Dr. Jan Duffy",
+  "short_name": "The Vistas Summerlin",
+  "description": "Homes in The Vistas Summerlin, Summerlin West, Las Vegas, with Dr. Jan Duffy.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F7F9FC",
@@ -10,7 +10,20 @@
     {
       "src": "/favicon.ico",
       "sizes": "48x48 32x32 16x16",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/android-chrome-192x192.png",

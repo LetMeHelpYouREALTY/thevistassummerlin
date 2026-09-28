@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SiteLogo } from "@/components/SiteLogo";
 import { GBP_OFFICE_ADDRESS, gbpTelHref } from "@/lib/gbp";
 
 export const metadata: Metadata = {
@@ -21,6 +22,9 @@ export default function NotFound() {
       aria-labelledby="not-found-heading"
     >
       <div className="max-w-lg text-center">
+        <div className="mb-8 flex justify-center">
+          <SiteLogo variant="dark" />
+        </div>
         <p className="font-primary text-sm font-medium uppercase tracking-[0.2em] text-[color:var(--color-gold)]">
           404
         </p>

@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect } from 'react'
+import { AnswerFacts } from '@/components/AnswerFacts'
+import { BrokerageDisclosure } from '@/components/BrokerageDisclosure'
 
 export default function GlobalError({
   error,
@@ -16,6 +18,10 @@ export default function GlobalError({
 
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+      </head>
       <body>
         <div className="min-h-screen flex items-center justify-center bg-light-gray">
           <div className="text-center p-8">
@@ -33,6 +39,8 @@ export default function GlobalError({
             </button>
           </div>
         </div>
+        <AnswerFacts />
+        <BrokerageDisclosure />
       </body>
     </html>
   )

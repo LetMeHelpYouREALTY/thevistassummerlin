@@ -43,8 +43,8 @@ export async function GET() {
     const keyImages = [
       {
         url: `${baseUrl}/berkshire-hathaway-logo.png`,
-        caption: 'Berkshire Hathaway HomeServices Nevada Properties - Dr. Jan Duffy',
-        title: 'Berkshire Hathaway HomeServices Logo',
+        caption: 'The Vistas Summerlin office mark',
+        title: 'The Vistas Summerlin',
         pageUrl: `${baseUrl}/about`
       },
       {

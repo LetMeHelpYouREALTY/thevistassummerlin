@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { CalendlyButton } from '@/components/CalendlyButton';
+import { SiteLogo } from '@/components/SiteLogo';
 import { getAvailableCommunities, getCommunitySlug } from '@/lib/community-mapping';
 
 const subcommunities = getAvailableCommunities();
@@ -48,19 +49,9 @@ export default function Navigation() {
 
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link
-              href="/"
-              className="flex items-center group"
-              title="The Vistas Summerlin homes for sale | Dr. Jan Duffy, Las Vegas real estate"
-              aria-label="The Vistas Summerlin — home"
-            >
-              <div className="text-2xl lg:text-3xl font-primary font-bold text-primary-navy group-hover:text-link-blue transition-colors duration-300">
-                The Vistas Summerlin
-              </div>
-            </Link>
+        <div className="flex min-h-20 items-center justify-between py-2">
+          <div className="min-w-0 flex-shrink">
+            <SiteLogo />
           </div>
 
           {/* Desktop Navigation */}

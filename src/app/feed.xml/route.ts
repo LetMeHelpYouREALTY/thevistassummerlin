@@ -10,7 +10,7 @@ export async function GET() {
   <channel>
     <title>The Vistas Summerlin - Luxury Homes by Dr. Jan Duffy</title>
     <link>${baseUrl}</link>
-    <description>Latest luxury homes and market updates in The Vistas Summerlin, Las Vegas. Expert real estate guidance from Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties.</description>
+    <description>Homes and market updates in The Vistas Summerlin, Summerlin West, Las Vegas. Real estate guidance from Dr. Jan Duffy. Office: 11312 Parkside Way. Call (702) 500-0607.</description>
     <language>en-us</language>
     <lastBuildDate>${currentDate}</lastBuildDate>
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml" />

@@ -382,7 +382,7 @@ const ContactSection = () => (
         </div>
 
         <div className="text-center">
-          <p className="text-emerald-200 mb-4">Available Daily: 6:00 AM - 9:00 PM</p>
+          <p className="text-emerald-200 mb-4">Available Daily: 8:00 AM – 8:00 PM</p>
           <p className="text-sm text-emerald-300">Serving Henderson, Enterprise, Southwest Vegas & More</p>
         </div>
       </div>

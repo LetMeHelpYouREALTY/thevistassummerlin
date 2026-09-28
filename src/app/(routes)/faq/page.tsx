@@ -127,8 +127,8 @@ export default function FAQPage() {
           answer: 'Dr. Jan Duffy offers flexible scheduling that works around YOUR lifestyle, specializing in The Vistas Summerlin with 12+ years of experience. She\'s available early mornings, evenings, and weekends, providing personalized service with deep local market knowledge.'
         },
         {
-          question: 'Does Dr. Jan Duffy work with Berkshire Hathaway HomeServices?',
-          answer: 'Yes, Dr. Jan Duffy is affiliated with Berkshire Hathaway HomeServices Nevada Properties, providing the backing of one of the world\'s most trusted real estate brands while maintaining her personalized, flexible approach to client service.'
+          question: 'What are Dr. Jan Duffy\'s business hours and service area?',
+          answer: 'The office is open daily from 8:00 AM to 8:00 PM. Dr. Jan Duffy serves Summerlin West, Las Vegas, Nevada, including all 28 Vistas subcommunities. Call or text (702) 500-0607. The office is at 11312 Parkside Way, Las Vegas, NV 89138.'
         }
       ]
     },

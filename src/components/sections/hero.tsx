@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen py-12 lg:py-20">
           <div className="text-white space-y-8">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-blue-100 font-medium shadow-lg">
-              <span>Dr. Jan Duffy | S.0197614.LLC</span>
+              <span>Dr. Jan Duffy | The Vistas Summerlin</span>
             </div>
 
             <div className="space-y-4">

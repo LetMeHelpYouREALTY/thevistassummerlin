@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { HomeSearch } from '@/components/HomeSearch';
 import { VistasRealScoutOfficeListings } from '@/components/VistasRealScoutOfficeListings';
+import Navigation from '@/components/sections/navigation';
 
 const propertyTypes = [
   {
@@ -77,6 +78,7 @@ export default function SearchPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <Navigation />
       {/* V0 Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white overflow-hidden">
         {/* Advanced V0 Background Elements */}

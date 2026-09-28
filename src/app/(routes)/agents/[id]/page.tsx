@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CalendlyButton } from '@/components/CalendlyButton';
+import Navigation from '@/components/sections/navigation';
 import { getSiteUrl } from '@/lib/site-url';
 
 type AgentPageProps = {
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: AgentPageProps): Promise<Meta
   return {
     title: 'Dr. Jan Duffy REALTOR | The Vistas Summerlin',
     description:
-      'Meet Dr. Jan Duffy, REALTOR with Berkshire Hathaway HomeServices Nevada Properties, specializing in The Vistas Summerlin and Las Vegas luxury homes.',
+      'Meet Dr. Jan Duffy, real estate agent for The Vistas Summerlin in Summerlin West, Las Vegas. Office at 11312 Parkside Way. Call or text (702) 500-0607.',
     alternates: { canonical },
     openGraph: {
       title: 'Dr. Jan Duffy REALTOR | The Vistas Summerlin',
@@ -38,10 +39,12 @@ export default async function AgentProfilePage({ params }: AgentPageProps) {
   if (id !== 'dr-jan-duffy') notFound();
 
   return (
+    <>
+    <Navigation />
     <main className="max-w-3xl mx-auto py-12 px-4">
-      <h1 className="text-3xl font-bold mb-2">Dr. Jan Duffy REALTOR</h1>
+      <h1 className="text-3xl font-bold mb-2">Dr. Jan Duffy, real estate agent</h1>
       <p className="mb-6 text-lg text-gray-700">
-        Berkshire Hathaway HomeServices Nevada Properties
+        Homes by Dr. Jan Duffy · The Vistas Summerlin, Summerlin West, Las Vegas
       </p>
       <p className="mb-4 text-gray-700 leading-7">
         Dr. Jan Duffy serves buyers and sellers in The Vistas Summerlin and nearby Las Vegas
@@ -72,5 +75,6 @@ export default async function AgentProfilePage({ params }: AgentPageProps) {
         </Link>
       </div>
     </main>
+    </>
   );
 }

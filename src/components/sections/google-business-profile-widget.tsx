@@ -81,7 +81,7 @@ export default function GoogleBusinessProfileWidget() {
                 <Clock className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-semibold text-gray-900">Hours</p>
-                  <p className="text-gray-600">Daily: 6:00 AM - 9:00 PM</p>
+                  <p className="text-gray-600">Daily: 8:00 AM – 8:00 PM</p>
                 </div>
               </div>
               
@@ -89,7 +89,7 @@ export default function GoogleBusinessProfileWidget() {
                 <MapPin className="w-5 h-5 text-red-600" />
                 <div>
                   <p className="font-semibold text-gray-900">Service Area</p>
-                  <p className="text-gray-600">Henderson, Enterprise, Southwest Vegas & More</p>
+                  <p className="text-gray-600">Summerlin West, Las Vegas, NV</p>
                 </div>
               </div>
             </div>

@@ -9,8 +9,9 @@ export function RealEstateExpertSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    "name": "Dr. Jan Duffy",
-    "description": "Las Vegas real estate expert with flexible scheduling that works around your lifestyle. Based in Summerlin, serving buyers, sellers, and investors across Henderson, Enterprise, and Southwest Las Vegas.",
+    "name": "The Vistas Summerlin",
+    "alternateName": "Homes by Dr. Jan Duffy",
+    "description": "Dr. Jan Duffy is the real estate agent for The Vistas Summerlin in Summerlin West, Las Vegas. She tracks pricing across all 28 Vistas subcommunities and shows sellers recent nearby closings. Office: 11312 Parkside Way, Las Vegas, NV 89138. Open daily 8:00 AM to 8:00 PM. Call or text (702) 500-0607.",
     "url": siteUrl,
     "telephone": "+1-702-500-0607",
     "email": "DrJanSells@TheVistasSummerlin.com",
@@ -27,32 +28,10 @@ export function RealEstateExpertSchema() {
       "latitude": "36.1699",
       "longitude": "-115.1398"
     },
-    "areaServed": [
-      {
-        "@type": "Place",
-        "name": "Paradise, NV"
-      },
-      {
-        "@type": "Place", 
-        "name": "Henderson, NV"
-      },
-      {
-        "@type": "Place",
-        "name": "Las Vegas, NV"
-      },
-      {
-        "@type": "Place",
-        "name": "Enterprise, NV"
-      },
-      {
-        "@type": "Place",
-        "name": "Clark County, NV"
-      },
-      {
-        "@type": "Place",
-        "name": "Summerlin, Las Vegas, NV"
-      }
-    ],
+    "areaServed": {
+      "@type": "Place",
+      "name": "Summerlin West, Las Vegas, NV, USA"
+    },
     "serviceType": [
       "Real Estate Sales",
       "Property Valuation",
@@ -68,14 +47,6 @@ export function RealEstateExpertSchema() {
         "recognizedBy": {
           "@type": "Organization",
           "name": "Nevada Real Estate Division"
-        }
-      },
-      {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Real Estate Agent",
-        "recognizedBy": {
-          "@type": "Organization",
-          "name": "Berkshire Hathaway HomeServices Nevada Properties"
         }
       }
     ],
@@ -97,19 +68,10 @@ export function RealEstateExpertSchema() {
       "https://twitter.com/drjanduffy",
       "https://www.pinterest.com/DrJanDuffy/"
     ],
-    "image": `${siteUrl}/logo.png`,
+    "image": `${siteUrl}/images/dr-jan-duffy.png`,
     "alumniOf": {
       "@type": "EducationalOrganization",
       "name": "University of Nevada, Las Vegas"
-    },
-    "memberOf": {
-      "@type": "Organization",
-      "name": "Berkshire Hathaway HomeServices Nevada Properties"
-    },
-    "identifier": {
-      "@type": "PropertyValue",
-      "name": "Nevada real estate license",
-      "value": "S.0197614.LLC"
     },
     "openingHoursSpecification": [
       {
@@ -283,7 +245,7 @@ export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Berkshire Hathaway HomeServices Nevada Properties - The Vistas Summerlin | Dr. Jan Duffy",
+    "name": "The Vistas Summerlin | Homes by Dr. Jan Duffy",
     "description": "Premier real estate services specializing in The Vistas Summerlin luxury community.",
     "url": siteUrl,
     "logo": `${siteUrl}/berkshire-hathaway-logo.png`,
@@ -454,24 +416,10 @@ export function ServiceSchema() {
       "telephone": "+1-702-500-0607",
       "email": "DrJanSells@TheVistasSummerlin.com"
     },
-    "areaServed": [
-      {
-        "@type": "Place",
-        "name": "The Vistas Summerlin, Las Vegas, NV"
-      },
-      {
-        "@type": "Place",
-        "name": "Henderson, NV"
-      },
-      {
-        "@type": "Place",
-        "name": "Enterprise, NV"
-      },
-      {
-        "@type": "Place",
-        "name": "Southwest Vegas, NV"
-      }
-    ],
+    "areaServed": {
+      "@type": "Place",
+      "name": "Summerlin West, Las Vegas, NV, USA"
+    },
     "serviceType": [
       "Real Estate Sales",
       "Property Valuation",
@@ -520,7 +468,7 @@ export function ArticleSchema({
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Berkshire Hathaway HomeServices Nevada Properties",
+      "name": "The Vistas Summerlin",
       "url": siteUrl
     },
     "url": url,

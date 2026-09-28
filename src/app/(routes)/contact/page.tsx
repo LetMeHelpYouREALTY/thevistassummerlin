@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Calendar, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { PostHeroOfficeListings } from '@/components/sections/post-hero-office-listings';
 import { ContactForm } from '@/components/forms/ContactForm';
+import { VisitPlanner } from '@/components/maps/VisitPlanner';
 import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
@@ -252,6 +253,9 @@ export default function Contact() {
                           11312 Parkside Way<br />
                           Las Vegas, NV 89138
                         </p>
+                        <a href="#plan-your-visit" className="mt-2 inline-block text-sm font-semibold text-blue-700 hover:underline">
+                          Plan your visit with travel times
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -267,7 +271,7 @@ export default function Contact() {
                     <div className="space-y-2">
                       <div className="flex justify-between items-center">
                         <span className="text-sm font-medium text-gray-500">Daily</span>
-                        <span className="text-lg font-bold text-gray-900">6:00 AM - 9:00 PM</span>
+                        <span className="text-lg font-bold text-gray-900">8:00 AM – 8:00 PM</span>
                       </div>
                       <p className="text-sm text-gray-600 mt-2">
                         Flexible scheduling that works around YOUR lifestyle
@@ -312,6 +316,8 @@ export default function Contact() {
             </div>
           </div>
         </section>
+
+        <VisitPlanner />
 
         <section className="py-20 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

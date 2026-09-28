@@ -6,7 +6,6 @@ import "@/styles/realscout-widgets.css";
 import Script from 'next/script';
 import { 
   RealEstateExpertSchema, 
-  FAQSchema, 
   RealEstateListingSchema,
   WebsiteSchema,
   OrganizationSchema,
@@ -14,6 +13,8 @@ import {
   ServiceSchema,
 } from '@/components/StructuredData';
 import { CalendlyBadge } from '@/components/CalendlyBadge';
+import { AnswerFacts } from '@/components/AnswerFacts';
+import { BrokerageDisclosure } from '@/components/BrokerageDisclosure';
 import { GbpActionStrip } from '@/components/sections/gbp-action-strip';
 import { getSiteUrl } from '@/lib/site-url';
 
@@ -63,15 +64,23 @@ export const metadata: Metadata = {
     "Las Vegas luxury real estate",
     "The Vistas community center",
     "11312 Parkside Way",
-    "flexible scheduling real estate",
-    "Berkshire Hathaway HomeServices",
-    "Berkshire Hathaway Nevada Properties",
-    "BHHS Nevada Properties",
-    "Berkshire Hathaway real estate agent"
+    "Summerlin West real estate",
+    "flexible scheduling real estate"
   ],
   authors: [{ name: "Dr. Jan Duffy", url: siteUrl }],
-  creator: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties Real Estate Expert",
-  publisher: "Berkshire Hathaway HomeServices Nevada Properties | Dr. Jan Duffy",
+  creator: "Dr. Jan Duffy",
+  publisher: "The Vistas Summerlin | Homes by Dr. Jan Duffy",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.ico",
+  },
   robots: {
     index: true,
     follow: true,
@@ -139,11 +148,13 @@ export default function RootLayout({
               href={`${siteUrl}/feed.xml`} 
               title="The Vistas Summerlin Updates" />
         
-        {/* Favicon Links for Google Search Results */}
+        {/* Favicon: Dr. Jan Duffy portrait, every page */}
         <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png" />
         <link rel="icon" href="/android-chrome-192x192.png" sizes="192x192" type="image/png" />
         <link rel="icon" href="/android-chrome-512x512.png" sizes="512x512" type="image/png" />
-        <link rel="apple-touch-icon" href="/android-chrome-192x192.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         
         {/* Performance: preconnect with crossOrigin so hints match subresource fetches (avoids "unused" preconnect warnings) */}
         <link rel="preconnect" href="https://em.realscout.com" crossOrigin="anonymous" />
@@ -165,7 +176,6 @@ export default function RootLayout({
         
         {/* 2025 SEO Schema Markup */}
         <RealEstateExpertSchema />
-        <FAQSchema />
         <RealEstateListingSchema />
         <WebsiteSchema />
         <OrganizationSchema />
@@ -190,6 +200,8 @@ export default function RootLayout({
         {/* Floating badge: init matches Calendly snippet (15min event, brand colors); see CalendlyBadge + globals.css placement */}
         <CalendlyBadge />
         {children}
+        <AnswerFacts />
+        <BrokerageDisclosure />
       </body>
     </html>
   );

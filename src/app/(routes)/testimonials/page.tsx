@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'Dr. Jan Duffy testimonials',
     'The Vistas Summerlin reviews',
     'Las Vegas real estate agent reviews',
-    'Berkshire Hathaway agent testimonials',
+    'Summerlin West agent testimonials',
     'Summerlin home buying reviews',
     'real estate client testimonials',
     'Vistas Summerlin client feedback',
