@@ -99,12 +99,12 @@ const nextConfig = {
               "base-uri 'self'; " +
               "frame-ancestors 'self' https://vercel.com https://*.vercel.com; " +
               "object-src 'none'; " +
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://assets.calendly.com https://maps.googleapis.com https://maps.gstatic.com; " +
-              "connect-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://*.calendly.com https:; " +
-              "img-src 'self' data: blob: https:; " +
+              "script-src https://widgetbe.com https://*.widgetbe.com 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://assets.calendly.com https://maps.googleapis.com https://maps.gstatic.com; " +
+              "connect-src https://widgetbe.com https://*.widgetbe.com 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://*.calendly.com https:; " +
+              "img-src https://widgetbe.com https://*.widgetbe.com 'self' data: blob: https:; " +
               "style-src 'self' 'unsafe-inline' https:; " +
               "font-src 'self' data: https:; " +
-              "frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://player.vimeo.com " +
+              "frame-src https://widgetbe.com https://*.widgetbe.com 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://player.vimeo.com " +
               "https://em.realscout.com https://www.realscout.com https://widget.realscout.com https://*.realscout.com " +
               "https://calendly.com https://*.calendly.com https://assets.calendly.com;",
           },
