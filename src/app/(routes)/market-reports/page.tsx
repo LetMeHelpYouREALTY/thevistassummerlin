@@ -304,7 +304,7 @@ export default function MarketReportsPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Buyer Demand</h3>
                 <p className="text-gray-700 mb-4">
                   Strong buyer demand driven by The Vistas' reputation for quality, 
-                  amenities, and excellent schools continues to fuel market activity.
+                  amenities, and nearby public schools continues to fuel market activity.
                 </p>
                 <div className="flex items-center space-x-2 text-purple-600">
                   <Home className="w-5 h-5" />

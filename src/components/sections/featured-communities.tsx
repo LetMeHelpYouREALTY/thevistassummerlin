@@ -41,11 +41,11 @@ const featuredCommunities = [
   {
     id: 'summerlin-west',
     name: 'Summerlin West',
-    description: 'Family-friendly community with parks, schools, and shopping nearby',
+    description: 'Community with parks, schools, and shopping nearby',
     priceRange: '$525K - $1.2M',
     homesAvailable: 25,
     image: '/subcommunities/IMG_0739.JPG',
-    features: ['Parks & Playgrounds', 'Top Schools', 'Shopping Center', 'Walking Trails'],
+    features: ['Parks & Playgrounds', 'Nearby Public Schools', 'Shopping Center', 'Walking Trails'],
     rating: 4.7,
     population: '3,200+',
     icon: TreePine,

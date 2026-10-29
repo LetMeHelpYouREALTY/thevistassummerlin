@@ -177,7 +177,7 @@ export default function KingwoodCommunityPage() {
               
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Scale & Prestige</h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                With 322 homes, Kingwood represents the largest single community in The Vistas Summerlin, offering an incredible variety of architectural styles, floor plans, and price points. This scale creates a vibrant, diverse neighborhood where residents can find everything from elegant starter homes to sprawling luxury estates. The community's size also ensures robust amenities, extensive landscaping, and a strong sense of community that comes from having a large, established neighborhood.
+                With 322 homes, Kingwood represents the largest single community in The Vistas Summerlin, offering an incredible variety of architectural styles, floor plans, and price points. This scale creates a vibrant, diverse neighborhood where residents can find everything from elegant starter homes to sprawling luxury estates. The community's size also ensures robust amenities, extensive landscaping, and a strong sense of community that comes from having a large, older neighborhood.
               </p>
 
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Royal-Inspired Architecture</h3>

@@ -217,7 +217,7 @@ export default function InvestmentPage() {
                 <p className="mb-6">
                   The Vistas Summerlin offers excellent rental potential with an average yield of 
                   4.8% and strong tenant demand from professionals working in Las Vegas. The community's 
-                  amenities, including miles of walking paths and access to top-rated schools, 
+                  amenities, including miles of walking paths and access to public schools, 
                   make it highly desirable for long-term tenants seeking luxury living.
                 </p>
                 

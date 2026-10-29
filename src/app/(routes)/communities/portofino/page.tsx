@@ -525,9 +525,9 @@ export default function PortofinoCommunityPage() {
               </h3>
               
               <p className="mb-6">
-                Families in Portofino benefit from access to top-rated schools within the Clark County School District, 
+                Families in Portofino benefit from access to public schools within the Clark County School District, 
                 including Ernest May Elementary, Sig Rogich Middle School, and Palo Verde High School. The community's 
-                safe, family-friendly environment and abundance of recreational facilities make it an ideal place for 
+                parks and abundance of recreational facilities make it a strong choice for 
                 children to grow and thrive. Portofino's location provides convenient access to Summerlin's cultural 
                 attractions and family entertainment venues.
               </p>
@@ -540,7 +540,7 @@ export default function PortofinoCommunityPage() {
                 Portofino offers the perfect blend of Mediterranean elegance and modern convenience. With its distinctive 
                 architecture, resort-style amenities, and prime location within The Vistas Summerlin, Portofino provides 
                 an exceptional living experience for discerning homebuyers. The community's strong market performance and 
-                family-friendly environment make it an excellent choice for both primary residences and investment properties.
+                parks and amenities make it an excellent choice for both primary residences and investment properties.
               </p>
               
               <div className="bg-blue-50 p-6 rounded-xl mt-8">

@@ -38,7 +38,7 @@ import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Barrington Community - The Vistas Summerlin | Luxury Homes & Lifestyle',
-  description: 'Discover Barrington in The Vistas Summerlin. Elegant homes with sophisticated architecture, premium amenities, and family-friendly living. Expert realtor Jan Duffy helps you find your dream home.',
+  description: 'Discover Barrington in The Vistas Summerlin. Elegant homes with sophisticated architecture, premium amenities, and suburban living. Expert realtor Jan Duffy helps you find your dream home.',
   keywords: [
     'Barrington Summerlin homes',
     'Barrington Las Vegas real estate',
@@ -165,7 +165,7 @@ export default function BarringtonCommunityPage() {
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">About Barrington Community</h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                Nestled in the prestigious Vistas Summerlin master-planned community, Barrington represents the pinnacle of sophisticated living in Las Vegas. This exclusive neighborhood combines timeless architectural elegance with modern luxury amenities, creating an unparalleled residential experience for discerning homeowners.
+                Nestled in the prestigious Vistas Summerlin master-planned community, Barrington represents the pinnacle of sophisticated living in Las Vegas. This luxury neighborhood combines timeless architectural elegance with modern luxury amenities, creating an unparalleled residential experience for discerning homeowners.
               </p>
               
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Architectural Excellence</h3>
@@ -178,9 +178,9 @@ export default function BarringtonCommunityPage() {
                 Barrington's strategic location within The Vistas offers residents exceptional convenience and accessibility. The community is positioned just minutes from Downtown Summerlin's premier shopping, dining, and entertainment destinations, including the Fashion Show Mall and Red Rock Casino. Easy access to the I-215 beltway provides quick connections to the Las Vegas Strip, McCarran International Airport, and major employment centers throughout the valley.
               </p>
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Family-Friendly Environment</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Environment</h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Barrington is designed with families in mind, offering a safe, welcoming environment where children can thrive. The community features well-maintained parks, walking trails, and recreational facilities that encourage outdoor activity and neighborly interaction. Top-rated schools in the Clark County School District serve the area, including Givens Elementary School, Rogich Middle School, and Palo Verde High School, all known for their academic excellence and comprehensive programs.
+                Barrington is designed with families in mind, offering a safe, welcoming environment where children can thrive. The community features well-maintained parks, walking trails, and recreational facilities that encourage outdoor activity and neighborly interaction. public schools in the Clark County School District serve the area, including Givens Elementary School, Rogich Middle School, and Palo Verde High School, all known for their academic excellence and comprehensive programs.
               </p>
 
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Investment Potential</h3>
@@ -342,7 +342,7 @@ export default function BarringtonCommunityPage() {
               <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
                 <School className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Top-Rated Schools</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Nearby Public Schools</h3>
               <p className="text-gray-600">
                 Served by Givens Elementary, Rogich Middle School, and Palo Verde High School - 
                 all recognized for academic excellence and comprehensive programs.
@@ -377,7 +377,7 @@ export default function BarringtonCommunityPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Dining & Entertainment</h3>
               <p className="text-gray-600">
-                Nearby restaurants include fine dining establishments, casual cafes, and family-friendly 
+                Nearby restaurants include fine dining establishments, casual cafes, and casual 
                 options, plus entertainment venues and cultural attractions.
               </p>
             </div>
@@ -404,7 +404,7 @@ export default function BarringtonCommunityPage() {
               Available Properties in Barrington
             </h2>
             <p className="text-xl text-gray-600">
-              Discover your dream home in this exclusive community
+              Discover your dream home in this community
             </p>
           </div>
 

@@ -159,7 +159,7 @@ export default function SonestaPage() {
                   
                   <p className="mb-6">
                     Sonesta is designed for those who appreciate resort-style amenities 
-                    and luxury living. This exclusive community features homes with 
+                    and luxury living. This community features homes with 
                     spa facilities, resort amenities, and access to community pools, 
                     tennis courts, and fitness centers.
                   </p>
@@ -272,7 +272,7 @@ export default function SonestaPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Community Events</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Exclusive community events including wine tastings, 
+                  Community events including wine tastings, 
                   gourmet dinners, and luxury social gatherings.
                 </p>
               </div>

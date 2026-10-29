@@ -10,7 +10,7 @@ import { getSiteUrl } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Encanto Community - Charming Living in The Vistas Summerlin | Dr. Jan Duffy',
-  description: 'Discover Encanto, a charming community in The Vistas Summerlin featuring luxury homes with community gardens and family-friendly amenities. Expert real estate guidance from Dr. Jan Duffy.',
+  description: 'Discover Encanto, a charming community in The Vistas Summerlin featuring luxury homes with community gardens and amenities. Expert real estate guidance from Dr. Jan Duffy.',
   keywords: [
     'Encanto The Vistas Summerlin',
     'charming homes Encanto',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Encanto Community - Charming Living in The Vistas Summerlin',
-    description: 'Charming community featuring luxury homes with community gardens and family-friendly amenities.',
+    description: 'Charming community featuring luxury homes with community gardens and amenities.',
     url: `${getSiteUrl()}/communities/encanto`,
     type: 'website',
   },
@@ -37,7 +37,7 @@ export default function EncantoPage() {
       {/* Structured Data */}
       <CommunitySchema 
         communityName="Encanto"
-        description="Charming community in The Vistas Summerlin featuring luxury homes with community gardens and family-friendly amenities."
+        description="Charming community in The Vistas Summerlin featuring luxury homes with community gardens and amenities."
         priceRange="$500,000 - $1,100,000"
         homeCount={28}
         amenities={['Charming Architecture', 'Community Gardens', 'Pool Area', 'Playground', 'Walking Trails', 'Community Events']}
@@ -73,7 +73,7 @@ export default function EncantoPage() {
               
               <p className="text-2xl text-teal-100 max-w-4xl mx-auto leading-relaxed mb-12">
                 Discover Encanto, a charming community in The Vistas Summerlin 
-                featuring luxury homes with community gardens and family-friendly amenities.
+                featuring luxury homes with community gardens and amenities.
               </p>
 
               {/* Community Stats */}
@@ -150,7 +150,7 @@ export default function EncantoPage() {
                   <p className="text-xl mb-6">
                     Encanto brings charm and warmth to The Vistas Summerlin, 
                     offering residents luxury living with community gardens 
-                    and family-friendly amenities.
+                    and amenities.
                   </p>
                   
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">
@@ -161,7 +161,7 @@ export default function EncantoPage() {
                     Encanto is designed for families who appreciate charming 
                     architecture and community spirit. This welcoming community 
                     features homes with character, community gardens, and 
-                    access to family-friendly amenities including playgrounds.
+                    access to amenities including playgrounds.
                   </p>
                   
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">
@@ -170,7 +170,7 @@ export default function EncantoPage() {
                   
                   <p className="mb-6">
                     Homes in Encanto range from $500,000 to $1.1 million, featuring 
-                    charming architecture, spacious layouts, and family-friendly 
+                    charming architecture, spacious layouts, and community 
                     designs. Many properties include private yards, community garden 
                     access, and modern amenities throughout.
                   </p>
@@ -206,7 +206,7 @@ export default function EncantoPage() {
                 Encanto Community Amenities
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Experience charming community living with gardens and family-friendly amenities.
+                Experience charming community living with gardens and amenities.
               </p>
             </div>
             
@@ -239,7 +239,7 @@ export default function EncantoPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Pool Area</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Family-friendly pool area with shallow sections for children 
+                  Pool area with shallow sections 
                   and shaded seating areas for parents.
                 </p>
               </div>

@@ -159,7 +159,7 @@ export default function MiralestePage() {
                   
                   <p className="mb-6">
                     Miraleste is designed for those who appreciate elevated views and 
-                    modern architecture. This exclusive community features homes with 
+                    modern architecture. This community features homes with 
                     private terraces, golf course access, and access to world-class 
                     amenities including fitness centers and community pools.
                   </p>

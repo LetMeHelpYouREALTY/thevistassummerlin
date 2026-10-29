@@ -327,7 +327,7 @@ const NeighborhoodScores = () => (
             icon: GraduationCap,
             title: "School Rating",
             score: "9.8",
-            description: "Exceptional schools",
+            description: "Nearby public schools",
             color: "from-purple-500 to-pink-500"
           }
         ].map((score, index) => (

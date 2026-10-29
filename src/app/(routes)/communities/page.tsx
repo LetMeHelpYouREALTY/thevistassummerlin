@@ -259,7 +259,7 @@ export default function CommunitiesPage() {
                 The Vistas Summerlin HOA fees typically range from $200 to $400 per month, 
                 depending on the specific subcommunity and included amenities. These fees 
                 cover professional landscape maintenance, community security, and access to 
-                shared facilities. The community is served by top-rated schools including 
+                shared facilities. The community is served by nearby public schools including 
                 Palo Verde High School and Ernest May Elementary.
               </p>
               

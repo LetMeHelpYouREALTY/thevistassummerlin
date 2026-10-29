@@ -160,7 +160,7 @@ export default function AshtonParkPage() {
                   
                   <p className="mb-6">
                     Ashton Park is designed for modern families who appreciate contemporary design 
-                    and community amenities. This well-established community features homes with 
+                    and community amenities. This older community features homes with 
                     clean architectural lines, updated interiors, and private outdoor spaces 
                     perfect for entertaining and relaxation.
                   </p>

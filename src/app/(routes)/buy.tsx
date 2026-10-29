@@ -63,7 +63,7 @@ export default function Buy() {
                   Single Family Homes
                 </h3>
                 <p className="text-body font-secondary text-text-light mb-6 text-center">
-                  Spacious homes perfect for families
+                  Spacious homes perfect for buyers
                 </p>
                 <Link 
                   href="/search?type=single-family"

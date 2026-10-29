@@ -70,7 +70,7 @@ const CommunityHero = () => (
           
           <p className="text-xl lg:text-2xl text-red-100 mb-8 leading-relaxed">
             Experience the breathtaking beauty of Red Rock Canyon from your doorstep. 
-            This exclusive neighborhood offers stunning mountain views, luxury amenities, 
+            This luxury neighborhood offers stunning mountain views, luxury amenities, 
             and a lifestyle that embraces the natural splendor of the Las Vegas Valley.
           </p>
 
@@ -193,8 +193,8 @@ const CommunityFeatures = () => (
           },
           {
             icon: Award,
-            title: "Award-Winning Schools",
-            description: "Top-rated schools in the Summerlin district",
+            title: "Nearby Public Schools",
+            description: "public schools in the Summerlin district",
             color: "from-indigo-500 to-purple-500"
           }
         ].map((feature, index) => (
@@ -323,7 +323,7 @@ const NeighborhoodScores = () => (
             icon: GraduationCap,
             title: "School Rating",
             score: "9.2",
-            description: "Excellent schools",
+            description: "Nearby public schools",
             color: "from-purple-500 to-pink-500"
           }
         ].map((score, index) => (

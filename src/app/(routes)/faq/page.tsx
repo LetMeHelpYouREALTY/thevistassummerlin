@@ -90,7 +90,7 @@ export default function FAQPage() {
         },
         {
           question: 'Why are homes in The Vistas Summerlin good investments?',
-          answer: 'The Vistas Summerlin homes are excellent investments due to their prime Summerlin location, master-planned community amenities, proximity to TPC Summerlin golf course, excellent schools, and limited supply. The community was built during the pre-boom era, providing excellent appreciation potential.'
+          answer: 'The Vistas Summerlin homes are excellent investments due to their prime Summerlin location, master-planned community amenities, proximity to TPC Summerlin golf course, nearby public schools, and limited supply. The community was built during the pre-boom era, providing excellent appreciation potential.'
         },
         {
           question: 'What is the current market trend in The Vistas Summerlin?',
@@ -103,7 +103,7 @@ export default function FAQPage() {
       questions: [
         {
           question: 'What amenities are available in The Vistas Summerlin?',
-          answer: 'The Vistas Summerlin offers world-class amenities including TPC Summerlin golf course access, community pools, tennis courts, walking trails, mountain views, Downtown Summerlin shopping and dining, excellent schools, and the Vistas Community Center at 11312 Parkside Way.'
+          answer: 'The Vistas Summerlin offers world-class amenities including TPC Summerlin golf course access, community pools, tennis courts, walking trails, mountain views, Downtown Summerlin shopping and dining, nearby public schools, and the Vistas Community Center at 11312 Parkside Way.'
         },
         {
           question: 'Are there golf course homes available?',
@@ -111,7 +111,7 @@ export default function FAQPage() {
         },
         {
           question: 'What schools serve The Vistas Summerlin?',
-          answer: 'The Vistas Summerlin is served by excellent schools in the Clark County School District, including top-rated elementary, middle, and high schools. The community\'s location in Summerlin provides access to some of Las Vegas\'s best educational opportunities.'
+          answer: 'The Vistas Summerlin is served by public schools in the Clark County School District, including top-rated elementary, middle, and high schools. The community\'s location in Summerlin provides access to some of Las Vegas\'s best educational opportunities.'
         }
       ]
     },

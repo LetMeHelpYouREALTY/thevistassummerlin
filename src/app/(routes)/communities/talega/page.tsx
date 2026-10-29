@@ -159,7 +159,7 @@ export default function TalegaPage() {
                   
                   <p className="mb-6">
                     Talega is designed for those who appreciate contemporary luxury 
-                    and modern sophistication. This exclusive community features homes with 
+                    and modern sophistication. This community features homes with 
                     luxury amenities, modern design, and access to community pools, 
                     tennis courts, and premium facilities.
                   </p>

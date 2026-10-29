@@ -195,7 +195,7 @@ const SEOContentSection = () => (
             parks, and access to TPC Summerlin golf course. The community features 
             European-inspired architecture with Mediterranean charm, creating a sophisticated 
             retreat that combines relaxed elegance with modern conveniences. Residents enjoy 
-            proximity to top-rated schools, shopping centers, and entertainment venues 
+            proximity to public schools, shopping centers, and entertainment venues 
             throughout the Las Vegas Valley.
           </p>
           
@@ -452,7 +452,7 @@ const RealEstateSection = () => (
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-green-400 mt-1" />
                 <div>
-                  <h4 className="font-semibold">Top Schools</h4>
+                  <h4 className="font-semibold">Nearby Public Schools</h4>
                   <p className="text-blue-200 text-sm">Excellent Clark County School District</p>
                 </div>
               </div>

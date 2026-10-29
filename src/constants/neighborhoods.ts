@@ -13,7 +13,7 @@ export const neighborhoods = [
   { name: "Sonesta", slug: "sonesta", description: "Resort-style living with community amenities", priceRange: "$800K-$1.2M" },
   { name: "Cara Vella", slug: "cara-vella", description: "Luxury townhomes with rooftop terraces", priceRange: "$750K-$1.1M" },
   { name: "Palmilla", slug: "palmilla", description: "Mediterranean estates with private courtyards", priceRange: "$950K-$1.7M" },
-  { name: "Summerfield", slug: "summerfield", description: "Family-friendly homes with community pools", priceRange: "$800K-$1.3M" },
+  { name: "Summerfield", slug: "summerfield", description: "Homes with community pools", priceRange: "$800K-$1.3M" },
   { name: "Casa Rosa", slug: "casa-rosa", description: "Spanish-style homes with custom features", priceRange: "$875K-$1.4M" },
   { name: "Paradiso", slug: "paradiso", description: "Paradise-inspired living with resort amenities", priceRange: "$900K-$1.6M" },
   { name: "Talaverde", slug: "talaverde", description: "Green living with energy-efficient features", priceRange: "$825K-$1.3M" },

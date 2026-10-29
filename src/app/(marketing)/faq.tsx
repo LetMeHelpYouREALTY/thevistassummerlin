@@ -3,7 +3,7 @@ import Head from "next/head";
 const faqs = [
   {
     question: "What is The Vistas Summerlin?",
-    answer: "The Vistas Summerlin is a master-planned community in Las Vegas, featuring 28 unique subcommunities, parks, and top-rated schools."
+    answer: "The Vistas Summerlin is a master-planned community in Las Vegas, featuring 28 unique subcommunities, parks, and nearby public schools."
   },
   {
     question: "How can I find available homes in The Vistas?",
