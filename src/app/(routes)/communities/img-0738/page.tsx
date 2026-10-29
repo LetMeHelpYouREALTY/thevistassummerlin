@@ -169,7 +169,7 @@ export default function KingwoodCommunityPage() {
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">About Kingwood Community</h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                Kingwood stands as the crown jewel of The Vistas Summerlin, offering residents an unparalleled luxury living experience that combines royal-inspired architecture with breathtaking mountain vistas. This exclusive enclave represents the pinnacle of sophisticated desert living, where every detail has been carefully crafted to create an atmosphere of elegance and grandeur.
+                Kingwood stands as the crown jewel of The Vistas Summerlin, offering residents an unparalleled luxury living experience that combines royal-inspired architecture with breathtaking mountain vistas. This luxury enclave represents the pinnacle of sophisticated desert living, where every detail has been carefully crafted to create an atmosphere of elegance and grandeur.
               </p>
               
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Majestic Mountain Views</h3>
@@ -408,7 +408,7 @@ export default function KingwoodCommunityPage() {
               Available Properties in Kingwood
             </h2>
             <p className="text-xl text-gray-600">
-              Discover your royal residence in this exclusive community
+              Discover your royal residence in this community
             </p>
           </div>
 

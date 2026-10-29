@@ -159,7 +159,7 @@ export default function HillstonePage() {
                   
                   <p className="mb-6">
                     Hillstone is designed for those who appreciate natural beauty and 
-                    outdoor recreation. This exclusive community features homes with 
+                    outdoor recreation. This community features homes with 
                     stone architecture, private patios, and direct access to hiking 
                     trails and scenic mountain views.
                   </p>

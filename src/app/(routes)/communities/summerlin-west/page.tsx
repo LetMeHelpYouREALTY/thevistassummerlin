@@ -72,7 +72,7 @@ const CommunityHero = () => (
           
           <p className="text-xl lg:text-2xl text-blue-100 mb-8 leading-relaxed">
             Experience the perfect blend of urban convenience and suburban tranquility in Summerlin West. 
-            This master-planned community offers modern amenities, excellent schools, and easy access to 
+            This master-planned community offers modern amenities, nearby public schools, and easy access to 
             the Las Vegas Strip and Red Rock Canyon.
           </p>
 
@@ -171,7 +171,7 @@ const CommunityFeatures = () => (
           },
           {
             icon: GraduationCap,
-            title: "Top-Rated Schools",
+            title: "Nearby Public Schools",
             description: "Excellent public and private school options",
             color: "from-green-500 to-emerald-500"
           },
@@ -195,8 +195,8 @@ const CommunityFeatures = () => (
           },
           {
             icon: Shield,
-            title: "Safe Neighborhood",
-            description: "Low crime rates and community security",
+            title: "Neighborhood",
+            description: "Gated entries and community security",
             color: "from-indigo-500 to-purple-500"
           }
         ].map((feature, index) => (
@@ -325,7 +325,7 @@ const NeighborhoodScores = () => (
             icon: GraduationCap,
             title: "School Rating",
             score: "8.8",
-            description: "Excellent schools",
+            description: "Nearby public schools",
             color: "from-purple-500 to-pink-500"
           }
         ].map((score, index) => (

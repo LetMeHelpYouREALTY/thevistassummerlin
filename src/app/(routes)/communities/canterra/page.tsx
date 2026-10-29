@@ -367,7 +367,7 @@ export default function CanterraPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Flexible Square Footage</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Homes from 1,829-2,787 sq ft hit the sweet spot - bigger than entry-level 
-                  but not luxury pricing, perfect for growing families.
+                  but not luxury pricing, perfect for move-up buyers.
                 </p>
                 <div className="text-green-600 font-semibold text-lg">1,829 - 2,787 sq ft</div>
               </div>

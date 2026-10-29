@@ -36,7 +36,7 @@ const propertyTypes = [
   {
     id: 'mf',
     name: 'Multi-Family',
-    description: 'Townhomes and duplexes perfect for families and investors',
+    description: 'Townhomes and duplexes for owner-occupants and investors',
     priceRange: '$450K - $1.2M',
     count: '120+',
     image: '/subcommunities/IMG_0737.JPG',

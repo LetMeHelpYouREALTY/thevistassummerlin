@@ -159,7 +159,7 @@ export default function CaraVellaPage() {
                   
                   <p className="mb-6">
                     Cara Vella is designed for those who appreciate Mediterranean-inspired 
-                    architecture and luxury amenities. This exclusive community features 
+                    architecture and luxury amenities. This community features 
                     homes with private courtyards, elegant finishes, and access to 
                     world-class facilities including golf course access.
                   </p>

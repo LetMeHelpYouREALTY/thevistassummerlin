@@ -161,7 +161,7 @@ export default function SantaluzPage() {
                   
                   <p className="mb-6">
                     Santaluz is designed for discerning homeowners who appreciate the finer things in life. 
-                    This exclusive community features custom-built luxury homes with panoramic mountain views, 
+                    This community features custom-built luxury homes with panoramic mountain views, 
                     resort-style pools, and direct access to world-class golf courses. The community's 
                     elevated position provides stunning vistas of the Las Vegas Strip and surrounding 
                     mountain ranges.

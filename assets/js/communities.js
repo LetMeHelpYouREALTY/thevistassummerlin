@@ -35,11 +35,11 @@ const allCommunities = [
     {
         id: 'summerlin-park',
         name: 'Summerlin Park',
-        description: 'Family-friendly community with parks, schools, and shopping nearby',
+        description: 'Community with parks, schools, and shopping nearby',
         priceRange: '$525K - $1.2M',
         homesAvailable: 25,
         image: '/subcommunities/IMG_0738.JPG',
-        features: ['Parks & Playgrounds', 'Top Schools', 'Shopping Center', 'Walking Trails'],
+        features: ['Parks & Playgrounds', 'Nearby Public Schools', 'Shopping Center', 'Walking Trails'],
         category: 'Family'
     },
     {
@@ -125,11 +125,11 @@ const allCommunities = [
     {
         id: 'maple-woods',
         name: 'Maple Woods',
-        description: 'Family-oriented community with excellent schools and parks',
+        description: 'Community with nearby schools and parks',
         priceRange: '$500K - $1.1M',
         homesAvailable: 28,
         image: '/subcommunities/IMG_0738.JPG',
-        features: ['Top Schools', 'Parks', 'Family Events', 'Safe Environment'],
+        features: ['Nearby Public Schools', 'Parks', 'Family Events', 'Environment'],
         category: 'Family'
     },
     {

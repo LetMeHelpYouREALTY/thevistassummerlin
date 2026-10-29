@@ -25,7 +25,7 @@ export function VoiceSearchFAQ() {
     },
     {
       question: "Is The Vistas Summerlin a good place to live?",
-      answer: "Yes, The Vistas Summerlin is considered one of Las Vegas' premier communities, offering luxury homes, excellent schools, golf course access, and a family-friendly environment.",
+      answer: "Yes, The Vistas Summerlin is considered one of Las Vegas' premier communities, offering luxury homes, nearby schools, golf course access, and a parks and community amenities.",
       voiceQuery: "Is The Vistas Summerlin a good neighborhood?"
     }
   ];

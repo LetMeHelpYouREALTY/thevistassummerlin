@@ -305,7 +305,7 @@ const PropertiesSection = ({ community }: { community: CommunityData }) => (
           Available Properties in {community.name}
         </h2>
         <p className="text-xl text-gray-600">
-          Discover your dream home in this exclusive community
+          Discover your dream home in this community
         </p>
       </div>
 
@@ -388,14 +388,14 @@ export default async function CommunityPage({ params }: { params: Promise<{ slug
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   {community.description} Located in the prestigious Vistas Summerlin community, 
                   {community.name} offers residents an unparalleled living experience with access to 
-                  world-class amenities, top-rated schools, and stunning natural beauty.
+                  world-class amenities, nearby public schools, and stunning natural beauty.
                 </p>
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Community Highlights</h3>
                 <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
                   <li>Prime location in The Vistas Summerlin master-planned community</li>
                   <li>Access to championship golf courses and resort-style amenities</li>
-                  <li>Top-rated schools including Palo Verde High School</li>
+                  <li>Nearby public schools including Palo Verde High School</li>
                   <li>Minutes from Downtown Summerlin shopping and dining</li>
                   <li>Easy access to Red Rock Canyon and outdoor recreation</li>
                 </ul>

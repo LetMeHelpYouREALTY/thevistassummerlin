@@ -150,7 +150,7 @@ export default function BellaVistaPage() {
                 <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
                   <p className="text-xl mb-6">
                     Bella Vista lives up to its name, offering residents beautiful mountain views 
-                    and elegant homes in a well-established community within The Vistas Summerlin.
+                    and elegant homes in an older community within The Vistas Summerlin.
                   </p>
                   
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">

@@ -14,11 +14,11 @@ export default function AboutContent() {
             <p className="text-xl font-secondary text-text-light mb-6 leading-relaxed">
               The Vistas Summerlin is one of Las Vegas&apos; most prestigious residential areas, 
               featuring 28 unique subcommunities that offer diverse housing options from 
-              luxury estates to family-friendly homes.
+              luxury estates to homes.
             </p>
             <p className="text-xl font-secondary text-text-light mb-8 leading-relaxed">
               Our community is known for its stunning mountain views, world-class amenities, 
-              top-rated schools, and convenient access to shopping, dining, and entertainment. 
+              nearby public schools, and convenient access to shopping, dining, and entertainment. 
               Whether you&apos;re looking for a peaceful retreat or an active lifestyle, 
               The Vistas Summerlin has something for everyone.
             </p>

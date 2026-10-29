@@ -268,7 +268,7 @@ export default function GoldenMomentsProperty() {
                   from The Vistas Summerlin's world-class amenities including the community center 
                   at 11312 Parkside Way, miles of walking paths, and access to TPC Summerlin golf 
                   course. The community's elevation provides stunning mountain views and proximity 
-                  to top-rated schools including Palo Verde High School.
+                  to nearby public schools including Palo Verde High School.
                 </p>
                 
                 <h3 className="text-2xl font-bold text-[#f0eaff] mb-4 mt-8">

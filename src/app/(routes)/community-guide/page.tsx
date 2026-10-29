@@ -96,7 +96,7 @@ export default function CommunityGuidePage() {
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 The Vistas Summerlin is one of Las Vegas' most prestigious master-planned communities, 
-                offering luxury living with world-class amenities and a family-friendly atmosphere.
+                offering luxury living with world-class amenities and an atmosphere.
               </p>
             </div>
 
@@ -107,7 +107,7 @@ export default function CommunityGuidePage() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">28 Subcommunities</h3>
                 <p className="text-gray-700">
-                  From luxury estates to family-friendly neighborhoods, discover the perfect community for your lifestyle.
+                  From luxury estates to neighborhoods, discover the perfect community for your lifestyle.
                 </p>
               </div>
 
@@ -125,7 +125,7 @@ export default function CommunityGuidePage() {
                 <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <Award className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Top-Rated Schools</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Nearby Public Schools</h3>
                 <p className="text-gray-700">
                   Access to Clark County's highest-rated schools including Palo Verde High School.
                 </p>

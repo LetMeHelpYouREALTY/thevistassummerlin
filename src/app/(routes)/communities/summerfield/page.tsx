@@ -170,7 +170,7 @@ export default function SummerfieldPage() {
                   
                   <p className="mb-6">
                     Homes in Summerfield range from $500,000 to $1.2 million, featuring 
-                    family-friendly designs, spacious layouts, and outdoor living areas. 
+                    designs, spacious layouts, and outdoor living areas. 
                     Many properties include private yards, community pool access, and 
                     premium finishes throughout.
                   </p>
@@ -228,7 +228,7 @@ export default function SummerfieldPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Community Pool</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Family-friendly community pool with shallow areas for children 
+                  Community pool with shallow areas 
                   and shaded seating areas for parents to relax.
                 </p>
               </div>

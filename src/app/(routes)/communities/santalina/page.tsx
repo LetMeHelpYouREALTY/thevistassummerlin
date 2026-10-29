@@ -194,7 +194,7 @@ export default function SantalinaCommunityPage() {
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-lg text-center border border-orange-100">
               <School className="w-12 h-12 text-red-600 mx-auto mb-6" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Top-Rated Schools</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Nearby Public Schools</h3>
               <p className="text-gray-600">
                 Access to excellent public and private schools in Summerlin.
               </p>
@@ -302,9 +302,9 @@ export default function SantalinaCommunityPage() {
               </h3>
 
               <p className="mb-6">
-                Families in Santalina benefit from access to top-rated schools within the Clark County School District,
+                Families in Santalina benefit from access to public schools within the Clark County School District,
                 including Ernest May Elementary, Sig Rogich Middle School, and Palo Verde High School. The community's
-                warm, family-friendly environment and abundance of recreational facilities make it an ideal place for
+                warm, parks and community amenities and abundance of recreational facilities make it an ideal place for
                 children to grow and thrive. Santalina's location provides convenient access to Summerlin's cultural
                 attractions and family entertainment venues.
               </p>
@@ -317,7 +317,7 @@ export default function SantalinaCommunityPage() {
                 Santalina offers the perfect blend of Mediterranean elegance and modern convenience. With its distinctive
                 architecture, outdoor living spaces, and prime location within The Vistas Summerlin, Santalina provides
                 an exceptional living experience for discerning homebuyers. The community's strong market performance and
-                family-friendly environment make it an excellent choice for both primary residences and investment properties.
+                parks and amenities make it an excellent choice for both primary residences and investment properties.
               </p>
 
               <div className="bg-orange-50 p-6 rounded-xl mt-8">
