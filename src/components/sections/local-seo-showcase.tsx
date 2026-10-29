@@ -8,7 +8,7 @@ export default function LocalSEOShowcase() {
     googleRanking: 'Top 3',
     localVisibility: '95%',
     reviewCount: 150,
-    averageRating: 4.9,
+    averageRating: 5.0,
     responseTime: '< 2 hours',
     marketShare: '23%'
   });
