@@ -122,7 +122,7 @@ export default function TestimonialsPage() {
 
   const stats = [
     { label: 'Client Satisfaction', value: '100%', icon: Heart },
-    { label: 'Average Rating', value: '4.9/5', icon: Star },
+    { label: 'Realtor.com Rating (50 reviews)', value: '5.0/5', icon: Star },
     { label: 'Years Experience', value: '12+', icon: Award },
     { label: 'Happy Clients', value: '150+', icon: Users }
   ];

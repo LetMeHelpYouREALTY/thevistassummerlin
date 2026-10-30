@@ -113,9 +113,9 @@ export default function ReviewCollectionWidget() {
                 <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6">
                   <div className="flex items-center justify-center space-x-2 mb-2">
                     <Star className="w-6 h-6 text-yellow-500 fill-current" />
-                    <span className="text-2xl font-bold text-gray-900">4.9</span>
+                    <span className="text-2xl font-bold text-gray-900">5.0</span>
                   </div>
-                  <p className="text-gray-600 font-medium">Average Rating</p>
+                  <p className="text-gray-600 font-medium">Realtor.com (50 reviews)</p>
                 </div>
                 
                 <div className="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-6">
