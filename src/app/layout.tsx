@@ -17,6 +17,8 @@ import { AnswerFacts } from '@/components/AnswerFacts';
 import { BrokerageDisclosure } from '@/components/BrokerageDisclosure';
 import { GbpActionStrip } from '@/components/sections/gbp-action-strip';
 import { getSiteUrl } from '@/lib/site-url';
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights as VercelSpeedInsights } from "@vercel/speed-insights/next";
 
 const siteUrl = getSiteUrl();
 
@@ -213,6 +215,8 @@ e.parentNode.insertBefore(t,e);})
 window.widgetTracker("create", "WT-XQHVYQWW");
 window.widgetTracker("send", "pageview");
         `}</Script>
+  <VercelAnalytics />
+  <VercelSpeedInsights />
 </body>
     </html>
   );
