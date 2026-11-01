@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Playfair_Display, DM_Sans } from "next/font/google";
@@ -47,7 +48,7 @@ const dmSans = DM_Sans({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
   manifest: "/manifest.json",
   title: {
@@ -118,10 +119,21 @@ export const metadata: Metadata = {
     ? { verification: { google: googleSiteVerification } }
     : {}),
   ...(Object.keys(verificationMeta).length ? { other: verificationMeta } : {}),
-  alternates: {
-    canonical: siteUrl,
-  },
 };
+
+/**
+ * Self-referencing canonical for every page. The path comes from the
+ * `x-pathname` request header set in middleware.ts; pages that set their own
+ * `alternates.canonical` still override this.
+ */
+export async function generateMetadata(): Promise<Metadata> {
+  const pathname = (await headers()).get('x-pathname') || '/';
+  const path = pathname === '/' ? '' : pathname.replace(/\/+$/, '');
+  return {
+    ...baseMetadata,
+    alternates: { canonical: `${siteUrl}${path}` },
+  };
+}
 
 export default function RootLayout({
   children,

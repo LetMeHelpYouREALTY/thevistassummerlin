@@ -52,9 +52,6 @@ export const metadata: Metadata = {
     description: "Discover homes in The Vistas Summerlin with local market guidance from Dr. Jan Duffy.",
     images: ["/subcommunities/IMG_0737.JPG"],
   },
-  alternates: {
-    canonical: siteUrl,
-  },
 };
 
 export default function RoutesLayout({

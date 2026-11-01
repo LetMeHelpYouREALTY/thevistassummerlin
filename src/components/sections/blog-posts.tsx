@@ -109,7 +109,7 @@ export default function BlogPosts() {
                 </p>
                 
                 <Link 
-                  href={`/blog/${post.id}`}
+                  href="/blog"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-all duration-300 text-lg font-semibold group/link"
                 >
                   Read More

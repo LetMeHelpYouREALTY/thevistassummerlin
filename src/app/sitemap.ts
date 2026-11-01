@@ -17,9 +17,8 @@ const EXTRA_COMMUNITY_SLUGS = [
   'summerlin-west',
   'macdonald-highlands',
   'southern-highlands',
-  'img-0737',
-  'img-0738',
-  'img-0739',
+  // img-0737/0738/0739 are legacy photo-named URLs that 308 to real community
+  // pages (see next.config), so they stay out of the sitemap.
 ] as const
 
 const staticRoutes = [

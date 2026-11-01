@@ -13,9 +13,6 @@ export const metadata: Metadata = {
     'Las Vegas luxury neighborhoods',
     'Canterra Kingwood Santalina',
   ],
-  alternates: {
-    canonical: `${getSiteUrl()}/communities`,
-  },
   openGraph: {
     title: 'The Vistas Summerlin Communities | Neighborhood Guide',
     description:
